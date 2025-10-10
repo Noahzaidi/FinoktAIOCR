@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Document - {{ doc_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <div class="container review-container">
+        <header>
+            <h1>Document Review</h1>
+            <p>Document ID: <strong id="doc-id">{{ doc_id }}</strong></p>
+            <div class="actions">
+                <button id="undo-btn" class="btn">Undo</button>
+                <button id="redo-btn" class="btn">Redo</button>
+                <div class="export-dropdown">
+                    <button class="btn dropdown-toggle">Export ▼</button>
+                    <div class="dropdown-menu">
+                        <a href="/export/{{ doc_id }}?format=json" target="_blank" class="dropdown-item">📄 Structured JSON</a>
+                        <a href="/raw_ocr/{{ doc_id }}" target="_blank" class="dropdown-item">🔍 Raw OCR JSON</a>
+                        <a href="/export/{{ doc_id }}?format=csv" target="_blank" class="dropdown-item">📊 Export CSV</a>
+                        <a href="/export/{{ doc_id }}?format=xml" target="_blank" class="dropdown-item">📋 Export XML</a>
+                    </div>
+                </div>
+                <a href="/" class="btn">Upload New</a>
+            </div>
+            
+            {% if quality_level %}
+            <div class="quality-info">
+                <div class="quality-badge quality-{{ quality_level }}">
+                    Quality: {{ quality_level.title() }} ({{ overall_quality }})
+                </div>
+                {% if recommendations %}
+                <div class="recommendations">
+                    <h4>Recommendations:</h4>
+                    <ul>
+                        {% for rec in recommendations %}
+                        <li>{{ rec }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </header>
+        
+        <main class="review-main">
+            <!-- Left Panel: OCR Text and Editing -->
+            <div id="left-panel" class="review-left-panel">
+                <div class="panel-tabs">
+                    <button class="tab-btn active" data-tab="edit">Edit Selection</button>
+                    <button class="tab-btn" data-tab="raw-text">Raw OCR Text</button>
+                </div>
+                
+                <div id="edit-tab" class="tab-content active">
+                    <h2>Edit Selection</h2>
+                    <div id="selection-info">
+                        <p>Select a text box on the document viewer to edit.</p>
+                        <p><small>Click on any red bounding box to select text for editing.</small></p>
+                    </div>
+                    <div id="edit-form" class="hidden">
+                        <div class="form-group">
+                            <label for="text-editor">Corrected Text:</label>
+                            <input type="text" id="text-editor" class="form-control">
+                        </div>
+                        <div class="selected-word-info">
+                            <p><strong>Selected:</strong> <span id="original-text"></span></p>
+                            <p><strong>Page:</strong> <span id="word-page"></span></p>
+                            <p><strong>Position:</strong> <span id="word-position"></span></p>
+                        </div>
+                        <button id="save-btn" class="btn">Save Correction</button>
+                        <p id="save-status"></p>
+                    </div>
+                </div>
+                
+                <div id="raw-text-tab" class="tab-content">
+                    <h2>Raw OCR Text</h2>
+                    <div id="raw-text-container">
+                        <textarea id="raw-text-display" readonly class="raw-text-area">
+                            Loading OCR text...
+                        </textarea>
+                        <div class="text-stats">
+                            <p><strong>Total Words:</strong> <span id="word-count">-</span></p>
+                            <p><strong>Avg Confidence:</strong> <span id="avg-confidence">-</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Panel: Document Viewer -->
+            <div id="right-panel" class="review-right-panel">
+                <div class="document-viewer-header">
+                    <h2>Document Viewer</h2>
+                    <div class="viewer-controls">
+                        <span id="page-indicator">Loading...</span>
+                        <button id="zoom-out-btn" class="btn-small">−</button>
+                        <span id="zoom-level">100%</span>
+                        <button id="zoom-in-btn" class="btn-small">+</button>
+                    </div>
+                </div>
+                <div id="document-viewer-container">
+                    <div id="pages-container">
+                        <!-- Pages will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', path='/canvas.js') }}"></script>
+</body>
+</html>

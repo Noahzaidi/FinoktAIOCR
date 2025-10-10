@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinoktAI - Upload Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FinoktAI OCR Learning & Structuring System</h1>
+            <p>Upload a document (PDF or Image) to begin processing.</p>
+        </header>
+        <main>
+            <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file-input">Choose a file:</label>
+                    <input id="file-input" type="file" name="file" accept=".pdf,.png,.jpg,.jpeg" required>
+                </div>
+                <button type="submit" class="btn">Upload and Process</button>
+            </form>
+            <div id="loading-indicator" class="hidden">
+                <div class="spinner"></div>
+                <p>Processing document, please wait...</p>
+            </div>
+        </main>
+        <footer>
+            <p>FinoktAI - CPU-based Document Intelligence</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', function() {
+            document.getElementById('loading-indicator').classList.remove('hidden');
+            this.querySelector('button').disabled = true;
+        });
+    </script>
+</body>
+</html>
