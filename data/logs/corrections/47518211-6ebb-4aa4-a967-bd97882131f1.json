@@ -1,0 +1,43 @@
+{
+  "corrections": [
+    {
+      "document_id": "47518211-6ebb-4aa4-a967-bd97882131f1",
+      "page": 0,
+      "word_id": "p0_w44",
+      "original_text": "KOWALSKAKKANNAS<<<<<<<<<<<<<<",
+      "corrected_text": "KOWALSKAKKANNAS<<<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.0673828125,
+          0.8580729166666667
+        ],
+        [
+          0.9296875,
+          0.9052734375
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:07:31.310589"
+    },
+    {
+      "document_id": "47518211-6ebb-4aa4-a967-bd97882131f1",
+      "page": 0,
+      "word_id": "p0_w43",
+      "original_text": "0408125<2010315D<<<<<<<<<<<<4",
+      "corrected_text": "6408125<2010315D<<<<<<<<<<<<4",
+      "corrected_bbox": [
+        [
+          0.0625,
+          0.7718098958333333
+        ],
+        [
+          0.923828125,
+          0.8206380208333333
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:09:16.169992"
+    }
+  ],
+  "document_id": "47518211-6ebb-4aa4-a967-bd97882131f1"
+}

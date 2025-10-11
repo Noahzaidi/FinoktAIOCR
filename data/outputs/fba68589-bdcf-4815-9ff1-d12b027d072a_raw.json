@@ -1,0 +1,715 @@
+{
+  "document_id": "fba68589-bdcf-4815-9ff1-d12b027d072a",
+  "extraction_timestamp": "2025-10-11T15:25:18.534534",
+  "pages": [
+    {
+      "page_num": 1,
+      "words": [
+        {
+          "text": "pu",
+          "bbox": [
+            0.7363149947478992,
+            0.2900390625
+          ],
+          "confidence": 0.4267,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PERSONALAUSWEIS",
+          "bbox": [
+            0.12687106092436973,
+            0.30078125
+          ],
+          "confidence": 0.7911,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "REPUBLIK",
+          "bbox": [
+            0.6050288865546218,
+            0.2998046875
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OSTERREICH",
+          "bbox": [
+            0.7708639705882353,
+            0.296875
+          ],
+          "confidence": 0.9687,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AT",
+          "bbox": [
+            0.5179654674369748,
+            0.314453125
+          ],
+          "confidence": 0.9978,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IDENTITY",
+          "bbox": [
+            0.2816504726890756,
+            0.33203125
+          ],
+          "confidence": 0.99,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CARD;",
+          "bbox": [
+            0.3935891544117647,
+            0.33203125
+          ],
+          "confidence": 0.6018,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "REPUBLICOF",
+          "bbox": [
+            0.602264968487395,
+            0.328125
+          ],
+          "confidence": 0.9934,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AUSTRIA",
+          "bbox": [
+            0.7611902573529412,
+            0.330078125
+          ],
+          "confidence": 0.9924,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Nie",
+          "bbox": [
+            0.3935891544117647,
+            0.37109375
+          ],
+          "confidence": 0.3637,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Vortase/Sernane",
+          "bbox": [
+            0.4253742121848739,
+            0.369140625
+          ],
+          "confidence": 0.3526,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Given",
+          "bbox": [
+            0.5331670168067227,
+            0.3701171875
+          ],
+          "confidence": 0.4647,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "nse",
+          "bbox": [
+            0.5732438287815126,
+            0.37109375
+          ],
+          "confidence": 0.3852,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MUSTERFRAU",
+          "bbox": [
+            0.39497111344537816,
+            0.3857421875
+          ],
+          "confidence": 0.9265,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "USTR",
+          "bbox": [
+            0.943608849789916,
+            0.400390625
+          ],
+          "confidence": 0.7828,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MARIA",
+          "bbox": [
+            0.39497111344537816,
+            0.4130859375
+          ],
+          "confidence": 0.9952,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "us",
+          "bbox": [
+            0.9671021533613445,
+            0.412109375
+          ],
+          "confidence": 0.5023,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Statiangehdrigkeit/utianalat",
+          "bbox": [
+            0.39220719537815124,
+            0.4619140625
+          ],
+          "confidence": 0.2982,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AUT",
+          "bbox": [
+            0.39497111344537816,
+            0.478515625
+          ],
+          "confidence": 0.9986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "a",
+          "bbox": [
+            0.02184217436974789,
+            0.5146484375
+          ],
+          "confidence": 0.4968,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Gokumenteumer/Tocument",
+          "bbox": [
+            0.39497111344537816,
+            0.5029296875
+          ],
+          "confidence": 0.4024,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "mnter",
+          "bbox": [
+            0.5538964023109244,
+            0.5009765625
+          ],
+          "confidence": 0.5779,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PA1234567",
+          "bbox": [
+            0.3935891544117647,
+            0.515625
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Witig",
+          "bbox": [
+            0.3935891544117647,
+            0.544921875
+          ],
+          "confidence": 0.5123,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "0/Date",
+          "bbox": [
+            0.4391938025210084,
+            0.5458984375
+          ],
+          "confidence": 0.4154,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.5013819590336135,
+            0.546875
+          ],
+          "confidence": 0.9765,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "pxpiry",
+          "bbox": [
+            0.5179654674369748,
+            0.5478515625
+          ],
+          "confidence": 0.2733,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "01.08.2031",
+          "bbox": [
+            0.39497111344537816,
+            0.5615234375
+          ],
+          "confidence": 0.9962,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Gebortsdatun/late",
+          "bbox": [
+            0.3935891544117647,
+            0.5849609375
+          ],
+          "confidence": 0.465,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "et",
+          "bbox": [
+            0.5138195903361344,
+            0.5859375
+          ],
+          "confidence": 0.9784,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "birth",
+          "bbox": [
+            0.5345489758403361,
+            0.5849609375
+          ],
+          "confidence": 0.9633,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "31.12.1981",
+          "bbox": [
+            0.3935891544117647,
+            0.6005859375
+          ],
+          "confidence": 0.9944,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Gesalectt/Ser",
+          "bbox": [
+            0.39220719537815124,
+            0.6240234375
+          ],
+          "confidence": 0.3295,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CAN",
+          "bbox": [
+            0.7777737657563025,
+            0.6318359375
+          ],
+          "confidence": 0.9979,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "F",
+          "bbox": [
+            0.3935891544117647,
+            0.640625
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "123456",
+          "bbox": [
+            0.7639541754201681,
+            0.6474609375
+          ],
+          "confidence": 0.9978,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Specimennr.",
+          "bbox": [
+            0.44610359768907565,
+            0.6865234375
+          ],
+          "confidence": 0.9911,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "00458",
+          "bbox": [
+            0.6105567226890756,
+            0.6865234375
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 38,
+      "average_confidence": 0.742
+    },
+    {
+      "page_num": 2,
+      "words": [
+        {
+          "text": "Messtatiomguatun/ate",
+          "bbox": [
+            0.019078256302521024,
+            0.3037109375
+          ],
+          "confidence": 0.2266,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.17247570903361342,
+            0.3046875
+          ],
+          "confidence": 0.7209,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Ase",
+          "bbox": [
+            0.19320509453781515,
+            0.3046875
+          ],
+          "confidence": 0.3709,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Grole/Height",
+          "bbox": [
+            0.5538964023109244,
+            0.3056640625
+          ],
+          "confidence": 0.4217,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "02.08.2021",
+          "bbox": [
+            0.020460215336134457,
+            0.3193359375
+          ],
+          "confidence": 0.9988,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "170",
+          "bbox": [
+            0.5193474264705882,
+            0.3212890625
+          ],
+          "confidence": 0.9858,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "cm",
+          "bbox": [
+            0.5953551733193277,
+            0.322265625
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Rehorteilsthority",
+          "bbox": [
+            0.01769629726890759,
+            0.34375
+          ],
+          "confidence": 0.3673,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AUSSTELLENDE",
+          "bbox": [
+            0.020460215336134457,
+            0.3603515625
+          ],
+          "confidence": 0.9393,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BEHORDE",
+          "bbox": [
+            0.27888655462184875,
+            0.359375
+          ],
+          "confidence": 0.9962,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Geburtsort/Place",
+          "bbox": [
+            0.020460215336134457,
+            0.3837890625
+          ],
+          "confidence": 0.7704,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ef",
+          "bbox": [
+            0.13239889705882352,
+            0.3837890625
+          ],
+          "confidence": 0.9292,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "birtee",
+          "bbox": [
+            0.15174632352941175,
+            0.3837890625
+          ],
+          "confidence": 0.2856,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "GEBURTSORT",
+          "bbox": [
+            0.020460215336134457,
+            0.3994140625
+          ],
+          "confidence": 0.9964,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Stantsangehorigteit/laionality",
+          "bbox": [
+            0.019078256302521024,
+            0.4228515625
+          ],
+          "confidence": 0.2566,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OSTERREICH",
+          "bbox": [
+            0.020460215336134457,
+            0.4365234375
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Titumate",
+          "bbox": [
+            0.5594242384453781,
+            0.451171875
+          ],
+          "confidence": 0.5415,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Mag,",
+          "bbox": [
+            0.5635701155462185,
+            0.466796875
+          ],
+          "confidence": 0.9596,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Titel",
+          "bbox": [
+            0.3935891544117647,
+            0.490234375
+          ],
+          "confidence": 0.9933,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "nachgestel.akutcicul",
+          "bbox": [
+            0.43366596638655464,
+            0.4892578125
+          ],
+          "confidence": 0.1465,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IL",
+          "bbox": [
+            0.6036469275210083,
+            0.4921875
+          ],
+          "confidence": 0.3598,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "X",
+          "bbox": [
+            0.5884453781512605,
+            0.5078125
+          ],
+          "confidence": 0.9651,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IDAUTPA12345673<<<<<<<<<<<<<<<",
+          "bbox": [
+            0.06744682247899159,
+            0.5830078125
+          ],
+          "confidence": 0.9408,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "8112314F3108011AUT<<<<<<<<<<<6",
+          "bbox": [
+            0.06606486344537815,
+            0.6171875
+          ],
+          "confidence": 0.7615,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MUSTERFRAU<<MARIA<<<<<<<<<<<<<",
+          "bbox": [
+            0.06468290441176472,
+            0.6513671875
+          ],
+          "confidence": 0.8215,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "MUSTERFRAU<<MARIAS<<<<<<<<<<<"
+        }
+      ],
+      "word_count": 25,
+      "average_confidence": 0.7101
+    }
+  ],
+  "total_words": 63,
+  "overall_confidence": 0.7293
+}

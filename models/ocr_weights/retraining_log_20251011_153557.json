@@ -1,0 +1,7 @@
+{
+  "timestamp": "2025-10-11T15:35:57.189103",
+  "samples_used": 12,
+  "status": "completed_stub",
+  "model_version": "v1.0_stub",
+  "notes": "This is a stub implementation. Real retraining would fine-tune DocTR here."
+}

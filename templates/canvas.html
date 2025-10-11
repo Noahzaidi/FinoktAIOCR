@@ -62,6 +62,7 @@
                     <button class="tab-btn active" data-tab="edit">Edit Selection</button>
                     <button class="tab-btn" data-tab="raw-text">Raw OCR Text</button>
                     <button class="tab-btn" data-tab="learning">Learning Stats</button>
+                    <button class="tab-btn" data-tab="pages">Pages</button>
                 </div>
                 
                 <div id="edit-tab" class="tab-content active">
@@ -176,18 +177,73 @@
                         <div class="learning-section">
                             <h3>🔄 Advanced</h3>
                             <div id="retraining-section">
-                                <p>Retrain the OCR model using collected correction data to improve base accuracy.</p>
-                                <button id="retrain-btn" class="btn">Start Model Retraining</button>
+                                <div style="padding: 0.75rem; background: #d1ecf1; border-left: 4px solid #0c5460; border-radius: 4px; margin-bottom: 1rem;">
+                                    <strong style="color: #0c5460;">✅ Real PyTorch Training Available!</strong>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #0c5460;">
+                                        You can now train a real OCR model using PyTorch on your collected samples.
+                                    </p>
+                                </div>
+                                <p>Train and deploy improved OCR models based on your corrections.</p>
+                                
+                                <div class="retrain-info" style="margin-bottom: 1rem;">
+                                    <small>Training samples available: <strong><span id="training-samples-for-retrain">0</span></strong> (need 10+ for training)</small>
+                                </div>
+                                
+                                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                                    <button id="retrain-real-btn" class="btn">🔥 Train Real Model</button>
+                                    <button id="retrain-stub-btn" class="btn" style="background: #6c757d;">📝 Run Simulation (Stub)</button>
+                                </div>
+                                
                                 <div id="retrain-status"></div>
-                                <div class="retrain-info">
-                                    <small>Requires at least 10 training samples. Currently available: <span id="training-samples-for-retrain">0</span></small>
+                            </div>
+                        </div>
+
+                        <div class="learning-section">
+                            <h3>🚀 Model Deployment</h3>
+                            <div id="deployment-section">
+                                <p>Deploy trained models to production or rollback to previous versions.</p>
+                                
+                                <div id="active-model-info" style="padding: 0.75rem; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 6px; margin-bottom: 1rem;">
+                                    <strong style="color: #155724;">Active Model:</strong>
+                                    <div id="active-model-details" style="font-size: 0.85rem; margin-top: 0.5rem; color: #155724;">
+                                        <p style="margin: 0.25rem 0;">Loading...</p>
+                                    </div>
+                                </div>
+                                
+                                <div id="available-models-list" style="margin-bottom: 1rem;">
+                                    <h4 style="margin-bottom: 0.5rem; color: var(--secondary-color);">Available Models:</h4>
+                                    <div id="models-list-container" style="max-height: 200px; overflow-y: auto;">
+                                        <p style="color: #666; font-style: italic; font-size: 0.85rem;">Loading models...</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                                    <button id="refresh-models-btn" class="btn-small">🔄 Refresh</button>
+                                    <button id="rollback-model-btn" class="btn-small" style="background: #dc3545;">↩️ Rollback</button>
+                                </div>
+                                
+                                <div id="deployment-status"></div>
+                                
+                                <div id="deployment-history" style="margin-top: 1rem;">
+                                    <h4 style="margin-bottom: 0.5rem; color: var(--secondary-color);">Recent Deployments:</h4>
+                                    <div id="deployment-history-list" style="max-height: 150px; overflow-y: auto; font-size: 0.85rem;">
+                                        <p style="color: #666; font-style: italic;">No deployments yet</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div id="pages-tab" class="tab-content">
+                    <h2>Pages</h2>
+                    <div id="pages-list" class="pages-list"></div>
+                </div>
             </div>
             
+            <!-- Draggable splitter between left and right panels -->
+            <div id="panel-resizer" class="panel-resizer" role="separator" aria-orientation="vertical" aria-label="Resize panels" tabindex="0"></div>
+
             <!-- Right Panel: Document Viewer -->
             <div id="right-panel" class="review-right-panel">
                 <div class="document-viewer-header">

@@ -122,19 +122,45 @@ footer {
 .review-main {
     display: flex;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: stretch; /* make both panels same height */
     height: calc(100vh - 200px);
+    min-height: 0; /* allow children to manage their own overflow */
+}
+
+/* Draggable vertical resizer */
+.panel-resizer {
+    width: 6px;
+    cursor: col-resize;
+    align-self: stretch;
+    background: linear-gradient(180deg, #e9ecef, #dfe3e6);
+    border-radius: 4px;
+    border: 1px solid var(--dark-gray);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.08);
+}
+
+.panel-resizer:hover,
+.panel-resizer:focus {
+    outline: none;
+    background: linear-gradient(180deg, #dde3e8, #cfd6db);
+}
+
+.resizing * {
+    cursor: col-resize !important;
+    user-select: none !important;
 }
 
 /* Left Panel - OCR Text and Editing */
 .review-left-panel {
-    flex: 1;
-    min-width: 350px;
-    max-width: 450px;
+    /* Default to 50/50 split with the right panel */
+    flex: 1 1 0;
+    min-width: 420px;
     padding: 1rem;
     background: var(--light-gray);
     border-radius: 8px;
     overflow-y: auto;
+    max-height: 100%; /* constrain to parent height */
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-gray) transparent;
 }
 
 .review-left-panel h2 {
@@ -144,13 +170,16 @@ footer {
 
 /* Right Panel - Document Viewer */
 .review-right-panel {
-    flex: 2;
+    /* Match left panel so default split is 50/50 */
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--dark-gray);
     border-radius: 8px;
     background: var(--white);
     overflow: hidden;
+    max-height: 100%; /* constrain to parent height */
+    min-height: 0; /* critical for child (#document-viewer-container) scrolling */
 }
 
 .document-viewer-header {
@@ -160,6 +189,9 @@ footer {
     padding: 1rem;
     border-bottom: 1px solid var(--dark-gray);
     background: var(--light-gray);
+    position: sticky; /* Keep controls visible while scrolling */
+    top: 0;
+    z-index: 5;
 }
 
 .document-viewer-header h2 {
@@ -196,8 +228,24 @@ footer {
 
 #document-viewer-container {
     flex: 1;
-    overflow-y: auto;
+    min-height: 0; /* allow flex item to scroll */
+    overflow-y: scroll; /* Force visible vertical scrollbar */
+    overflow-x: hidden;
     background: #f8f9fa;
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-gray) transparent;
+}
+
+/* WebKit scrollbar styling for document viewer */
+#document-viewer-container::-webkit-scrollbar {
+    width: 10px;
+}
+#document-viewer-container::-webkit-scrollbar-thumb {
+    background-color: var(--dark-gray);
+    border-radius: 6px;
+}
+#document-viewer-container::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 #pages-container {
@@ -379,15 +427,20 @@ footer {
     display: flex;
     border-bottom: 1px solid var(--dark-gray);
     margin-bottom: 1rem;
+    position: sticky; /* Keep tabs visible when left panel scrolls */
+    top: 0;
+    background: var(--light-gray);
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .tab-btn {
     background: none;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem; /* Bigger targets for easier clicking */
     cursor: pointer;
     border-bottom: 2px solid transparent;
-    font-size: 0.9rem;
+    font-size: 1.05rem; /* Larger label size */
 }
 
 .tab-btn.active {
@@ -408,10 +461,49 @@ footer {
     display: block;
 }
 
+/* Pages list styles */
+.pages-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.page-jump-btn {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--dark-gray);
+    background: var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    color: var(--font-color);
+}
+
+.page-jump-btn:hover {
+    background: var(--light-gray);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-jump-btn:active {
+    transform: translateY(0);
+}
+
+.page-jump-btn.active {
+    background: var(--secondary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+    font-weight: bold;
+}
+
 /* Raw Text Display */
 .raw-text-area {
     width: 100%;
-    height: 300px;
+    height: 700px; /* Show more content by default */
     padding: 1rem;
     border: 1px solid var(--dark-gray);
     border-radius: 4px;

@@ -1,0 +1,24 @@
+{
+  "corrections": [
+    {
+      "document_id": "40012ea9-9ba6-4838-93e8-5f1fdf67a727",
+      "page": 1,
+      "word_id": "p1_w41",
+      "original_text": "7402027M1610235ARE<<<<<<<<<<6",
+      "corrected_text": "7402027M1610235ARE<<<<<<<<<<<6",
+      "corrected_bbox": [
+        [
+          0.07712053571428573,
+          0.630859375
+        ],
+        [
+          0.940844931722689,
+          0.6552734375
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:22:21.714766"
+    }
+  ],
+  "document_id": "40012ea9-9ba6-4838-93e8-5f1fdf67a727"
+}

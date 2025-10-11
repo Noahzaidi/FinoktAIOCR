@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageIndicator = document.getElementById('page-indicator');
     const zoomLevel = document.getElementById('zoom-level');
     const pagesContainer = document.getElementById('pages-container');
+    const pagesList = document.getElementById('pages-list');
+    const leftPanel = document.getElementById('left-panel');
+    const rightPanel = document.getElementById('right-panel');
+    const resizer = document.getElementById('panel-resizer');
 
     // State variables
     let ocrData = null;
@@ -26,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let hoveredWord = null;
     let tooltip = null;
     let currentZoom = 1.0;
+    let isResizing = false;
+    let startX = 0;
+    let startLeftWidth = 0;
 
     // --- History for Undo/Redo ---
     let history = [];
@@ -75,11 +82,96 @@ document.addEventListener('DOMContentLoaded', () => {
             initializeTooltip();
             initializeZoomControls();
             loadDocumentClassification();
+            initializeResizer();
+            populatePagesList();
 
         } catch (error) {
             console.error('Error initializing app:', error);
             pagesContainer.innerHTML = `<p style="color: red;">Failed to load document data: ${error.message}</p>`;
         }
+    }
+    // --- Panel Resizer ---
+    function initializeResizer() {
+        if (!resizer || !leftPanel || !rightPanel) return;
+
+        // Load saved width if exists
+        const savedWidth = localStorage.getItem('leftPanelWidthPx');
+        if (savedWidth) {
+            applyLeftPanelWidth(parseInt(savedWidth, 10));
+        }
+
+        const minWidth = 320; // keep left panel usable
+        const maxWidth = Math.min(window.innerWidth * 0.7, 900);
+
+        const onMouseMove = (e) => {
+            if (!isResizing) return;
+            const delta = e.clientX - startX;
+            let newWidth = Math.max(minWidth, Math.min(startLeftWidth + delta, maxWidth));
+            applyLeftPanelWidth(newWidth);
+        };
+
+        const onMouseUp = () => {
+            if (!isResizing) return;
+            isResizing = false;
+            document.body.classList.remove('resizing');
+            window.removeEventListener('mousemove', onMouseMove);
+            window.removeEventListener('mouseup', onMouseUp);
+            // Persist
+            const width = parseInt(getComputedStyle(leftPanel).width, 10);
+            localStorage.setItem('leftPanelWidthPx', String(width));
+        };
+
+        const startResize = (clientX) => {
+            isResizing = true;
+            document.body.classList.add('resizing');
+            startX = clientX;
+            startLeftWidth = parseInt(getComputedStyle(leftPanel).width, 10);
+            window.addEventListener('mousemove', onMouseMove);
+            window.addEventListener('mouseup', onMouseUp);
+        };
+
+        resizer.addEventListener('mousedown', (e) => startResize(e.clientX));
+
+        // Keyboard accessibility: arrow keys to resize when resizer focused
+        resizer.addEventListener('keydown', (e) => {
+            const step = e.shiftKey ? 40 : 10;
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                const currentWidth = parseInt(getComputedStyle(leftPanel).width, 10);
+                let newWidth = e.key === 'ArrowLeft' ? currentWidth - step : currentWidth + step;
+                const clamped = Math.max(minWidth, Math.min(newWidth, maxWidth));
+                applyLeftPanelWidth(clamped);
+                localStorage.setItem('leftPanelWidthPx', String(clamped));
+            }
+        });
+
+        // Touch support
+        resizer.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            startResize(touch.clientX);
+        }, { passive: true });
+        window.addEventListener('touchmove', (e) => {
+            if (!isResizing) return;
+            const touch = e.touches[0];
+            const delta = touch.clientX - startX;
+            let newWidth = Math.max(minWidth, Math.min(startLeftWidth + delta, maxWidth));
+            applyLeftPanelWidth(newWidth);
+        }, { passive: true });
+        window.addEventListener('touchend', onMouseUp, { passive: true });
+        window.addEventListener('touchcancel', onMouseUp, { passive: true });
+
+        // Re-clamp on window resize
+        window.addEventListener('resize', () => {
+            const currentWidth = parseInt(getComputedStyle(leftPanel).width, 10);
+            const clamped = Math.max(minWidth, Math.min(currentWidth, Math.min(window.innerWidth * 0.7, 900)));
+            applyLeftPanelWidth(clamped);
+        });
+    }
+
+    function applyLeftPanelWidth(px) {
+        leftPanel.style.flex = `0 0 ${px}px`;
+        leftPanel.style.minWidth = `${px}px`;
+        leftPanel.style.maxWidth = `${px}px`;
     }
 
     // Start initialization
@@ -116,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pageContainer = document.createElement('div');
         pageContainer.className = 'page-container';
         pageContainer.dataset.page = pageIndex;
+        pageContainer.id = `page-container-${pageIndex}`;
 
         // Create page header
         const pageHeader = document.createElement('div');
@@ -206,6 +299,100 @@ document.addEventListener('DOMContentLoaded', () => {
             // Start with specific page image
             tryLoadImage(specificImageUrl);
         });
+    }
+    // --- Pages list / navigation ---
+    function populatePagesList() {
+        if (!pagesList || !ocrData || !ocrData.pages) return;
+        pagesList.innerHTML = '';
+        for (let i = 0; i < ocrData.pages.length; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'page-jump-btn';
+            btn.type = 'button';
+            btn.dataset.pageIndex = i;
+            btn.textContent = `Page ${i + 1}`;
+            btn.addEventListener('click', () => scrollToPage(i));
+            pagesList.appendChild(btn);
+        }
+        
+        // Set up scroll listener to highlight active page
+        const viewer = document.getElementById('document-viewer-container');
+        if (viewer) {
+            let scrollTimeout;
+            viewer.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    updateActivePageIndicator();
+                }, 100);
+            });
+        }
+    }
+    
+    function updateActivePageIndicator() {
+        const viewer = document.getElementById('document-viewer-container');
+        if (!viewer || !ocrData || !ocrData.pages) return;
+        
+        const viewerRect = viewer.getBoundingClientRect();
+        const viewerMidpoint = viewerRect.top + (viewerRect.height / 3); // Use upper third
+        
+        let activePageIndex = 0;
+        let closestDistance = Infinity;
+        
+        // Find which page is closest to the viewport midpoint
+        for (let i = 0; i < ocrData.pages.length; i++) {
+            const pageEl = document.getElementById(`page-container-${i}`);
+            if (!pageEl) continue;
+            
+            const pageRect = pageEl.getBoundingClientRect();
+            const pageTop = pageRect.top;
+            const pageBottom = pageRect.bottom;
+            
+            // Check if page is in view
+            if (pageTop <= viewerMidpoint && pageBottom >= viewerMidpoint) {
+                activePageIndex = i;
+                break;
+            }
+            
+            // Otherwise find closest
+            const distanceFromMidpoint = Math.abs(pageTop - viewerMidpoint);
+            if (distanceFromMidpoint < closestDistance) {
+                closestDistance = distanceFromMidpoint;
+                activePageIndex = i;
+            }
+        }
+        
+        // Update button states
+        const buttons = pagesList.querySelectorAll('.page-jump-btn');
+        buttons.forEach((btn, idx) => {
+            if (idx === activePageIndex) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+
+    function scrollToPage(index) {
+        const el = document.getElementById(`page-container-${index}`);
+        const viewer = document.getElementById('document-viewer-container');
+        if (!el || !viewer) return;
+        
+        // Calculate accurate scroll position relative to the viewer's scroll container
+        const viewerRect = viewer.getBoundingClientRect();
+        const elementRect = el.getBoundingClientRect();
+        const relativeTop = elementRect.top - viewerRect.top + viewer.scrollTop;
+        
+        // Scroll with some padding at the top
+        viewer.scrollTo({ 
+            top: relativeTop - 16, 
+            behavior: 'smooth' 
+        });
+        
+        // Visual feedback: highlight the page briefly
+        el.style.transition = 'box-shadow 0.3s ease';
+        el.style.boxShadow = '0 0 0 3px rgba(37, 99, 235, 0.5)';
+        setTimeout(() => {
+            el.style.boxShadow = '';
+        }, 1500);
     }
 
     function extractWordsFromPage(pageData, pageIndex) {
@@ -651,6 +838,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         statusText += ` (Pattern learned - will auto-correct in future uploads)`;
                     }
+                }
+                
+                // Show training sample creation
+                if (data.training_data_prepared) {
+                    statusText += ' 🎓 Training sample created!';
                 }
                 
                 saveStatus.textContent = statusText;
@@ -1182,10 +1374,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Load initial learning data
             await loadLearningData();
             
-            // Set up retraining button
-            const retrainBtn = document.getElementById('retrain-btn');
-            if (retrainBtn) {
-                retrainBtn.addEventListener('click', triggerRetraining);
+            // Set up retraining buttons
+            const retrainRealBtn = document.getElementById('retrain-real-btn');
+            if (retrainRealBtn) {
+                retrainRealBtn.addEventListener('click', () => triggerRetraining(true));
+            }
+            
+            const retrainStubBtn = document.getElementById('retrain-stub-btn');
+            if (retrainStubBtn) {
+                retrainStubBtn.addEventListener('click', () => triggerRetraining(false));
             }
             
             // Set up configuration controls
@@ -1194,14 +1391,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateThresholdBtn.addEventListener('click', updateLearningThreshold);
             }
             
+            // Set up deployment controls
+            const refreshModelsBtn = document.getElementById('refresh-models-btn');
+            if (refreshModelsBtn) {
+                refreshModelsBtn.addEventListener('click', loadAvailableModels);
+            }
+            
+            const rollbackBtn = document.getElementById('rollback-model-btn');
+            if (rollbackBtn) {
+                rollbackBtn.addEventListener('click', rollbackModel);
+            }
+            
             // Refresh learning data when tab is selected
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.addEventListener('click', async (e) => {
                     if (e.target.dataset.tab === 'learning') {
                         await loadLearningData();
+                        await loadAvailableModels();
+                        await loadDeploymentHistory();
                     }
                 });
             });
+            
+            // Load deployment info on initial load
+            await loadAvailableModels();
+            await loadDeploymentHistory();
             
         } catch (error) {
             console.error('Error initializing learning tab:', error);
@@ -1370,38 +1584,113 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    async function triggerRetraining() {
-        const retrainBtn = document.getElementById('retrain-btn');
+    async function triggerRetraining(isReal = false) {
+        const retrainBtn = isReal ? document.getElementById('retrain-real-btn') : document.getElementById('retrain-stub-btn');
         const retrainStatus = document.getElementById('retrain-status');
 
         if (!retrainBtn || !retrainStatus) return;
 
         try {
             retrainBtn.disabled = true;
-            retrainStatus.textContent = 'Starting retraining...';
+            
+            const endpoint = isReal ? '/api/retrain_real' : '/api/retrain_stub';
+            retrainStatus.textContent = isReal ? '🔥 Starting real PyTorch training...' : '🔄 Starting simulation...';
             retrainStatus.className = 'loading';
 
-            const response = await fetch('/api/retrain_stub', { method: 'POST' });
+            const response = await fetch(endpoint, { method: 'POST' });
             const data = await response.json();
 
             if (response.ok) {
-                retrainStatus.textContent = `${data.message} (${data.samples_used} samples)`;
+                let statusHTML;
+                
+                if (isReal) {
+                    // Real training completed
+                    statusHTML = `
+                        <div style="padding: 1rem; background: #d4edda; border: 2px solid #28a745; border-radius: 6px; margin-top: 0.5rem;">
+                            <strong style="color: #155724;">✅ TRAINING COMPLETED!</strong>
+                            <p style="margin: 0.5rem 0; color: #155724; font-size: 0.9rem;">
+                                ${data.message}
+                            </p>
+                            <p style="margin: 0.5rem 0; color: #155724; font-size: 0.85rem;">
+                                <strong>Samples used:</strong> ${data.samples_used} (${data.train_samples} train, ${data.val_samples} val)<br>
+                                <strong>Epochs:</strong> ${data.epochs_completed}<br>
+                                <strong>Final train loss:</strong> ${data.final_train_loss.toFixed(4)}<br>
+                                ${data.final_val_accuracy ? `<strong>Validation accuracy:</strong> ${(data.final_val_accuracy * 100).toFixed(1)}%<br>` : ''}
+                                <strong>Device:</strong> ${data.device.toUpperCase()}<br>
+                                <strong>Model saved:</strong> ✅
+                            </p>
+                            <div style="margin-top: 0.75rem; padding: 0.5rem; background: white; border-radius: 4px;">
+                                <p style="margin: 0.25rem 0; font-size: 0.85rem; color: #155724;"><strong>Next step:</strong> Deploy this model to use it in production!</p>
+                                <button onclick="loadAvailableModels()" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                                    View Models & Deploy
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // Stub simulation
+                    statusHTML = `
+                        <div style="padding: 1rem; background: #fff3cd; border: 2px solid #ffc107; border-radius: 6px; margin-top: 0.5rem;">
+                            <strong style="color: #856404;">⚠️ STUB IMPLEMENTATION</strong>
+                            <p style="margin: 0.5rem 0; color: #856404; font-size: 0.9rem;">
+                                ${data.message}
+                            </p>
+                            <p style="margin: 0.5rem 0; color: #856404; font-size: 0.85rem;">
+                                <strong>Samples used:</strong> ${data.samples_used}<br>
+                                <strong>Status:</strong> Training data collected ✅<br>
+                                <strong>Model updated:</strong> No ❌ (stub only)
+                            </p>
+                            <details style="margin-top: 0.5rem;">
+                                <summary style="cursor: pointer; color: #856404; font-size: 0.85rem; font-weight: bold;">
+                                    What does this mean? ▼
+                                </summary>
+                                <div style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 4px; font-size: 0.85rem; color: #333;">
+                                    <p><strong>This is just a simulation.</strong> Use the "🔥 Train Real Model" button for actual training.</p>
+                                </div>
+                            </details>
+                        </div>
+                    `;
+                }
+                
+                retrainStatus.innerHTML = statusHTML;
                 retrainStatus.className = 'success';
+                
+                // Log to console for visibility
+                console.log(isReal ? '🔥 REAL TRAINING COMPLETED' : '🔄 RETRAINING STUB COMPLETED');
+                console.log('Samples used:', data.samples_used);
+                if (isReal) {
+                    console.log('Final loss:', data.final_train_loss);
+                    console.log('Validation accuracy:', data.final_val_accuracy);
+                    console.log('Model path:', data.model_path);
+                    
+                    // Refresh models list
+                    await loadAvailableModels();
+                }
             } else {
-                retrainStatus.textContent = data.error || 'Retraining failed';
+                retrainStatus.innerHTML = `
+                    <div style="padding: 0.5rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">
+                        <strong>Error:</strong> ${data.error || 'Retraining failed'}
+                        ${data.samples_available !== undefined ? `<br><small>Available samples: ${data.samples_available}/10</small>` : ''}
+                    </div>
+                `;
                 retrainStatus.className = 'error';
             }
 
         } catch (error) {
             console.error('Retraining error:', error);
-            retrainStatus.textContent = 'Retraining failed - network error';
+            retrainStatus.innerHTML = `
+                <div style="padding: 0.5rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">
+                    <strong>Error:</strong> Retraining failed - network error
+                </div>
+            `;
             retrainStatus.className = 'error';
         } finally {
             retrainBtn.disabled = false;
-            setTimeout(() => {
-                retrainStatus.textContent = '';
-                retrainStatus.className = '';
-            }, 5000);
+            // Don't auto-hide this important message
+            // setTimeout(() => {
+            //     retrainStatus.textContent = '';
+            //     retrainStatus.className = '';
+            // }, 5000);
         }
     }
 
@@ -1480,6 +1769,229 @@ document.addEventListener('DOMContentLoaded', () => {
         } finally {
             updateBtn.disabled = false;
         }
+    }
+
+    // --- Model Deployment Functions ---
+    async function loadAvailableModels() {
+        try {
+            const response = await fetch('/api/models/available');
+            if (!response.ok) {
+                console.warn('Failed to load available models');
+                return;
+            }
+            
+            const data = await response.json();
+            displayAvailableModels(data.available_models, data.active_model);
+        } catch (error) {
+            console.error('Error loading available models:', error);
+        }
+    }
+    
+    function displayAvailableModels(models, activeModel) {
+        const container = document.getElementById('models-list-container');
+        const activeDetails = document.getElementById('active-model-details');
+        
+        // Display active model
+        if (activeDetails) {
+            if (activeModel) {
+                activeDetails.innerHTML = `
+                    <p style="margin: 0.25rem 0;"><strong>Model:</strong> Active (deployed)</p>
+                    <p style="margin: 0.25rem 0;"><strong>Epoch:</strong> ${activeModel.epoch}</p>
+                    <p style="margin: 0.25rem 0;"><strong>Accuracy:</strong> ${(activeModel.accuracy * 100).toFixed(1)}%</p>
+                    <p style="margin: 0.25rem 0;"><strong>Deployed:</strong> ${new Date(activeModel.deployed_at).toLocaleString()}</p>
+                `;
+            } else {
+                activeDetails.innerHTML = '<p style="margin: 0;">No model deployed yet</p>';
+            }
+        }
+        
+        // Display available models
+        if (container) {
+            if (!models || models.length === 0) {
+                container.innerHTML = '<p style="color: #666; font-style: italic; font-size: 0.85rem;">No trained models yet. Train a model first!</p>';
+                return;
+            }
+            
+            container.innerHTML = '';
+            models.forEach(model => {
+                const modelDiv = document.createElement('div');
+                modelDiv.className = 'model-item';
+                modelDiv.style.cssText = 'padding: 0.75rem; background: white; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 0.5rem;';
+                
+                const badge = model.is_best ? '<span style="background: #28a745; color: white; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.75rem; margin-left: 0.5rem;">BEST</span>' : 
+                             model.is_latest ? '<span style="background: #0077b6; color: white; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.75rem; margin-left: 0.5rem;">LATEST</span>' : '';
+                
+                modelDiv.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="flex: 1;">
+                            <p style="margin: 0; font-weight: bold; font-size: 0.9rem;">${model.filename}${badge}</p>
+                            <p style="margin: 0.25rem 0; font-size: 0.8rem; color: #666;">
+                                Epoch ${model.epoch} | Loss: ${model.loss.toFixed(4)} | Acc: ${(model.accuracy * 100).toFixed(1)}%
+                            </p>
+                            <p style="margin: 0.25rem 0; font-size: 0.75rem; color: #999;">${model.size_mb.toFixed(2)} MB</p>
+                        </div>
+                        <button 
+                            class="deploy-model-btn btn-small" 
+                            data-filename="${model.filename}"
+                            style="white-space: nowrap;">
+                            🚀 Deploy
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(modelDiv);
+            });
+            
+            // Add click handlers to deploy buttons
+            container.querySelectorAll('.deploy-model-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    const filename = e.target.dataset.filename;
+                    await deployModel(filename);
+                });
+            });
+        }
+    }
+    
+    async function deployModel(filename) {
+        const deploymentStatus = document.getElementById('deployment-status');
+        
+        if (!confirm(`Deploy model "${filename}" to production?\n\nThis will make it the active OCR model.`)) {
+            return;
+        }
+        
+        try {
+            deploymentStatus.textContent = '🚀 Deploying model...';
+            deploymentStatus.className = 'loading';
+            
+            const formData = new FormData();
+            formData.append('model_filename', filename);
+            formData.append('deployed_by', 'user');
+            formData.append('notes', `Deployed via UI at ${new Date().toLocaleString()}`);
+            
+            const response = await fetch('/api/models/deploy', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok) {
+                deploymentStatus.innerHTML = `
+                    <div style="padding: 0.75rem; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; margin-top: 0.5rem; color: #155724;">
+                        <strong>✅ Deployment Successful!</strong><br>
+                        <small>Model "${filename}" is now active</small>
+                    </div>
+                `;
+                deploymentStatus.className = 'success';
+                
+                // Refresh displays
+                await loadAvailableModels();
+                await loadDeploymentHistory();
+                
+                setTimeout(() => {
+                    deploymentStatus.innerHTML = '';
+                }, 5000);
+            } else {
+                deploymentStatus.innerHTML = `
+                    <div style="padding: 0.5rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">
+                        <strong>Error:</strong> ${data.error}
+                    </div>
+                `;
+                deploymentStatus.className = 'error';
+            }
+        } catch (error) {
+            console.error('Deployment error:', error);
+            deploymentStatus.innerHTML = `
+                <div style="padding: 0.5rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">
+                    <strong>Error:</strong> Deployment failed
+                </div>
+            `;
+            deploymentStatus.className = 'error';
+        }
+    }
+    
+    async function rollbackModel() {
+        if (!confirm('Rollback to the previous deployed model?\n\nThis will restore the last active model.')) {
+            return;
+        }
+        
+        const deploymentStatus = document.getElementById('deployment-status');
+        
+        try {
+            deploymentStatus.textContent = '↩️ Rolling back...';
+            deploymentStatus.className = 'loading';
+            
+            const response = await fetch('/api/models/rollback', { method: 'POST' });
+            const data = await response.json();
+            
+            if (response.ok) {
+                deploymentStatus.innerHTML = `
+                    <div style="padding: 0.75rem; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; margin-top: 0.5rem; color: #155724;">
+                        <strong>✅ Rollback Successful!</strong><br>
+                        <small>Restored previous model</small>
+                    </div>
+                `;
+                
+                await loadAvailableModels();
+                await loadDeploymentHistory();
+                
+                setTimeout(() => {
+                    deploymentStatus.innerHTML = '';
+                }, 5000);
+            } else {
+                deploymentStatus.innerHTML = `
+                    <div style="padding: 0.5rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">
+                        <strong>Error:</strong> ${data.error}
+                    </div>
+                `;
+            }
+        } catch (error) {
+            console.error('Rollback error:', error);
+            deploymentStatus.innerHTML = `
+                <div style="padding: 0.5rem; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; color: #721c24;">
+                    <strong>Error:</strong> Rollback failed
+                </div>
+            `;
+        }
+    }
+    
+    async function loadDeploymentHistory() {
+        try {
+            const response = await fetch('/api/models/deployment-history');
+            if (!response.ok) return;
+            
+            const data = await response.json();
+            displayDeploymentHistory(data.history);
+        } catch (error) {
+            console.error('Error loading deployment history:', error);
+        }
+    }
+    
+    function displayDeploymentHistory(history) {
+        const container = document.getElementById('deployment-history-list');
+        if (!container) return;
+        
+        if (!history || history.length === 0) {
+            container.innerHTML = '<p style="color: #666; font-style: italic;">No deployments yet</p>';
+            return;
+        }
+        
+        container.innerHTML = '';
+        history.slice(0, 5).forEach(record => {
+            const item = document.createElement('div');
+            item.style.cssText = 'padding: 0.5rem; background: #f8f9fa; border-left: 3px solid #0077b6; border-radius: 3px; margin-bottom: 0.5rem;';
+            
+            const action = record.action === 'rollback' ? '↩️ Rollback' : '🚀 Deploy';
+            const modelName = record.source_model || 'Unknown';
+            const timestamp = new Date(record.deployed_at).toLocaleString();
+            
+            item.innerHTML = `
+                <p style="margin: 0; font-size: 0.85rem;"><strong>${action}</strong> ${modelName}</p>
+                <p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #666;">${timestamp}</p>
+            `;
+            
+            container.appendChild(item);
+        });
     }
 
     // --- Document Classification Functions ---

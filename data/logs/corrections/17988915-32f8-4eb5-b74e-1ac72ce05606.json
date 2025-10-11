@@ -1,0 +1,43 @@
+{
+  "corrections": [
+    {
+      "document_id": "17988915-32f8-4eb5-b74e-1ac72ce05606",
+      "page": 1,
+      "word_id": "p1_w57",
+      "original_text": "HOXHAS<MERITAS<<<<<<<<<<<<<<",
+      "corrected_text": "HOXHA<<MERITA<<<<<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.052245273109243706,
+          0.6552734375
+        ],
+        [
+          0.9532825630252101,
+          0.67578125
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:18:23.189297"
+    },
+    {
+      "document_id": "17988915-32f8-4eb5-b74e-1ac72ce05606",
+      "page": 1,
+      "word_id": "p1_w55",
+      "original_text": "IDRKSIDO00000005<<<<<<<<<<<<<<<",
+      "corrected_text": "IDRKSID00000005<<<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.052245273109243706,
+          0.5830078125
+        ],
+        [
+          0.9519006039915967,
+          0.6044921875
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:20:07.316037"
+    }
+  ],
+  "document_id": "17988915-32f8-4eb5-b74e-1ac72ce05606"
+}

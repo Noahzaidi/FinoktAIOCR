@@ -1,0 +1,902 @@
+{
+  "document_id": "40012ea9-9ba6-4838-93e8-5f1fdf67a727",
+  "extraction_timestamp": "2025-10-11T15:22:21.766078",
+  "pages": [
+    {
+      "page_num": 1,
+      "words": [
+        {
+          "text": "United",
+          "bbox": [
+            0.02737001050420168,
+            0.2978515625
+          ],
+          "confidence": 0.99,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Arab",
+          "bbox": [
+            0.1531282825630252,
+            0.298828125
+          ],
+          "confidence": 0.8048,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Emirates",
+          "bbox": [
+            0.25124737394957986,
+            0.2998046875
+          ],
+          "confidence": 0.9879,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Saia",
+          "bbox": [
+            0.5608061974789916,
+            0.2919921875
+          ],
+          "confidence": 0.3019,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "al",
+          "bbox": [
+            0.6713629201680672,
+            0.2939453125
+          ],
+          "confidence": 0.4122,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "u4y",
+          "bbox": [
+            0.7750098476890757,
+            0.294921875
+          ],
+          "confidence": 0.2081,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "14",
+          "bbox": [
+            0.8897124474789916,
+            0.2958984375
+          ],
+          "confidence": 0.3806,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Identity",
+          "bbox": [
+            0.13516281512605044,
+            0.3525390625
+          ],
+          "confidence": 0.9906,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Card",
+          "bbox": [
+            0.2581571691176471,
+            0.3525390625
+          ],
+          "confidence": 0.9938,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Lygs",
+          "bbox": [
+            0.6616892069327731,
+            0.341796875
+          ],
+          "confidence": 0.3535,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "dah,",
+          "bbox": [
+            0.7528985031512605,
+            0.341796875
+          ],
+          "confidence": 0.2433,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ID",
+          "bbox": [
+            0.34936646533613447,
+            0.4150390625
+          ],
+          "confidence": 0.8613,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Number",
+          "bbox": [
+            0.3894432773109244,
+            0.4169921875
+          ],
+          "confidence": 0.8166,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "/",
+          "bbox": [
+            0.4944721638655462,
+            0.4150390625
+          ],
+          "confidence": 0.7973,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "L",
+          "bbox": [
+            0.5138195903361344,
+            0.4130859375
+          ],
+          "confidence": 0.4961,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "A",
+          "bbox": [
+            0.6105567226890756,
+            0.4130859375
+          ],
+          "confidence": 0.7126,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "784-1974-7260635-5",
+          "bbox": [
+            0.37147780987394957,
+            0.4482421875
+          ],
+          "confidence": 0.8732,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "VOID",
+          "bbox": [
+            0.39497111344537816,
+            0.4892578125
+          ],
+          "confidence": 0.5411,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AALA",
+          "bbox": [
+            0.20426076680672267,
+            0.5458984375
+          ],
+          "confidence": 0.2547,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FE",
+          "bbox": [
+            0.2816504726890756,
+            0.544921875
+          ],
+          "confidence": 0.312,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sadluc",
+          "bbox": [
+            0.35213038340336134,
+            0.541015625
+          ],
+          "confidence": 0.1952,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Lawiawy",
+          "bbox": [
+            0.5082917542016807,
+            0.5390625
+          ],
+          "confidence": 0.5494,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "GASI",
+          "bbox": [
+            0.4889443277310924,
+            0.572265625
+          ],
+          "confidence": 0.2335,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Name:",
+          "bbox": [
+            0.02184217436974789,
+            0.6005859375
+          ],
+          "confidence": 0.9622,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Saif",
+          "bbox": [
+            0.11028755252100841,
+            0.6025390625
+          ],
+          "confidence": 0.9773,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Abdulrahman",
+          "bbox": [
+            0.17109375,
+            0.603515625
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Obaid",
+          "bbox": [
+            0.3618040966386554,
+            0.603515625
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Mohammed",
+          "bbox": [
+            0.45024947478991595,
+            0.6025390625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Alkaabi",
+          "bbox": [
+            0.11028755252100841,
+            0.6279296875
+          ],
+          "confidence": 0.9919,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sas1al",
+          "bbox": [
+            0.2291360294117647,
+            0.65234375
+          ],
+          "confidence": 0.2097,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "wal",
+          "bbox": [
+            0.335546875,
+            0.6494140625
+          ],
+          "confidence": 0.5572,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ayi",
+          "bbox": [
+            0.43366596638655464,
+            0.6533203125
+          ],
+          "confidence": 0.4524,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "<",
+          "bbox": [
+            0.5953551733193277,
+            0.66015625
+          ],
+          "confidence": 0.5617,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "-"
+        },
+        {
+          "text": "aJ",
+          "bbox": [
+            0.6119386817226891,
+            0.654296875
+          ],
+          "confidence": 0.3579,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Nationality:",
+          "bbox": [
+            0.023224133403361324,
+            0.6806640625
+          ],
+          "confidence": 0.9702,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "United",
+          "bbox": [
+            0.16971179096638656,
+            0.681640625
+          ],
+          "confidence": 0.9646,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Arab",
+          "bbox": [
+            0.2636850052521008,
+            0.681640625
+          ],
+          "confidence": 0.9259,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Emirates",
+          "bbox": [
+            0.3396927521008403,
+            0.681640625
+          ],
+          "confidence": 0.6986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 38,
+      "average_confidence": 0.6563
+    },
+    {
+      "page_num": 2,
+      "words": [
+        {
+          "text": "00769/01",
+          "bbox": [
+            0.43781184348739494,
+            0.296875
+          ],
+          "confidence": 0.9409,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sex:",
+          "bbox": [
+            0.046717436974789917,
+            0.3232421875
+          ],
+          "confidence": 0.9036,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "7402027M1610235ARE<<<<<<<<<<<6",
+          "bbox": [
+            0.10614167542016806,
+            0.32421875
+          ],
+          "confidence": 0.9942,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": "M"
+        },
+        {
+          "text": "si:u4",
+          "bbox": [
+            0.17662158613445378,
+            0.3212890625
+          ],
+          "confidence": 0.3759,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Date",
+          "bbox": [
+            0.6133206407563025,
+            0.322265625
+          ],
+          "confidence": 0.9884,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.6796546743697479,
+            0.3212890625
+          ],
+          "confidence": 0.994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Birth",
+          "bbox": [
+            0.714203650210084,
+            0.322265625
+          ],
+          "confidence": 0.9836,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "/sJy",
+          "bbox": [
+            0.7708639705882353,
+            0.3203125
+          ],
+          "confidence": 0.4034,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "a",
+          "bbox": [
+            0.8537815126050421,
+            0.3310546875
+          ],
+          "confidence": 0.9342,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "U",
+          "bbox": [
+            0.8980042016806722,
+            0.3232421875
+          ],
+          "confidence": 0.3741,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "02/02/1974",
+          "bbox": [
+            0.7031479779411764,
+            0.349609375
+          ],
+          "confidence": 0.5798,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Card",
+          "bbox": [
+            0.046717436974789917,
+            0.3984375
+          ],
+          "confidence": 0.672,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Number",
+          "bbox": [
+            0.11719734768907564,
+            0.3974609375
+          ],
+          "confidence": 0.8712,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AGLLI",
+          "bbox": [
+            0.22775407037815126,
+            0.3935546875
+          ],
+          "confidence": 0.4231,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "A",
+          "bbox": [
+            0.33692883403361346,
+            0.39453125
+          ],
+          "confidence": 0.529,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Expiry/asduall",
+          "bbox": [
+            0.4143185399159664,
+            0.392578125
+          ],
+          "confidence": 0.407,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "04C0009FE61A056F",
+          "bbox": [
+            0.6782727153361344,
+            0.4150390625
+          ],
+          "confidence": 0.4132,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "000005277",
+          "bbox": [
+            0.1158153886554622,
+            0.4287109375
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "23/10/2016",
+          "bbox": [
+            0.45163143382352944,
+            0.4267578125
+          ],
+          "confidence": 0.8676,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Myou",
+          "bbox": [
+            0.030133928571428548,
+            0.4697265625
+          ],
+          "confidence": 0.3656,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "find",
+          "bbox": [
+            0.08403033088235295,
+            0.46875
+          ],
+          "confidence": 0.8356,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "this",
+          "bbox": [
+            0.1254891018907563,
+            0.470703125
+          ],
+          "confidence": 0.9948,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "card,",
+          "bbox": [
+            0.16418395483193277,
+            0.4697265625
+          ],
+          "confidence": 0.9779,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "please",
+          "bbox": [
+            0.21669839810924368,
+            0.4697265625
+          ],
+          "confidence": 0.978,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "retum",
+          "bbox": [
+            0.2844143907563025,
+            0.4716796875
+          ],
+          "confidence": 0.9408,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "it",
+          "bbox": [
+            0.3452205882352941,
+            0.470703125
+          ],
+          "confidence": 0.9862,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Saut",
+          "bbox": [
+            0.4889443277310924,
+            0.4580078125
+          ],
+          "confidence": 0.432,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "tothe",
+          "bbox": [
+            0.06606486344537815,
+            0.48828125
+          ],
+          "confidence": 0.9437,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "issuing",
+          "bbox": [
+            0.12963497899159665,
+            0.4892578125
+          ],
+          "confidence": 0.5488,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "organisation",
+          "bbox": [
+            0.2014968487394958,
+            0.490234375
+          ],
+          "confidence": 0.9626,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "or",
+          "bbox": [
+            0.049481355042016784,
+            0.509765625
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "to",
+          "bbox": [
+            0.07573857668067224,
+            0.5087890625
+          ],
+          "confidence": 0.9931,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "the",
+          "bbox": [
+            0.09923188025210083,
+            0.5087890625
+          ],
+          "confidence": 0.9344,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "nearest",
+          "bbox": [
+            0.13516281512605044,
+            0.509765625
+          ],
+          "confidence": 0.9906,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "police",
+          "bbox": [
+            0.20840664390756303,
+            0.5078125
+          ],
+          "confidence": 0.9975,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "station",
+          "bbox": [
+            0.27059480042016804,
+            0.509765625
+          ],
+          "confidence": 0.8524,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Signaturel,",
+          "bbox": [
+            0.41708245798319327,
+            0.501953125
+          ],
+          "confidence": 0.6028,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "L",
+          "bbox": [
+            0.5690979516806722,
+            0.509765625
+          ],
+          "confidence": 0.9669,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "a",
+          "bbox": [
+            0.6064108455882353,
+            0.5029296875
+          ],
+          "confidence": 0.3135,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IDARE0000052777784197472606355",
+          "bbox": [
+            0.07712053571428573,
+            0.5908203125
+          ],
+          "confidence": 0.8643,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "7402027M1610235ARE<<<<<<<<<<6",
+          "bbox": [
+            0.07712053571428573,
+            0.630859375
+          ],
+          "confidence": 0.8674,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ALKAABI<<SAIF<ABDULRAHMAN<OBAI",
+          "bbox": [
+            0.07712053571428573,
+            0.67578125
+          ],
+          "confidence": 0.8529,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 42,
+      "average_confidence": 0.7823
+    }
+  ],
+  "total_words": 80,
+  "overall_confidence": 0.7225
+}

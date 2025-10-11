@@ -343,46 +343,291 @@ async def trigger_retraining_stub():
         # Count available training samples
         sample_count = len(list(training_dir.glob("*.json"))) if training_dir.exists() else 0
         
+        logger.info(f"🔄 RETRAINING REQUEST: {sample_count} samples available")
+        
         if sample_count < 10:
+            logger.warning(f"⚠️ Insufficient samples for retraining: {sample_count}/10")
             return JSONResponse(
                 status_code=400,
                 content={
                     "error": "Insufficient training data",
                     "message": f"Need at least 10 samples, found {sample_count}",
-                    "samples_available": sample_count
+                    "samples_available": sample_count,
+                    "is_stub": True
                 }
             )
         
-        # Simulate retraining process
-        logger.info(f"Retraining stub triggered with {sample_count} samples")
+        # Log all samples being used
+        logger.info(f"📚 Using {sample_count} training samples for retraining:")
+        json_files = list(training_dir.glob("*.json"))
+        for idx, json_file in enumerate(json_files[:5], 1):  # Log first 5
+            try:
+                with json_file.open('r') as f:
+                    sample = json.load(f)
+                logger.info(f"   {idx}. '{sample.get('original_text')}' → '{sample.get('corrected_text')}'")
+            except:
+                pass
+        if sample_count > 5:
+            logger.info(f"   ... and {sample_count - 5} more samples")
         
         # Create a stub retraining log
         models_dir = Path("models/ocr_weights")
         models_dir.mkdir(parents=True, exist_ok=True)
+        
+        logger.warning("⚠️ STUB IMPLEMENTATION: This is a simulation, not real retraining!")
+        logger.info("💡 Real retraining would:")
+        logger.info("   1. Load DocTR model weights")
+        logger.info("   2. Fine-tune on training samples")
+        logger.info("   3. Validate accuracy improvement")
+        logger.info("   4. Save updated model")
         
         retraining_log = {
             "timestamp": __import__("datetime").datetime.utcnow().isoformat(),
             "samples_used": sample_count,
             "status": "completed_stub",
             "model_version": "v1.0_stub",
-            "notes": "This is a stub implementation. Real retraining would fine-tune DocTR here."
+            "is_stub": True,
+            "notes": "⚠️ STUB: This is a simulation. Real retraining would fine-tune DocTR model on the collected samples.",
+            "next_steps": [
+                "Implement PyTorch fine-tuning pipeline",
+                "Load DocTR pre-trained weights",
+                "Create training loop with samples",
+                "Validate on test set",
+                "Save and deploy improved model"
+            ]
         }
         
         log_path = models_dir / f"retraining_log_{__import__('datetime').datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json"
         with log_path.open("w", encoding="utf-8") as f:
             json.dump(retraining_log, f, ensure_ascii=False, indent=2)
         
+        logger.info(f"✅ Retraining stub completed - log saved to: {log_path}")
+        
         return JSONResponse(content={
             "status": "success",
-            "message": "Retraining completed (stub)",
+            "message": "⚠️ Retraining Simulation Completed (This is a STUB - no actual model update)",
             "samples_used": sample_count,
             "model_version": "v1.0_stub",
-            "log_file": str(log_path)
+            "log_file": str(log_path),
+            "is_stub": True,
+            "warning": "This is a simulation. The OCR model has NOT been actually retrained. Training samples are collected and ready for real implementation."
         })
         
     except Exception as e:
-        logger.error(f"Retraining stub failed: {e}")
-        return JSONResponse(status_code=500, content={"error": f"Retraining failed: {str(e)}"})
+        logger.error(f"❌ Retraining stub failed: {e}")
+        return JSONResponse(status_code=500, content={"error": f"Retraining failed: {str(e)}", "is_stub": True})
+
+
+@app.post("/api/retrain_real")
+async def trigger_real_retraining(
+    epochs: int = Form(20),
+    batch_size: int = Form(16),
+    learning_rate: float = Form(0.001)
+):
+    """Real OCR model retraining endpoint using PyTorch."""
+    try:
+        from training.train_service import TrainingService
+        
+        logger.info("=" * 60)
+        logger.info("🚀 REAL OCR MODEL RETRAINING REQUESTED")
+        logger.info("=" * 60)
+        logger.info(f"Parameters:")
+        logger.info(f"  Epochs: {epochs}")
+        logger.info(f"  Batch size: {batch_size}")
+        logger.info(f"  Learning rate: {learning_rate}")
+        
+        # Initialize training service
+        service = TrainingService()
+        
+        # Check if training can proceed
+        can_train, message = service.can_train(min_samples=10)
+        sample_count = service.count_samples()
+        
+        if not can_train:
+            logger.warning(f"⚠️ {message}")
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "error": "Insufficient training data",
+                    "message": message,
+                    "samples_available": sample_count,
+                    "is_stub": False
+                }
+            )
+        
+        logger.info(f"✅ {message}")
+        logger.info(f"🎓 Starting real model training...")
+        
+        # Train the model (this will take time)
+        report = service.train_model(
+            num_epochs=epochs,
+            batch_size=batch_size,
+            learning_rate=learning_rate,
+            val_ratio=0.2
+        )
+        
+        logger.info("=" * 60)
+        logger.info("✅ TRAINING COMPLETED SUCCESSFULLY!")
+        logger.info("=" * 60)
+        logger.info(f"Final train loss: {report['final_train_loss']:.4f}")
+        if report['final_val_accuracy']:
+            logger.info(f"Final val accuracy: {report['final_val_accuracy']:.2%}")
+        logger.info(f"Model saved to: {report['model_path']}")
+        
+        return JSONResponse(content={
+            "status": "success",
+            "message": "✅ Real OCR Model Training Completed!",
+            "is_stub": False,
+            "samples_used": report['samples_used'],
+            "train_samples": report['train_samples'],
+            "val_samples": report['val_samples'],
+            "epochs_completed": report['epochs'],
+            "final_train_loss": float(report['final_train_loss']),
+            "final_val_loss": float(report['final_val_loss']) if report['final_val_loss'] else None,
+            "final_val_accuracy": float(report['final_val_accuracy']) if report['final_val_accuracy'] else None,
+            "best_val_accuracy": float(report['best_val_accuracy']) if report['best_val_accuracy'] else None,
+            "model_path": report['model_path'],
+            "device": report['device'],
+            "vocab_size": report['vocab_size']
+        })
+        
+    except ImportError as e:
+        logger.error(f"❌ Training module not available: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={
+                "error": "Training module not available",
+                "message": "PyTorch training dependencies not installed. Install with: pip install torch torchvision",
+                "is_stub": False
+            }
+        )
+    except Exception as e:
+        logger.error(f"❌ Real retraining failed: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        return JSONResponse(
+            status_code=500,
+            content={
+                "error": f"Real retraining failed: {str(e)}",
+                "is_stub": False
+            }
+        )
+
+
+@app.get("/api/models/available")
+async def get_available_models():
+    """List all trained models available for deployment."""
+    try:
+        from training.model_deployment import ModelDeploymentManager
+        
+        manager = ModelDeploymentManager()
+        models = manager.list_available_models()
+        active = manager.get_active_model_info()
+        
+        return JSONResponse(content={
+            "status": "success",
+            "available_models": models,
+            "active_model": active,
+            "total_models": len(models)
+        })
+    except ImportError:
+        return JSONResponse(
+            status_code=500,
+            content={"error": "Deployment module not available"}
+        )
+    except Exception as e:
+        logger.error(f"Failed to list models: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"error": f"Failed to list models: {str(e)}"}
+        )
+
+
+@app.post("/api/models/deploy")
+async def deploy_model(
+    model_filename: str = Form(...),
+    deployed_by: str = Form("user"),
+    notes: str = Form("")
+):
+    """Deploy a trained model to production."""
+    try:
+        from training.model_deployment import ModelDeploymentManager
+        
+        logger.info(f"🚀 Deployment request: {model_filename} by {deployed_by}")
+        
+        manager = ModelDeploymentManager()
+        result = manager.deploy_model(model_filename, deployed_by, notes)
+        
+        return JSONResponse(content=result)
+        
+    except ImportError:
+        return JSONResponse(
+            status_code=500,
+            content={"error": "Deployment module not available"}
+        )
+    except FileNotFoundError as e:
+        return JSONResponse(
+            status_code=404,
+            content={"error": str(e)}
+        )
+    except Exception as e:
+        logger.error(f"Deployment failed: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        return JSONResponse(
+            status_code=500,
+            content={"error": f"Deployment failed: {str(e)}"}
+        )
+
+
+@app.post("/api/models/rollback")
+async def rollback_model():
+    """Rollback to the previous deployed model."""
+    try:
+        from training.model_deployment import ModelDeploymentManager
+        
+        logger.info("🔄 Rollback request")
+        
+        manager = ModelDeploymentManager()
+        result = manager.rollback_to_previous()
+        
+        return JSONResponse(content=result)
+        
+    except ValueError as e:
+        return JSONResponse(
+            status_code=400,
+            content={"error": str(e)}
+        )
+    except Exception as e:
+        logger.error(f"Rollback failed: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"error": f"Rollback failed: {str(e)}"}
+        )
+
+
+@app.get("/api/models/deployment-history")
+async def get_deployment_history(limit: int = 10):
+    """Get model deployment history."""
+    try:
+        from training.model_deployment import ModelDeploymentManager
+        
+        manager = ModelDeploymentManager()
+        history = manager.get_deployment_history(limit)
+        
+        return JSONResponse(content={
+            "status": "success",
+            "history": history,
+            "total_records": len(history)
+        })
+        
+    except Exception as e:
+        logger.error(f"Failed to get deployment history: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"error": f"Failed to get history: {str(e)}"}
+        )
+
 
 @app.get("/api/document_types")
 async def get_document_types():
@@ -636,6 +881,25 @@ async def save_correction(
         except Exception as e:
             logger.warning(f"⚠️ Lexicon update failed but correction saved: {e}")
 
+        # Prepare training data (background task - won't block response)
+        training_data_prepared = False
+        try:
+            import asyncio
+            asyncio.create_task(
+                prepare_training_data_async(
+                    doc_id=doc_id,
+                    page=page,
+                    word_id=word_id,
+                    original_text=text_for_lexicon,
+                    corrected_text=corrected_text,
+                    bbox=bbox
+                )
+            )
+            training_data_prepared = True
+            logger.info(f"🎓 Training data preparation task created for word {word_id}")
+        except Exception as e:
+            logger.warning(f"⚠️ Training data preparation failed (non-blocking): {e}")
+
         # Return success response
         message = "Correction saved successfully"
         if lexicon_updated:
@@ -644,10 +908,14 @@ async def save_correction(
             else:
                 message += " - Added to lexicon"
         
+        if training_data_prepared:
+            message += " - Training sample created"
+        
         response_data = {
             "status": "success", 
             "message": message,
             "lexicon_updated": lexicon_updated,
+            "training_data_prepared": training_data_prepared,
             "correction_frequency": current_frequency if 'current_frequency' in locals() else 1,
             "lexicon_size": len(lexicon_data) if 'lexicon_data' in locals() else 0
         }

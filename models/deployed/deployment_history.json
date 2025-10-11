@@ -1,0 +1,16 @@
+[
+  {
+    "deployed_at": "2025-10-11T16:04:07.431280",
+    "source_model": "latest_model.pth",
+    "deployed_path": "models\\deployed\\deployed_20251011_160407.pth",
+    "backup_path": null,
+    "deployed_by": "user",
+    "notes": "Deployed via UI at 11/10/2025, 18:04:07",
+    "model_info": {
+      "epoch": 20,
+      "loss": 3.222440481185913,
+      "accuracy": 0.0,
+      "vocab_size": 35
+    }
+  }
+]

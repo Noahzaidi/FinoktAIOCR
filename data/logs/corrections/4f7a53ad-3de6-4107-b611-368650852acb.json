@@ -1,0 +1,81 @@
+{
+  "corrections": [
+    {
+      "document_id": "4f7a53ad-3de6-4107-b611-368650852acb",
+      "page": 0,
+      "word_id": "p0_w25",
+      "original_text": "<X73694690<<<<<",
+      "corrected_text": "<X7369469Q<<<<<",
+      "corrected_bbox": [
+        [
+          0.494140625,
+          0.6144138313609467
+        ],
+        [
+          0.828125,
+          0.6664201183431953
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:31:05.495346"
+    },
+    {
+      "document_id": "4f7a53ad-3de6-4107-b611-368650852acb",
+      "page": 0,
+      "word_id": "p0_w27",
+      "original_text": "ZAIDI<<SALAHKEDDINE<<<<<<<<<<<",
+      "corrected_text": "ZAIDI<<SALAH<EDDINE<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.1611328125,
+          0.7444295488165681
+        ],
+        [
+          0.826171875,
+          0.7964358357988166
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:32:19.796940"
+    },
+    {
+      "document_id": "4f7a53ad-3de6-4107-b611-368650852acb",
+      "page": 0,
+      "word_id": "p0_w6",
+      "original_text": "AGADIRMAR",
+      "corrected_text": "AGADIR-MAR",
+      "corrected_bbox": [
+        [
+          0.2900390625,
+          0.19142936390532544
+        ],
+        [
+          0.416015625,
+          0.23130085059171596
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:32:49.701808"
+    },
+    {
+      "document_id": "4f7a53ad-3de6-4107-b611-368650852acb",
+      "page": 0,
+      "word_id": "p0_w9",
+      "original_text": "VM",
+      "corrected_text": "V-M",
+      "corrected_bbox": [
+        [
+          0.1611328125,
+          0.2729058801775148
+        ],
+        [
+          0.2021484375,
+          0.3162444526627219
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:32:58.248257"
+    }
+  ],
+  "document_id": "4f7a53ad-3de6-4107-b611-368650852acb"
+}

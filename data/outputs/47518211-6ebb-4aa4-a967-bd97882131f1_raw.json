@@ -1,0 +1,521 @@
+{
+  "document_id": "47518211-6ebb-4aa4-a967-bd97882131f1",
+  "extraction_timestamp": "2025-10-11T15:09:16.206956",
+  "pages": [
+    {
+      "page_num": 1,
+      "words": [
+        {
+          "text": "AugentarbeiColour",
+          "bbox": [
+            0.04296875,
+            0.0166015625
+          ],
+          "confidence": 0.6074,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.1904296875,
+            0.014973958333333315
+          ],
+          "confidence": 0.9846,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "eyes/Couleur",
+          "bbox": [
+            0.2109375,
+            0.0166015625
+          ],
+          "confidence": 0.538,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "des",
+          "bbox": [
+            0.314453125,
+            0.013346354166666685
+          ],
+          "confidence": 0.9937,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "yeux",
+          "bbox": [
+            0.3466796875,
+            0.019856770833333315
+          ],
+          "confidence": 0.9966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Anschrift/Adress/Adresse",
+          "bbox": [
+            0.4482421875,
+            0.013346354166666685
+          ],
+          "confidence": 0.7615,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "GRUN",
+          "bbox": [
+            0.046875,
+            0.044270833333333315
+          ],
+          "confidence": 0.9976,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "51147",
+          "bbox": [
+            0.4521484375,
+            0.052408854166666685
+          ],
+          "confidence": 0.9882,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BERLIN",
+          "bbox": [
+            0.5732421875,
+            0.052408854166666685
+          ],
+          "confidence": 0.9966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Grobe/Height/Taille",
+          "bbox": [
+            0.04296875,
+            0.11263020833333331
+          ],
+          "confidence": 0.6608,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LUKASSTRASSE",
+          "bbox": [
+            0.455078125,
+            0.12239583333333331
+          ],
+          "confidence": 0.4973,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "17",
+          "bbox": [
+            0.7099609375,
+            0.11751302083333331
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "160",
+          "bbox": [
+            0.046875,
+            0.14680989583333331
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "cm",
+          "bbox": [
+            0.1279296875,
+            0.15494791666666669
+          ],
+          "confidence": 0.9974,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Datum/Date/Date",
+          "bbox": [
+            0.04296875,
+            0.20865885416666669
+          ],
+          "confidence": 0.66,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "01.11.10",
+          "bbox": [
+            0.0498046875,
+            0.24609375
+          ],
+          "confidence": 0.9959,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Behorde/Authority/Autorité",
+          "bbox": [
+            0.04296875,
+            0.32584635416666663
+          ],
+          "confidence": 0.6158,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Ordens-",
+          "bbox": [
+            0.447265625,
+            0.32259114583333337
+          ],
+          "confidence": 0.9963,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "oder",
+          "bbox": [
+            0.51171875,
+            0.32096354166666663
+          ],
+          "confidence": 0.9881,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "KunstlemamelReligious",
+          "bbox": [
+            0.5517578125,
+            0.32096354166666663
+          ],
+          "confidence": 0.704,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "name",
+          "bbox": [
+            0.7392578125,
+            0.32747395833333337
+          ],
+          "confidence": 0.9863,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "or",
+          "bbox": [
+            0.7841796875,
+            0.32584635416666663
+          ],
+          "confidence": 0.9983,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "pseudonym",
+          "bbox": [
+            0.806640625,
+            0.32421875
+          ],
+          "confidence": 0.3886,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Nom",
+          "bbox": [
+            0.447265625,
+            0.34375
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "de",
+          "bbox": [
+            0.4873046875,
+            0.34375
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "religion",
+          "bbox": [
+            0.509765625,
+            0.34375
+          ],
+          "confidence": 0.9877,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ou",
+          "bbox": [
+            0.572265625,
+            0.3486328125
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "pseudonyme",
+          "bbox": [
+            0.59765625,
+            0.34700520833333337
+          ],
+          "confidence": 0.9945,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "STADT",
+          "bbox": [
+            0.0498046875,
+            0.36165364583333337
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BERLIN",
+          "bbox": [
+            0.169921875,
+            0.36328125
+          ],
+          "confidence": 0.9828,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2C",
+          "bbox": [
+            0.8955078125,
+            0.3909505208333333
+          ],
+          "confidence": 0.6583,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Diese",
+          "bbox": [
+            0.166015625,
+            0.5374348958333334
+          ],
+          "confidence": 0.9974,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Karte",
+          "bbox": [
+            0.220703125,
+            0.5374348958333334
+          ],
+          "confidence": 0.9931,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ist",
+          "bbox": [
+            0.271484375,
+            0.5390625
+          ],
+          "confidence": 0.9969,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "kein",
+          "bbox": [
+            0.296875,
+            0.5374348958333334
+          ],
+          "confidence": 0.9892,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Identitatsausweis",
+          "bbox": [
+            0.33984375,
+            0.5390625
+          ],
+          "confidence": 0.6987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Diese",
+          "bbox": [
+            0.4921875,
+            0.5374348958333334
+          ],
+          "confidence": 0.9949,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Karte",
+          "bbox": [
+            0.5478515625,
+            0.5374348958333334
+          ],
+          "confidence": 0.9949,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ist",
+          "bbox": [
+            0.5986328125,
+            0.5374348958333334
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "kein",
+          "bbox": [
+            0.623046875,
+            0.5374348958333334
+          ],
+          "confidence": 0.9902,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Identitatsausweis",
+          "bbox": [
+            0.6650390625,
+            0.5390625
+          ],
+          "confidence": 0.9594,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IDD<<1220001293<:",
+          "bbox": [
+            0.064453125,
+            0.6969401041666666
+          ],
+          "confidence": 0.8148,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "<<<<<",
+          "bbox": [
+            0.7587890625,
+            0.6985677083333334
+          ],
+          "confidence": 0.7992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "6408125<2010315D<<<<<<<<<<<<4",
+          "bbox": [
+            0.0625,
+            0.7718098958333333
+          ],
+          "confidence": 0.9098,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": "0408125<2010315D<<<<<<<<<<<<4"
+        },
+        {
+          "text": "KOWALSKAKKANNAS<<<<<<<<<<<<<<<",
+          "bbox": [
+            0.0673828125,
+            0.8580729166666667
+          ],
+          "confidence": 0.7058,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": "KOWALSKAKKANNAS<<<<<<<<<<<<<<"
+        },
+        {
+          "text": "DRUCKEREI",
+          "bbox": [
+            0.8583984375,
+            0.9378255208333333
+          ],
+          "confidence": 0.8691,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 46,
+      "average_confidence": 0.8845
+    }
+  ],
+  "total_words": 46,
+  "overall_confidence": 0.8845
+}

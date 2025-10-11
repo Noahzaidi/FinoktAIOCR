@@ -1,0 +1,785 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "dimensions": [
+        507,
+        900
+      ],
+      "orientation": {
+        "value": -90,
+        "confidence": null
+      },
+      "language": {
+        "value": null,
+        "confidence": null
+      },
+      "blocks": [
+        {
+          "geometry": [
+            [
+              0.16015625,
+              0.15329142011834318
+            ],
+            [
+              0.828125,
+              0.7964358357988166
+            ]
+          ],
+          "objectness_score": 0.7353855094739369,
+          "lines": [
+            {
+              "geometry": [
+                [
+                  0.1708984375,
+                  0.15329142011834318
+                ],
+                [
+                  0.3115234375,
+                  0.1879622781065089
+                ]
+              ],
+              "objectness_score": 0.6946688890457153,
+              "words": [
+                {
+                  "value": "H",
+                  "confidence": 0.20668138563632965,
+                  "geometry": [
+                    [
+                      0.1708984375,
+                      0.16195913461538464
+                    ],
+                    [
+                      0.2021484375,
+                      0.1879622781065089
+                    ]
+                  ],
+                  "objectness_score": 0.8170643448829651,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "<",
+                  "confidence": 0.6701392531394958,
+                  "geometry": [
+                    [
+                      0.2021484375,
+                      0.16542622041420119
+                    ],
+                    [
+                      0.208984375,
+                      0.1775610207100592
+                    ]
+                  ],
+                  "objectness_score": 0.5504592657089233,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "-",
+                  "auto_corrected": true,
+                  "corrected_by_lexicon": true,
+                  "correction_source": "lexicon",
+                  "auto_corrected_at": "2025-10-11T15:30:34.556088"
+                },
+                {
+                  "value": "WSN",
+                  "confidence": 0.3267374634742737,
+                  "geometry": [
+                    [
+                      0.2109375,
+                      0.16022559171597633
+                    ],
+                    [
+                      0.240234375,
+                      0.1862287352071006
+                    ]
+                  ],
+                  "objectness_score": 0.7299619317054749,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": ".",
+                  "confidence": 0.513090968132019,
+                  "geometry": [
+                    [
+                      0.2412109375,
+                      0.16195913461538464
+                    ],
+                    [
+                      0.2548828125,
+                      0.17929456360946744
+                    ]
+                  ],
+                  "objectness_score": 0.6393519043922424,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "MONNE",
+                  "confidence": 0.400926411151886,
+                  "geometry": [
+                    [
+                      0.2578125,
+                      0.15329142011834318
+                    ],
+                    [
+                      0.3115234375,
+                      0.1862287352071006
+                    ]
+                  ],
+                  "objectness_score": 0.736506998538971,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.1611328125,
+                  0.19142936390532544
+                ],
+                [
+                  0.240234375,
+                  0.23303439349112426
+                ]
+              ],
+              "objectness_score": 0.7593451142311096,
+              "words": [
+                {
+                  "value": "22-07-94",
+                  "confidence": 0.9495593905448914,
+                  "geometry": [
+                    [
+                      0.1611328125,
+                      0.19142936390532544
+                    ],
+                    [
+                      0.240234375,
+                      0.23303439349112426
+                    ]
+                  ],
+                  "objectness_score": 0.7593451142311096,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.2900390625,
+                  0.19142936390532544
+                ],
+                [
+                  0.416015625,
+                  0.23130085059171596
+                ]
+              ],
+              "objectness_score": 0.7975465059280396,
+              "words": [
+                {
+                  "value": "AGADIR-MAR",
+                  "confidence": 0.8933145999908447,
+                  "geometry": [
+                    [
+                      0.2900390625,
+                      0.19142936390532544
+                    ],
+                    [
+                      0.416015625,
+                      0.23130085059171596
+                    ]
+                  ],
+                  "objectness_score": 0.7975465059280396,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "AGADIRMAR",
+                  "corrected": true,
+                  "manually_corrected": true,
+                  "corrected_at": "2025-10-11T15:32:49.718707"
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.1708984375,
+                  0.2399685650887574
+                ],
+                [
+                  0.1962890625,
+                  0.2677052514792899
+                ]
+              ],
+              "objectness_score": 0.6925602555274963,
+              "words": [
+                {
+                  "value": "EE",
+                  "confidence": 0.19510434567928314,
+                  "geometry": [
+                    [
+                      0.1708984375,
+                      0.2399685650887574
+                    ],
+                    [
+                      0.1962890625,
+                      0.2677052514792899
+                    ]
+                  ],
+                  "objectness_score": 0.6925602555274963,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.384765625,
+                  0.23303439349112426
+                ],
+                [
+                  0.4453125,
+                  0.26423816568047337
+                ]
+              ],
+              "objectness_score": 0.6544155478477478,
+              "words": [
+                {
+                  "value": "",
+                  "confidence": 0.3093687891960144,
+                  "geometry": [
+                    [
+                      0.384765625,
+                      0.23303439349112426
+                    ],
+                    [
+                      0.4453125,
+                      0.26423816568047337
+                    ]
+                  ],
+                  "objectness_score": 0.6544155478477478,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.1611328125,
+                  0.2729058801775148
+                ],
+                [
+                  0.2021484375,
+                  0.3162444526627219
+                ]
+              ],
+              "objectness_score": 0.7939943671226501,
+              "words": [
+                {
+                  "value": "V-M",
+                  "confidence": 0.9918652176856995,
+                  "geometry": [
+                    [
+                      0.1611328125,
+                      0.2729058801775148
+                    ],
+                    [
+                      0.2021484375,
+                      0.3162444526627219
+                    ]
+                  ],
+                  "objectness_score": 0.7939943671226501,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "VM",
+                  "corrected": true,
+                  "manually_corrected": true,
+                  "corrected_at": "2025-10-11T15:32:58.284599"
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.3740234375,
+                  0.2659717085798816
+                ],
+                [
+                  0.5537109375,
+                  0.31277736686390534
+                ]
+              ],
+              "objectness_score": 0.682905912399292,
+              "words": [
+                {
+                  "value": "MARRUECOS-MAR",
+                  "confidence": 0.6687924265861511,
+                  "geometry": [
+                    [
+                      0.3740234375,
+                      0.2659717085798816
+                    ],
+                    [
+                      0.5537109375,
+                      0.31277736686390534
+                    ]
+                  ],
+                  "objectness_score": 0.682905912399292,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.169921875,
+                  0.31104382396449703
+                ],
+                [
+                  0.4462890625,
+                  0.3491817677514793
+                ]
+              ],
+              "objectness_score": 0.7579279116221836,
+              "words": [
+                {
+                  "value": "DHthNONG",
+                  "confidence": 0.30294984579086304,
+                  "geometry": [
+                    [
+                      0.169921875,
+                      0.3179779955621302
+                    ],
+                    [
+                      0.2392578125,
+                      0.3491817677514793
+                    ]
+                  ],
+                  "objectness_score": 0.8031582236289978,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "MMTCE",
+                  "confidence": 0.3495127260684967,
+                  "geometry": [
+                    [
+                      0.2412109375,
+                      0.31451090976331364
+                    ],
+                    [
+                      0.287109375,
+                      0.347448224852071
+                    ]
+                  ],
+                  "objectness_score": 0.7696731686592102,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "BNANX",
+                  "confidence": 0.31175175309181213,
+                  "geometry": [
+                    [
+                      0.2861328125,
+                      0.31277736686390534
+                    ],
+                    [
+                      0.3349609375,
+                      0.347448224852071
+                    ]
+                  ],
+                  "objectness_score": 0.7842649221420288,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "a",
+                  "confidence": 0.3578794598579407,
+                  "geometry": [
+                    [
+                      0.3349609375,
+                      0.31451090976331364
+                    ],
+                    [
+                      0.3466796875,
+                      0.34398113905325445
+                    ]
+                  ],
+                  "objectness_score": 0.6542049646377563,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "Mormi",
+                  "confidence": 0.3726734519004822,
+                  "geometry": [
+                    [
+                      0.3447265625,
+                      0.31104382396449703
+                    ],
+                    [
+                      0.3828125,
+                      0.34571468195266275
+                    ]
+                  ],
+                  "objectness_score": 0.7440462708473206,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "",
+                  "confidence": 0.2357158660888672,
+                  "geometry": [
+                    [
+                      0.3837890625,
+                      0.3162444526627219
+                    ],
+                    [
+                      0.3955078125,
+                      0.34224759615384615
+                    ]
+                  ],
+                  "objectness_score": 0.7499900460243225,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "MOR",
+                  "confidence": 0.3457237482070923,
+                  "geometry": [
+                    [
+                      0.3984375,
+                      0.31277736686390534
+                    ],
+                    [
+                      0.4462890625,
+                      0.34398113905325445
+                    ]
+                  ],
+                  "objectness_score": 0.8001577854156494,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.1630859375,
+                  0.35091531065088755
+                ],
+                [
+                  0.4638671875,
+                  0.39252034023668636
+                ]
+              ],
+              "objectness_score": 0.8319180210431417,
+              "words": [
+                {
+                  "value": "RESIDENCIA",
+                  "confidence": 0.961245059967041,
+                  "geometry": [
+                    [
+                      0.1630859375,
+                      0.35438239644970415
+                    ],
+                    [
+                      0.2841796875,
+                      0.39252034023668636
+                    ]
+                  ],
+                  "objectness_score": 0.8367577195167542,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "LARCA",
+                  "confidence": 0.5330992937088013,
+                  "geometry": [
+                    [
+                      0.2861328125,
+                      0.35264885355029585
+                    ],
+                    [
+                      0.3564453125,
+                      0.39252034023668636
+                    ]
+                  ],
+                  "objectness_score": 0.8492395281791687,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "DURACION",
+                  "confidence": 0.9618363976478577,
+                  "geometry": [
+                    [
+                      0.3564453125,
+                      0.35091531065088755
+                    ],
+                    [
+                      0.4638671875,
+                      0.3907867973372781
+                    ]
+                  ],
+                  "objectness_score": 0.8097568154335022,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.1640625,
+                  0.3907867973372781
+                ],
+                [
+                  0.388671875,
+                  0.4358589127218935
+                ]
+              ],
+              "objectness_score": 0.7923387090365092,
+              "words": [
+                {
+                  "value": "AUTORIZA",
+                  "confidence": 0.9480876922607422,
+                  "geometry": [
+                    [
+                      0.1640625,
+                      0.39425388313609466
+                    ],
+                    [
+                      0.263671875,
+                      0.4323918269230769
+                    ]
+                  ],
+                  "objectness_score": 0.8274082541465759,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "A",
+                  "confidence": 0.9966185092926025,
+                  "geometry": [
+                    [
+                      0.2646484375,
+                      0.39598742603550297
+                    ],
+                    [
+                      0.283203125,
+                      0.4341253698224852
+                    ]
+                  ],
+                  "objectness_score": 0.7781018614768982,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "TRABAJAR",
+                  "confidence": 0.9835155606269836,
+                  "geometry": [
+                    [
+                      0.28515625,
+                      0.3907867973372781
+                    ],
+                    [
+                      0.388671875,
+                      0.4358589127218935
+                    ]
+                  ],
+                  "objectness_score": 0.7715060114860535,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.1640625,
+                  0.6144138313609467
+                ],
+                [
+                  0.828125,
+                  0.6664201183431953
+                ]
+              ],
+              "objectness_score": 0.6780610680580139,
+              "words": [
+                {
+                  "value": "IRESPE188684504",
+                  "confidence": 0.8719906657934189,
+                  "geometry": [
+                    [
+                      0.1640625,
+                      0.6265486316568047
+                    ],
+                    [
+                      0.48046875,
+                      0.664686575443787
+                    ]
+                  ],
+                  "objectness_score": 0.7940765619277954,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "<X7369469Q<<<<<",
+                  "confidence": 0.8951221903165182,
+                  "geometry": [
+                    [
+                      0.494140625,
+                      0.6144138313609467
+                    ],
+                    [
+                      0.828125,
+                      0.6664201183431953
+                    ]
+                  ],
+                  "objectness_score": 0.5620455741882324,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "<X73694690<<<<<",
+                  "corrected": true,
+                  "manually_corrected": true,
+                  "corrected_at": "2025-10-11T15:31:05.523765"
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.16015625,
+                  0.6802884615384616
+                ],
+                [
+                  0.826171875,
+                  0.7374953772189349
+                ]
+              ],
+              "objectness_score": 0.5913848280906677,
+              "words": [
+                {
+                  "value": "9407222M2108221MAR<<<<<<<<<<<3",
+                  "confidence": 0.916413019100825,
+                  "geometry": [
+                    [
+                      0.16015625,
+                      0.6802884615384616
+                    ],
+                    [
+                      0.826171875,
+                      0.7374953772189349
+                    ]
+                  ],
+                  "objectness_score": 0.5913848280906677,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.1611328125,
+                  0.7444295488165681
+                ],
+                [
+                  0.826171875,
+                  0.7964358357988166
+                ]
+              ],
+              "objectness_score": 0.6109095811843872,
+              "words": [
+                {
+                  "value": "ZAIDI<<SALAH<EDDINE<<<<<<<<<<<",
+                  "confidence": 0.6534552148410252,
+                  "geometry": [
+                    [
+                      0.1611328125,
+                      0.7444295488165681
+                    ],
+                    [
+                      0.826171875,
+                      0.7964358357988166
+                    ]
+                  ],
+                  "objectness_score": 0.6109095811843872,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "ZAIDI<<SALAHKEDDINE<<<<<<<<<<<",
+                  "corrected": true,
+                  "manually_corrected": true,
+                  "corrected_at": "2025-10-11T15:32:19.815582"
+                }
+              ]
+            }
+          ],
+          "artefacts": []
+        }
+      ]
+    }
+  ]
+}

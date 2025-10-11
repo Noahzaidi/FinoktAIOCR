@@ -1,0 +1,43 @@
+{
+  "corrections": [
+    {
+      "document_id": "0658ce7d-3f96-4ca0-afc7-7465a5d5386c",
+      "page": 1,
+      "word_id": "p1_w41",
+      "original_text": "IDD<<T220001293<<<<<<<<<<<",
+      "corrected_text": "IDD<<T220001293<<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.06606486344537815,
+          0.5830078125
+        ],
+        [
+          0.9242614233193278,
+          0.603515625
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:35:06.040701"
+    },
+    {
+      "document_id": "0658ce7d-3f96-4ca0-afc7-7465a5d5386c",
+      "page": 1,
+      "word_id": "p1_w43",
+      "original_text": "KOWALSKAK<ANNA<<<<<<<<<<<<",
+      "corrected_text": "KOWALSKA<<ANNA<<<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.06882878151260502,
+          0.6513671875
+        ],
+        [
+          0.9284073004201681,
+          0.671875
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T15:35:48.245095"
+    }
+  ],
+  "document_id": "0658ce7d-3f96-4ca0-afc7-7465a5d5386c"
+}
