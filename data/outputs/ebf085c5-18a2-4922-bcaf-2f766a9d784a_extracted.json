@@ -1,0 +1,13 @@
+{
+  "invoice_number": null,
+  "date": null,
+  "amount": null,
+  "currency": null,
+  "country": null,
+  "corrections_applied": [],
+  "document_type": "document",
+  "classification_confidence": 0.05000000000000001,
+  "auto_corrections_applied": [
+    "'MUSTERFRAUS<MARIAS<<<<<<<<<<' → 'MUSTERFRAU<<MARIA<<<<<<<<<<<<<'"
+  ]
+}

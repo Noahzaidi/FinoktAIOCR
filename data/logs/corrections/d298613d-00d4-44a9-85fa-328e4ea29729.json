@@ -1,0 +1,25 @@
+{
+  "corrections": [
+    {
+      "document_id": "d298613d-00d4-44a9-85fa-328e4ea29729",
+      "page": 1,
+      "word_id": "p1_w25",
+      "original_text": "MUSTERFRAU<<MARIAS<<<<<<<<<<<",
+      "corrected_text": "MUSTERFRAU<<MARIA<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.06468290441176472,
+          0.6513671875
+        ],
+        [
+          0.9214975052521008,
+          0.6728515625
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T23:10:47.052953",
+      "document_type": "document"
+    }
+  ],
+  "document_id": "d298613d-00d4-44a9-85fa-328e4ea29729"
+}

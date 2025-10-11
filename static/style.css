@@ -500,6 +500,26 @@ footer {
     font-family: 'Courier New', monospace;
 }
 
+.canvas-tooltip .tooltip-autocorrected {
+    font-size: 0.75rem;
+    color: #28a745;
+    font-style: italic;
+    margin: 2px 0;
+    padding: 2px 4px;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 3px;
+}
+
+.canvas-tooltip .tooltip-manual-corrected {
+    font-size: 0.75rem;
+    color: #007bff;
+    font-style: italic;
+    margin: 2px 0;
+    padding: 2px 4px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 3px;
+}
+
 /* Confidence color coding */
 .confidence-high {
     color: #4ade80 !important; /* Green */
@@ -511,4 +531,460 @@ footer {
 
 .confidence-low {
     color: #f87171 !important; /* Red */
+}
+
+/* Learning Tab Styles */
+.learning-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.learning-section {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border: 1px solid var(--dark-gray);
+    border-radius: 6px;
+}
+
+.learning-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.learning-section h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+#lexicon-stats p, #training-stats p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+#lexicon-list, #training-list {
+    max-height: 120px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+#lexicon-list li, #training-list li {
+    margin-bottom: 0.3rem;
+    font-family: 'Courier New', monospace;
+}
+
+.correction-item {
+    background: var(--light-gray);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0.1rem 0;
+}
+
+.training-item {
+    background: #e3f2fd;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0.1rem 0;
+}
+
+#retrain-status {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#retrain-status.success {
+    color: var(--success-color);
+}
+
+#retrain-status.error {
+    color: var(--error-color);
+}
+
+#retrain-status.loading {
+    color: var(--secondary-color);
+}
+
+/* Document Classification Styles */
+.classification-info {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border: 1px solid var(--dark-gray);
+    border-radius: 6px;
+}
+
+.classification-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#doc-type {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.confidence-score {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: normal;
+}
+
+.doc-description {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Document type specific colors */
+#doc-type.invoice {
+    background: #28a745;
+}
+
+#doc-type.receipt {
+    background: #17a2b8;
+}
+
+#doc-type.identity_document {
+    background: #6f42c1;
+}
+
+#doc-type.contract {
+    background: #fd7e14;
+}
+
+#doc-type.bank_statement {
+    background: #20c997;
+}
+
+#doc-type.unknown, #doc-type.document {
+    background: #6c757d;
+}
+
+/* Auto-correction indicators */
+.auto-correction-item {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0.1rem 0;
+    font-size: 0.8rem;
+}
+
+.auto-corrected-word {
+    background-color: #d4edda !important;
+    border: 1px solid #28a745 !important;
+}
+
+#document-stats p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+#document-stats span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#auto-corrections-applied h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #28a745;
+    font-size: 0.9rem;
+}
+
+#auto-corrections-list {
+    max-height: 100px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+#auto-corrections-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* Configuration section styles */
+.config-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.config-item label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.config-item input[type="number"] {
+    width: 60px;
+    padding: 0.25rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.config-status {
+    background: var(--light-gray);
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.config-status p {
+    margin: 0.2rem 0;
+    font-size: 0.85rem;
+}
+
+.config-status span {
+    font-weight: bold;
+}
+
+/* Enhanced Learning Tab Styles */
+.highlight-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--dark-gray);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--font-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-description {
+    font-size: 0.75rem;
+    color: #666;
+    font-style: italic;
+}
+
+.corrections-display {
+    margin-top: 1rem;
+}
+
+.corrections-display h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+.corrections-container {
+    background: var(--white);
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--dark-gray);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.no-data {
+    color: #666;
+    font-style: italic;
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+}
+
+.learning-progress {
+    margin-bottom: 1rem;
+}
+
+.progress-item {
+    background: var(--white);
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--dark-gray);
+    margin-bottom: 0.5rem;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.progress-title {
+    font-weight: bold;
+    color: var(--font-color);
+    font-size: 0.9rem;
+}
+
+.progress-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.progress-description {
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+}
+
+.recent-activity h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+.activity-list {
+    background: var(--white);
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--dark-gray);
+    margin: 0;
+    list-style: none;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.activity-list li {
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+.setting-explanation {
+    background: #fff3cd;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ffeaa7;
+    margin-bottom: 1rem;
+}
+
+.setting-explanation p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+}
+
+.threshold-highlight {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.retrain-info {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+.retrain-info small {
+    color: #666;
+}
+
+/* Additional styles for improved Learning tab */
+.correction-item-display {
+    margin-bottom: 0.5rem;
+}
+
+.more-items {
+    color: #666;
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.learning-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Better spacing for learning sections */
+.learning-section {
+    margin-bottom: 2rem;
+}
+
+.learning-section:last-child {
+    margin-bottom: 1rem;
+}
+
+/* Expandable pattern display */
+.lexicon-pattern-item {
+    margin-bottom: 0.5rem;
+}
+
+.pattern-display {
+    cursor: pointer;
+}
+
+.pattern-short, .pattern-full {
+    transition: all 0.2s ease;
+}
+
+.expand-hint, .collapse-hint {
+    color: #666;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+.correction-item-full {
+    background: var(--light-gray);
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    word-break: break-all;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }

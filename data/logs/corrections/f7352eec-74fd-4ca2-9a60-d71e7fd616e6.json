@@ -1,0 +1,45 @@
+{
+  "corrections": [
+    {
+      "document_id": "f7352eec-74fd-4ca2-9a60-d71e7fd616e6",
+      "page": 0,
+      "word_id": "p0_w32",
+      "original_text": "MUSTERFRAUS<MARIAS<<<<<<<<<<",
+      "corrected_text": "MUSTERFRAU<<MARIA<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.064453125,
+          0.861328125
+        ],
+        [
+          0.9189453125,
+          0.9036458333333333
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T22:34:28.088451",
+      "document_type": "document"
+    },
+    {
+      "document_id": "f7352eec-74fd-4ca2-9a60-d71e7fd616e6",
+      "page": 0,
+      "word_id": "p0_w28",
+      "original_text": "LDAUTPA12345673<<<<<<",
+      "corrected_text": "LDAUTPA12345673<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.068359375,
+          0.6985677083333334
+        ],
+        [
+          0.703125,
+          0.7408854166666666
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T22:34:58.719631",
+      "document_type": "document"
+    }
+  ],
+  "document_id": "f7352eec-74fd-4ca2-9a60-d71e7fd616e6"
+}

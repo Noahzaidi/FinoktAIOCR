@@ -1,0 +1,85 @@
+{
+  "corrections": [
+    {
+      "document_id": "f9fbaac7-509a-40e1-81a7-01e9a724dc8a",
+      "page": 0,
+      "word_id": "p0_w32",
+      "original_text": "MUSTERFRAUS<MARIAS<<<<<<<<<<",
+      "corrected_text": "MUSTERFRAU<<MARIA<<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.064453125,
+          0.861328125
+        ],
+        [
+          0.9189453125,
+          0.9036458333333333
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T22:48:01.874744",
+      "document_type": "document"
+    },
+    {
+      "document_id": "f9fbaac7-509a-40e1-81a7-01e9a724dc8a",
+      "page": 0,
+      "word_id": "p0_w28",
+      "original_text": "LDAUTPA12345673<<<<<<",
+      "corrected_text": "LDAUTPA12345673<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.068359375,
+          0.6985677083333334
+        ],
+        [
+          0.703125,
+          0.7408854166666666
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T22:48:18.672241",
+      "document_type": "document"
+    },
+    {
+      "document_id": "f9fbaac7-509a-40e1-81a7-01e9a724dc8a",
+      "page": 0,
+      "word_id": "p0_w29",
+      "original_text": "-",
+      "corrected_text": "<",
+      "corrected_bbox": [
+        [
+          0.705078125,
+          0.7099609375
+        ],
+        [
+          0.7275390625,
+          0.7262369791666666
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T22:48:33.519706",
+      "document_type": "document"
+    },
+    {
+      "document_id": "f9fbaac7-509a-40e1-81a7-01e9a724dc8a",
+      "page": 0,
+      "word_id": "p0_w31",
+      "original_text": "8112314F3108011AUT<<<<<<<<<<6",
+      "corrected_text": "8112314F3108011AUT<<<<<<<<<<<6",
+      "corrected_bbox": [
+        [
+          0.0654296875,
+          0.7766927083333333
+        ],
+        [
+          0.91796875,
+          0.8238932291666667
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T22:50:54.149759",
+      "document_type": "document"
+    }
+  ],
+  "document_id": "f9fbaac7-509a-40e1-81a7-01e9a724dc8a"
+}

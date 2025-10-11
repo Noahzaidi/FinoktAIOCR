@@ -1,0 +1,85 @@
+{
+  "corrections": [
+    {
+      "document_id": "6738b134-53e3-43b8-a74a-67715fffa813",
+      "page": 0,
+      "word_id": "p0_w52",
+      "original_text": "ZAIDIS<NOUR<EDDINE<<<<<<<<<<",
+      "corrected_text": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.0361328125,
+          0.8366678022642068
+        ],
+        [
+          0.9794921875,
+          0.8827866792867008
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T23:26:49.318452",
+      "document_type": "document"
+    },
+    {
+      "document_id": "6738b134-53e3-43b8-a74a-67715fffa813",
+      "page": 0,
+      "word_id": "p0_w40",
+      "original_text": "ADRESSEI",
+      "corrected_text": "ADRESSE /",
+      "corrected_bbox": [
+        [
+          0.2958984375,
+          0.3355093386197711
+        ],
+        [
+          0.38671875,
+          0.36471796073401735
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T23:27:40.827223",
+      "document_type": "document"
+    },
+    {
+      "document_id": "6738b134-53e3-43b8-a74a-67715fffa813",
+      "page": 0,
+      "word_id": "p0_w51",
+      "original_text": "0001018M2510170MAR<<<<<<<<6",
+      "corrected_text": "0001018M2510170MAR<<<<<<<<<<<6",
+      "corrected_bbox": [
+        [
+          0.0341796875,
+          0.7521165277229677
+        ],
+        [
+          0.974609375,
+          0.8028472924477111
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T23:28:27.852591",
+      "document_type": "document"
+    },
+    {
+      "document_id": "6738b134-53e3-43b8-a74a-67715fffa813",
+      "page": 0,
+      "word_id": "p0_w52",
+      "original_text": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<",
+      "corrected_text": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.0361328125,
+          0.8366678022642068
+        ],
+        [
+          0.9794921875,
+          0.8827866792867008
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-10T23:28:54.659231",
+      "document_type": "document"
+    }
+  ],
+  "document_id": "6738b134-53e3-43b8-a74a-67715fffa813"
+}

@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTextStats();
             initializeTooltip();
             initializeZoomControls();
+            loadDocumentClassification();
 
         } catch (error) {
             console.error('Error initializing app:', error);
@@ -83,6 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start initialization
     initializeApp();
+    
+    // Initialize learning tab
+    initializeLearningTab();
 
     // --- Multi-Page Viewer Functions ---
     async function initializeMultiPageViewer(baseImageUrl) {
@@ -208,9 +212,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const words = [];
         let wordCounter = 0;
 
-        pageData.blocks.forEach(block => {
-            block.lines.forEach(line => {
-                line.words.forEach(word => {
+        console.log(`Extracting words from page ${pageIndex}`);
+
+        pageData.blocks.forEach((block, blockIndex) => {
+            block.lines.forEach((line, lineIndex) => {
+                line.words.forEach((word, wordIndex) => {
                     words.push({
                         ...word,
                         id: `p${pageIndex}_w${wordCounter++}`,
@@ -221,32 +227,86 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        console.log(`Extracted ${words.length} words from page ${pageIndex}`);
         return words;
     }
 
     function drawBoundingBoxes(ctx, words, canvasWidth, canvasHeight) {
-        words.forEach(word => {
-            if (!word.geometry || !word.geometry[0]) return;
+        console.log(`Drawing ${words.length} bounding boxes on ${canvasWidth}x${canvasHeight} canvas`);
+        
+        let drawnCount = 0;
+        words.forEach((word, index) => {
+            if (!word.geometry) {
+                console.log(`Word ${index} missing geometry:`, word);
+                return;
+            }
             
-            const [x1, y1, x2, y2] = word.geometry[0];
+            // Handle DocTR geometry format: [[x1, y1], [x2, y2]]
+            let x1, y1, x2, y2;
+            if (word.geometry.length === 2 && Array.isArray(word.geometry[0])) {
+                // DocTR format: [[x1, y1], [x2, y2]]
+                [x1, y1] = word.geometry[0];
+                [x2, y2] = word.geometry[1];
+            } else if (word.geometry[0] && word.geometry[0].length === 4) {
+                // Our expected format: [[x1, y1, x2, y2]]
+                [x1, y1, x2, y2] = word.geometry[0];
+            } else {
+                console.log(`Word ${index} has invalid geometry format:`, word.geometry);
+                return;
+            }
+            
             const canvasX = x1 * canvasWidth;
             const canvasY = y1 * canvasHeight;
             const width = (x2 - x1) * canvasWidth;
             const height = (y2 - y1) * canvasHeight;
 
-            // Skip invalid boxes
-            if (width <= 0 || height <= 0) return;
+            // Debug first few boxes
+            if (index < 3) {
+                console.log(`Word ${index} "${word.value}": geometry=[${x1.toFixed(3)}, ${y1.toFixed(3)}, ${x2.toFixed(3)}, ${y2.toFixed(3)}] -> canvas=[${canvasX.toFixed(1)}, ${canvasY.toFixed(1)}, ${width.toFixed(1)}, ${height.toFixed(1)}]`);
+            }
 
+            // Skip invalid boxes
+            if (width <= 0 || height <= 0) {
+                console.log(`Skipping invalid box for word ${index}: ${width}x${height}`);
+                return;
+            }
+
+            // Default red bounding box
             ctx.strokeStyle = 'rgba(255, 0, 0, 0.7)';
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 2;
             
+            // Check correction status and apply appropriate styling
+            if (word.auto_correction_overridden || word.manually_corrected) {
+                // Manual correction (including overridden auto-corrections) - blue
+                ctx.strokeStyle = 'rgba(0, 123, 255, 0.9)'; // Blue for manual corrections
+                ctx.lineWidth = 3;
+                ctx.fillStyle = 'rgba(0, 123, 255, 0.15)';
+                ctx.fillRect(canvasX, canvasY, width, height);
+            } else if (word.auto_corrected || word.corrected_by_lexicon) {
+                // Auto-corrected words - green
+                ctx.strokeStyle = 'rgba(40, 167, 69, 0.8)'; // Green for auto-corrected
+                ctx.lineWidth = 2;
+                ctx.fillStyle = 'rgba(40, 167, 69, 0.1)';
+                ctx.fillRect(canvasX, canvasY, width, height);
+            } else if (word.corrected) {
+                // Other manual corrections - blue
+                ctx.strokeStyle = 'rgba(0, 123, 255, 0.8)';
+                ctx.lineWidth = 2;
+                ctx.fillStyle = 'rgba(0, 123, 255, 0.1)';
+                ctx.fillRect(canvasX, canvasY, width, height);
+            }
+            
+            // Selected word gets priority styling
             if (word === selectedWord) {
                 ctx.strokeStyle = 'rgba(0, 255, 0, 1)';
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 3;
             }
             
             ctx.strokeRect(canvasX, canvasY, width, height);
+            drawnCount++;
         });
+        
+        console.log(`Drew ${drawnCount} bounding boxes out of ${words.length} words`);
     }
 
     // --- Canvas Event Handlers ---
@@ -254,10 +314,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Click handler
         canvas.addEventListener('click', (e) => {
             const rect = canvas.getBoundingClientRect();
-            const clickX = (e.clientX - rect.left) / canvas.width;  // Normalize to [0,1]
-            const clickY = (e.clientY - rect.top) / canvas.height;   // Normalize to [0,1]
+            
+            // Get actual canvas display size vs internal canvas size
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            
+            // Calculate click position in canvas coordinates
+            const canvasX = (e.clientX - rect.left) * scaleX;
+            const canvasY = (e.clientY - rect.top) * scaleY;
+            
+            // Normalize to [0,1] for comparison with DocTR coordinates
+            const clickX = canvasX / canvas.width;
+            const clickY = canvasY / canvas.height;
 
-            console.log(`Click on page ${pageIndex + 1} at: (${clickX.toFixed(3)}, ${clickY.toFixed(3)})`);
+            console.log(`Click on page ${pageIndex + 1} at: (${clickX.toFixed(3)}, ${clickY.toFixed(3)}) canvas=(${canvasX.toFixed(1)}, ${canvasY.toFixed(1)}) display=(${rect.width.toFixed(1)}x${rect.height.toFixed(1)}) internal=(${canvas.width}x${canvas.height})`);
             
             const clickedWord = findWordAt(clickX, clickY, pageWords);
             if (clickedWord) {
@@ -274,8 +344,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hover handlers
         canvas.addEventListener('mousemove', (e) => {
             const rect = canvas.getBoundingClientRect();
-            const mouseX = (e.clientX - rect.left) / canvas.width;  // Normalize to [0,1]
-            const mouseY = (e.clientY - rect.top) / canvas.height;   // Normalize to [0,1]
+            
+            // Use same coordinate calculation as click handler
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            const canvasX = (e.clientX - rect.left) * scaleX;
+            const canvasY = (e.clientY - rect.top) * scaleY;
+            const mouseX = canvasX / canvas.width;  // Normalize to [0,1]
+            const mouseY = canvasY / canvas.height; // Normalize to [0,1]
             
             const wordAtMouse = findWordAt(mouseX, mouseY, pageWords);
             
@@ -301,27 +377,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Helper Functions ---
     function findWordAt(relX, relY, pageWords) {
-        // Add tolerance for easier clicking
-        const tolerance = 0.01; // 1% tolerance
+        console.log(`Looking for word at (${relX.toFixed(3)}, ${relY.toFixed(3)})`);
         
-        // Find the word at the click position (check from last to first for overlapping)
-        for (let i = pageWords.length - 1; i >= 0; i--) {
-            const word = pageWords[i];
-            if (!word.geometry || !word.geometry[0]) continue;
+        // Find all words that could contain the click point with different tolerance levels
+        const candidates = [];
+        const tolerances = [0.01, 0.03, 0.05, 0.08]; // Try multiple tolerance levels
+        
+        for (const tolerance of tolerances) {
+            for (let i = 0; i < pageWords.length; i++) {
+                const word = pageWords[i];
+                if (!word.geometry) continue;
+                
+                // Handle DocTR geometry format: [[x1, y1], [x2, y2]]
+                let x1, y1, x2, y2;
+                if (word.geometry.length === 2 && Array.isArray(word.geometry[0])) {
+                    // DocTR format: [[x1, y1], [x2, y2]]
+                    [x1, y1] = word.geometry[0];
+                    [x2, y2] = word.geometry[1];
+                } else if (word.geometry[0] && word.geometry[0].length === 4) {
+                    // Our expected format: [[x1, y1, x2, y2]]
+                    [x1, y1, x2, y2] = word.geometry[0];
+                } else {
+                    continue; // Skip words with invalid geometry
+                }
+                
+                // Expand hit area with tolerance
+                const expandedX1 = x1 - tolerance;
+                const expandedY1 = y1 - tolerance;
+                const expandedX2 = x2 + tolerance;
+                const expandedY2 = y2 + tolerance;
+                
+                if (relX >= expandedX1 && relX <= expandedX2 && relY >= expandedY1 && relY <= expandedY2) {
+                    // Calculate distance to center for ranking
+                    const centerX = (x1 + x2) / 2;
+                    const centerY = (y1 + y2) / 2;
+                    const distance = Math.sqrt(
+                        Math.pow(relX - centerX, 2) + 
+                        Math.pow(relY - centerY, 2)
+                    );
+                    
+                    // Calculate area for ranking (smaller words are often more precise)
+                    const area = (x2 - x1) * (y2 - y1);
+                    
+                    candidates.push({
+                        word: word,
+                        distance: distance,
+                        area: area,
+                        tolerance: tolerance,
+                        confidence: word.confidence || 0,
+                        bbox: [x1, y1, x2, y2]
+                    });
+                }
+            }
             
-            const [x1, y1, x2, y2] = word.geometry[0];
-            
-            // Expand hit area with tolerance
-            const expandedX1 = x1 - tolerance;
-            const expandedY1 = y1 - tolerance;
-            const expandedX2 = x2 + tolerance;
-            const expandedY2 = y2 + tolerance;
-            
-            if (relX >= expandedX1 && relX <= expandedX2 && relY >= expandedY1 && relY <= expandedY2) {
-                return word;
+            // If we found candidates with this tolerance, break (prefer tighter tolerance)
+            if (candidates.length > 0) {
+                console.log(`Found ${candidates.length} candidates with tolerance ${tolerance}`);
+                break;
             }
         }
-        return null;
+        
+        if (candidates.length === 0) {
+            console.log("No word found at click position");
+            return null;
+        }
+        
+        // Sort candidates by: 1) distance to center, 2) confidence, 3) smaller area
+        candidates.sort((a, b) => {
+            if (Math.abs(a.distance - b.distance) < 0.01) {
+                // If distances are very close, prefer higher confidence
+                if (Math.abs(a.confidence - b.confidence) > 0.1) {
+                    return b.confidence - a.confidence;
+                }
+                // If confidence is similar, prefer smaller area (more precise)
+                return a.area - b.area;
+            }
+            return a.distance - b.distance;
+        });
+        
+        const bestMatch = candidates[0];
+        console.log(`Selected best match: "${bestMatch.word.value}" (distance: ${bestMatch.distance.toFixed(3)}, confidence: ${bestMatch.confidence.toFixed(3)}, tolerance: ${bestMatch.tolerance})`);
+        
+        return bestMatch.word;
     }
 
     function selectWord(word, pageIndex) {
@@ -332,11 +469,31 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update form fields
         textEditor.value = word.value;
-        if (originalTextSpan) originalTextSpan.textContent = word.value;
+        
+        // Show original text vs current text for auto-corrected words
+        if (originalTextSpan) {
+            if (word.auto_corrected || word.corrected_by_lexicon) {
+                originalTextSpan.innerHTML = `<span style="text-decoration: line-through; color: #999;">${word.original_value || word.originalValue || 'Unknown'}</span> → <strong>${word.value}</strong> <span style="color: #28a745; font-size: 0.8em;">(auto-corrected)</span>`;
+            } else {
+                originalTextSpan.textContent = word.value;
+            }
+        }
+        
         if (wordPageSpan) wordPageSpan.textContent = `Page ${pageIndex + 1}`;
         if (wordPositionSpan) {
-            const bbox = word.geometry[0];
-            wordPositionSpan.textContent = `(${bbox[0].toFixed(3)}, ${bbox[1].toFixed(3)}) to (${bbox[2].toFixed(3)}, ${bbox[3].toFixed(3)})`;
+            // Handle DocTR geometry format: [[x1, y1], [x2, y2]]
+            let x1, y1, x2, y2;
+            if (word.geometry.length === 2 && Array.isArray(word.geometry[0])) {
+                // DocTR format: [[x1, y1], [x2, y2]]
+                [x1, y1] = word.geometry[0];
+                [x2, y2] = word.geometry[1];
+            } else if (word.geometry[0] && word.geometry[0].length === 4) {
+                // Our expected format: [[x1, y1, x2, y2]]
+                [x1, y1, x2, y2] = word.geometry[0];
+            } else {
+                x1 = y1 = x2 = y2 = 0;
+            }
+            wordPositionSpan.textContent = `(${x1.toFixed(3)}, ${y1.toFixed(3)}) to (${x2.toFixed(3)}, ${y2.toFixed(3)})`;
         }
         
         textEditor.focus();
@@ -357,42 +514,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showNearbyWords(clickX, clickY, pageWords, pageIndex) {
         console.log(`Nearby words on page ${pageIndex + 1}:`);
+        console.log(`Click position: (${clickX.toFixed(3)}, ${clickY.toFixed(3)})`);
         
-        const nearbyWords = pageWords.filter(word => {
-            if (!word.geometry || !word.geometry[0]) return false;
+        // Show all words with their positions for debugging
+        const wordsWithDistance = pageWords.map(word => {
+            if (!word.geometry) return null;
             
-            const [x1, y1, x2, y2] = word.geometry[0];
+            // Handle DocTR geometry format: [[x1, y1], [x2, y2]]
+            let x1, y1, x2, y2;
+            if (word.geometry.length === 2 && Array.isArray(word.geometry[0])) {
+                // DocTR format: [[x1, y1], [x2, y2]]
+                [x1, y1] = word.geometry[0];
+                [x2, y2] = word.geometry[1];
+            } else if (word.geometry[0] && word.geometry[0].length === 4) {
+                // Our expected format: [[x1, y1, x2, y2]]
+                [x1, y1, x2, y2] = word.geometry[0];
+            } else {
+                return null; // Skip words with invalid geometry
+            }
+            
             const centerX = (x1 + x2) / 2;
             const centerY = (y1 + y2) / 2;
             const distance = Math.sqrt(
                 Math.pow(clickX - centerX, 2) + 
                 Math.pow(clickY - centerY, 2)
             );
-            return distance < 0.1; // Within 10% of document size
-        });
+            
+            return {
+                word: word,
+                distance: distance,
+                center: [centerX, centerY],
+                bbox: [x1, y1, x2, y2]
+            };
+        }).filter(item => item !== null).sort((a, b) => a.distance - b.distance);
 
-        if (nearbyWords.length === 0) {
+        // Show closest 5 words
+        const closest = wordsWithDistance.slice(0, 5);
+        console.log(`Showing ${closest.length} closest words:`);
+        
+        closest.forEach((item, index) => {
+            console.log(`  ${index}: "${item.word.value}" center=(${item.center[0].toFixed(3)}, ${item.center[1].toFixed(3)}) bbox=[${item.bbox.map(v => v.toFixed(3)).join(', ')}] distance=${item.distance.toFixed(3)}`);
+        });
+        
+        if (closest.length === 0) {
             console.log("  No words found nearby");
-        } else {
-            nearbyWords.forEach((word, index) => {
-                const bbox = word.geometry[0];
-                const distance = Math.sqrt(
-                    Math.pow(clickX - (bbox[0] + bbox[2]) / 2, 2) + 
-                    Math.pow(clickY - (bbox[1] + bbox[3]) / 2, 2)
-                );
-                console.log(`  ${index}: "${word.value}" at (${bbox[0].toFixed(3)}, ${bbox[1].toFixed(3)}) distance: ${distance.toFixed(3)}`);
-            });
         }
     }
 
     // --- Save Correction Handler ---
-    saveBtn.addEventListener('click', () => {
+    saveBtn.addEventListener('click', async () => {
         if (!selectedWord) return;
 
         const newText = textEditor.value;
         if (newText === selectedWord.value) return; // No change
 
         const oldText = selectedWord.value;
+        
+        // CRITICAL: Always use the current displayed text as "original" for this correction
+        // This ensures we track the progression: OCR -> Auto-correction -> Manual correction -> Further corrections
+        let originalTextForSaving = oldText; // Use what's currently displayed
+        
+        // But for lexicon learning, we need to track the true original OCR text
+        let trueOriginalText = selectedWord.original_value || selectedWord.originalValue || oldText;
+        
+        console.log(`📝 Correction details:`);
+        console.log(`   Current displayed: '${oldText}'`);
+        console.log(`   New correction: '${newText}'`);
+        console.log(`   True original OCR: '${trueOriginalText}'`);
+        
+        if (selectedWord.auto_corrected || selectedWord.corrected_by_lexicon) {
+            console.log(`🔄 This is a correction of an auto-corrected word`);
+        }
+        
+        // Update UI immediately for responsiveness
         updateWord(selectedWord.id, { value: newText });
         addToHistory({ wordId: selectedWord.id, oldText, newText });
 
@@ -401,24 +595,85 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('doc_id', docId);
         formData.append('page', selectedWord.pageIndex || 0);
         formData.append('word_id', selectedWord.id);
+        formData.append('original_text', originalTextForSaving); // Current displayed text
         formData.append('corrected_text', newText);
+        formData.append('true_original_text', trueOriginalText); // True original OCR text for lexicon
         formData.append('corrected_bbox', JSON.stringify(selectedWord.geometry)); 
 
+        // Also prepare real-time OCR data update
+        const ocrUpdateData = new FormData();
+        ocrUpdateData.append('word_id', selectedWord.id);
+        ocrUpdateData.append('corrected_text', newText);
+        ocrUpdateData.append('page_index', selectedWord.pageIndex || 0);
+
         saveStatus.textContent = 'Saving...';
-        fetch('/save_correction', { method: 'POST', body: formData })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    saveStatus.textContent = 'Saved!';
-                } else {
-                    saveStatus.textContent = `Error: ${data.message}`;
+        try {
+            // Send correction log first, then OCR update
+            console.log(`Saving correction: '${oldText}' -> '${newText}' for word ${selectedWord.id}`);
+            
+            const correctionResponse = await fetch('/save_correction', { method: 'POST', body: formData });
+            console.log(`Correction response status: ${correctionResponse.status}`);
+            
+            if (!correctionResponse.ok) {
+                throw new Error(`Correction save failed: ${correctionResponse.status} ${correctionResponse.statusText}`);
+            }
+            
+            const data = await correctionResponse.json();
+            console.log('Correction save response:', data);
+            
+            // Then update OCR data
+            const ocrUpdateResponse = await fetch(`/update_ocr_data/${docId}`, { method: 'POST', body: ocrUpdateData });
+            console.log(`OCR update response status: ${ocrUpdateResponse.status}`);
+            
+            let ocrUpdateResult = null;
+            if (ocrUpdateResponse.ok) {
+                ocrUpdateResult = await ocrUpdateResponse.json();
+                console.log('OCR update response:', ocrUpdateResult);
+            } else {
+                console.warn('OCR update failed but continuing...');
+            }
+            
+            if (data.status === 'success') {
+                let statusText = 'Saved!';
+                
+                // Special message for auto-corrected word corrections
+                if (selectedWord.auto_corrected || selectedWord.corrected_by_lexicon) {
+                    statusText = '🔄 Auto-correction overridden and saved!';
                 }
-                setTimeout(() => saveStatus.textContent = '', 2000);
-            })
-            .catch(err => {
-                saveStatus.textContent = 'Save failed.';
-                console.error('Save error:', err);
-            });
+                
+                // Check if lexicon was updated
+                if (data.lexicon_updated) {
+                    statusText += ` Lexicon pattern updated! (${data.lexicon_size} total patterns)`;
+                } else if (data.correction_frequency) {
+                    const remaining = Math.max(0, 1 - data.correction_frequency); // Use threshold of 1
+                    if (remaining > 0) {
+                        statusText += ` (${remaining} more correction needed for auto-learning)`;
+                    } else {
+                        statusText += ` (Pattern learned - will auto-correct in future uploads)`;
+                    }
+                }
+                
+                saveStatus.textContent = statusText;
+                
+                // Update raw text panel immediately
+                updateRawTextPanel(selectedWord, oldText, newText);
+                
+                // Highlight the raw text corresponding to this correction
+                highlightCorrectedWordInRawText(selectedWord, oldText, newText);
+                
+                // Update learning statistics
+                updateLearningStats();
+                
+            } else {
+                saveStatus.textContent = `Error: ${data.message}`;
+            }
+            
+            setTimeout(() => saveStatus.textContent = '', 3000);
+        } catch (err) {
+            saveStatus.textContent = 'Save failed.';
+            console.error('Save error:', err);
+            setTimeout(() => saveStatus.textContent = '', 3000);
+        }
     });
 
     // --- Undo/Redo Logic ---
@@ -436,10 +691,31 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const page of pages) {
             const word = page.words.find(w => w.id === wordId);
             if (word) {
+                // Store original value if not already stored
+                if (!word.original_value && updates.value && word.value !== updates.value) {
+                    word.original_value = word.value;
+                }
+                
+                // Mark as corrected if text is being updated
+                if (updates.value && word.value !== updates.value) {
+                    updates.corrected = true;
+                    updates.manually_corrected = true;
+                    updates.corrected_at = new Date().toISOString();
+                    
+                    // If this was auto-corrected, mark as overridden
+                    if (word.auto_corrected || word.corrected_by_lexicon) {
+                        updates.auto_correction_overridden = true;
+                        console.log(`🔄 Auto-correction overridden: ${word.id}`);
+                    }
+                }
+                
                 Object.assign(word, updates);
+                
                 if (word === selectedWord) {
                     textEditor.value = word.value;
                 }
+                
+                // Redraw the page to show updated text and styling
                 redrawPage(page.index);
                 break;
             }
@@ -581,33 +857,78 @@ document.addEventListener('DOMContentLoaded', () => {
     function showTooltip(clientX, clientY, word) {
         if (!tooltip) return;
         
-        // Get confidence level for styling
-        const confidence = word.confidence || 0;
+        // Get confidence level for styling - handle undefined/null confidence
+        const confidence = word.confidence;
         let confidenceClass = 'confidence-low';
-        let confidenceText = 'Low';
+        let confidenceText = 'N/A';
+        let confidencePercent = 'N/A';
         
-        if (confidence >= 0.8) {
-            confidenceClass = 'confidence-high';
-            confidenceText = 'High';
-        } else if (confidence >= 0.5) {
-            confidenceClass = 'confidence-medium';
-            confidenceText = 'Medium';
+        if (confidence !== null && confidence !== undefined && !isNaN(confidence)) {
+            confidencePercent = `${(confidence * 100).toFixed(1)}%`;
+            if (confidence >= 0.8) {
+                confidenceClass = 'confidence-high';
+                confidenceText = 'High';
+            } else if (confidence >= 0.5) {
+                confidenceClass = 'confidence-medium';
+                confidenceText = 'Medium';
+            } else {
+                confidenceClass = 'confidence-low';
+                confidenceText = 'Low';
+            }
         }
         
-        // Format bounding box coordinates
-        const bbox = word.geometry[0];
-        const bboxText = `(${bbox[0].toFixed(3)}, ${bbox[1].toFixed(3)}) → (${bbox[2].toFixed(3)}, ${bbox[3].toFixed(3)})`;
+        // Format bounding box coordinates - handle different geometry formats
+        let bboxText = 'N/A';
+        if (word.geometry) {
+            try {
+                let x1, y1, x2, y2;
+                if (word.geometry.length === 2 && Array.isArray(word.geometry[0])) {
+                    // DocTR format: [[x1, y1], [x2, y2]]
+                    [x1, y1] = word.geometry[0];
+                    [x2, y2] = word.geometry[1];
+                } else if (word.geometry[0] && word.geometry[0].length === 4) {
+                    // Our expected format: [[x1, y1, x2, y2]]
+                    [x1, y1, x2, y2] = word.geometry[0];
+                } else {
+                    bboxText = 'Invalid geometry format';
+                }
+                
+                if (x1 !== undefined && y1 !== undefined && x2 !== undefined && y2 !== undefined) {
+                    bboxText = `(${x1.toFixed(3)}, ${y1.toFixed(3)}) → (${x2.toFixed(3)}, ${y2.toFixed(3)})`;
+                }
+            } catch (error) {
+                console.warn('Error parsing geometry for tooltip:', error);
+                bboxText = 'Error parsing coordinates';
+            }
+        }
         
         // Create tooltip content
-        tooltip.innerHTML = `
-            <div class="tooltip-text">"${word.value}"</div>
+        let tooltipContent = `
+            <div class="tooltip-text">"${word.value || 'N/A'}"</div>
             <div class="tooltip-confidence ${confidenceClass}">
-                Confidence: ${confidenceText} (${(confidence * 100).toFixed(1)}%)
-            </div>
+                Confidence: ${confidenceText} (${confidencePercent})
+            </div>`;
+        
+        // Add correction info if applicable
+        if (word.auto_corrected || word.corrected_by_lexicon) {
+            tooltipContent += `
+            <div class="tooltip-autocorrected">
+                🤖 Auto-corrected from: "${word.original_value || 'Unknown'}"
+            </div>`;
+        } else if (word.corrected) {
+            tooltipContent += `
+            <div class="tooltip-manual-corrected">
+                ✏️ Manually corrected from: "${word.original_value || 'Unknown'}"
+            </div>`;
+        }
+        
+        tooltipContent += `
             <div class="tooltip-position">
                 ${bboxText}
             </div>
         `;
+        
+        tooltip.innerHTML = tooltipContent;
         
         // Position tooltip
         updateTooltipPosition(clientX, clientY);
@@ -681,6 +1002,523 @@ document.addEventListener('DOMContentLoaded', () => {
             pageIndicator.textContent = `${pages.length} page${pages.length > 1 ? 's' : ''}`;
         } else {
             pageIndicator.textContent = 'Loading...';
+        }
+    }
+
+    // --- Text Panel Linking Functions ---
+    function updateRawTextPanel(word, oldText, newText) {
+        if (!rawTextDisplay) return;
+        
+        try {
+            console.log(`Updating raw text panel: '${oldText}' → '${newText}'`);
+            
+            // Get current raw text
+            let rawText = rawTextDisplay.value;
+            console.log(`Raw text length: ${rawText.length}`);
+            
+            // Try multiple replacement strategies
+            let updated = false;
+            
+            // Strategy 1: Exact match replacement
+            if (rawText.includes(oldText)) {
+                rawText = rawText.replace(oldText, newText);
+                updated = true;
+                console.log(`Strategy 1 success: exact match replacement`);
+            }
+            
+            // Strategy 2: Case-insensitive replacement
+            if (!updated) {
+                const regex = new RegExp(escapeRegExp(oldText), 'gi');
+                if (regex.test(rawText)) {
+                    rawText = rawText.replace(regex, newText);
+                    updated = true;
+                    console.log(`Strategy 2 success: case-insensitive replacement`);
+                }
+            }
+            
+            // Strategy 3: Handle special characters (like < > - etc.)
+            if (!updated) {
+                // For text with special characters, use indexOf and substring replacement
+                const startIndex = rawText.indexOf(oldText);
+                if (startIndex !== -1) {
+                    const beforeText = rawText.substring(0, startIndex);
+                    const afterText = rawText.substring(startIndex + oldText.length);
+                    rawText = beforeText + newText + afterText;
+                    updated = true;
+                    console.log(`Strategy 3 success: indexOf replacement at position ${startIndex}`);
+                }
+            }
+            
+            // Strategy 4: Line-by-line search and replace
+            if (!updated) {
+                const lines = rawText.split('\n');
+                for (let i = 0; i < lines.length; i++) {
+                    if (lines[i].includes(oldText)) {
+                        lines[i] = lines[i].replace(oldText, newText);
+                        rawText = lines.join('\n');
+                        updated = true;
+                        console.log(`Strategy 4 success: line ${i} replacement`);
+                        break;
+                    }
+                }
+            }
+            
+            if (updated) {
+                rawTextDisplay.value = rawText;
+                console.log(`✅ Raw text panel updated successfully`);
+                
+                // Scroll to the updated text
+                scrollToWordInRawText(newText);
+            } else {
+                console.warn(`❌ Failed to update raw text panel - '${oldText}' not found in raw text`);
+                console.log(`Raw text preview: "${rawText.substring(0, 200)}..."`);
+            }
+            
+        } catch (error) {
+            console.error('Error updating raw text panel:', error);
+        }
+    }
+
+    function highlightCorrectedWordInRawText(word, oldText, newText) {
+        if (!rawTextDisplay) return;
+        
+        try {
+            // Find the word in the raw text and highlight it temporarily
+            const rawText = rawTextDisplay.value;
+            const wordRegex = new RegExp(`\\b${escapeRegExp(newText)}\\b`, 'gi'); // Use new text now
+            
+            // Replace first occurrence with highlighted version
+            const highlightedText = rawText.replace(wordRegex, `[CORRECTED: ${oldText} → ${newText}]`);
+            
+            // Update the raw text display temporarily
+            const originalText = rawText;
+            rawTextDisplay.value = highlightedText;
+            
+            // Scroll to the corrected word
+            scrollToWordInRawText(newText);
+            
+            // Revert back to corrected text after 3 seconds
+            setTimeout(() => {
+                rawTextDisplay.value = originalText;
+            }, 3000);
+            
+        } catch (error) {
+            console.error('Error highlighting corrected word:', error);
+        }
+    }
+
+    function scrollToWordInRawText(wordText) {
+        if (!rawTextDisplay) return;
+        
+        try {
+            const text = rawTextDisplay.value;
+            const wordIndex = text.toLowerCase().indexOf(wordText.toLowerCase());
+            
+            if (wordIndex !== -1) {
+                // Calculate approximate line number
+                const beforeText = text.substring(0, wordIndex);
+                const lineNumber = beforeText.split('\n').length;
+                
+                // Scroll to approximate position
+                const lineHeight = 20; // Approximate line height in pixels
+                const scrollPosition = Math.max(0, (lineNumber - 5) * lineHeight);
+                rawTextDisplay.scrollTop = scrollPosition;
+                
+                // Focus the textarea briefly to show the scroll position
+                rawTextDisplay.focus();
+                setTimeout(() => rawTextDisplay.blur(), 500);
+            }
+        } catch (error) {
+            console.error('Error scrolling to word:', error);
+        }
+    }
+
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    // --- Enhanced Bounding Box Selection ---
+    function selectWordAndHighlightInText(word, pageIndex) {
+        // Select the word in the canvas
+        selectWord(word, pageIndex);
+        
+        // Switch to raw text tab and highlight the word
+        switchTab('raw-text');
+        setTimeout(() => {
+            scrollToWordInRawText(word.value);
+        }, 300);
+    }
+
+    // --- Document Type Detection ---
+    function detectDocumentType() {
+        if (!ocrData) return 'unknown';
+        
+        // Extract all text for analysis
+        const fullText = ocrData.pages
+            .flatMap(page => page.blocks)
+            .flatMap(block => block.lines)
+            .flatMap(line => line.words)
+            .map(word => word.value)
+            .join(' ')
+            .toLowerCase();
+        
+        // Simple document type detection based on keywords
+        if (fullText.includes('invoice') || fullText.includes('bill') || fullText.includes('amount due')) {
+            return 'invoice';
+        } else if (fullText.includes('receipt') || fullText.includes('total paid')) {
+            return 'receipt';
+        } else if (fullText.includes('id') || fullText.includes('identification') || fullText.includes('passport')) {
+            return 'identity_document';
+        } else if (fullText.includes('contract') || fullText.includes('agreement')) {
+            return 'contract';
+        } else {
+            return 'document';
+        }
+    }
+
+    // --- Learning Tab Functions ---
+    async function initializeLearningTab() {
+        try {
+            // Load initial learning data
+            await loadLearningData();
+            
+            // Set up retraining button
+            const retrainBtn = document.getElementById('retrain-btn');
+            if (retrainBtn) {
+                retrainBtn.addEventListener('click', triggerRetraining);
+            }
+            
+            // Set up configuration controls
+            const updateThresholdBtn = document.getElementById('update-threshold-btn');
+            if (updateThresholdBtn) {
+                updateThresholdBtn.addEventListener('click', updateLearningThreshold);
+            }
+            
+            // Refresh learning data when tab is selected
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    if (e.target.dataset.tab === 'learning') {
+                        await loadLearningData();
+                    }
+                });
+            });
+            
+        } catch (error) {
+            console.error('Error initializing learning tab:', error);
+        }
+    }
+
+    async function loadLearningData() {
+        try {
+            // Load lexicon, training data, document-specific corrections, and config in parallel
+            const [lexiconResponse, trainingResponse, documentCorrectionsResponse, configResponse] = await Promise.all([
+                fetch('/api/lexicon'),
+                fetch('/api/training_data/stats'),
+                fetch(`/api/document_corrections/${docId}`),
+                fetch('/api/config')
+            ]);
+
+            if (lexiconResponse.ok) {
+                const lexiconData = await lexiconResponse.json();
+                updateLexiconDisplay(lexiconData);
+            } else {
+                console.warn('Failed to load lexicon data');
+            }
+
+            if (trainingResponse.ok) {
+                const trainingData = await trainingResponse.json();
+                updateTrainingDisplay(trainingData);
+            } else {
+                console.warn('Failed to load training data');
+            }
+
+            if (documentCorrectionsResponse.ok) {
+                const documentData = await documentCorrectionsResponse.json();
+                updateDocumentCorrectionsDisplay(documentData);
+            } else {
+                console.warn('Failed to load document corrections');
+            }
+
+            if (configResponse.ok) {
+                const configData = await configResponse.json();
+                updateConfigDisplay(configData);
+            } else {
+                console.warn('Failed to load configuration');
+            }
+
+        } catch (error) {
+            console.error('Error loading learning data:', error);
+        }
+    }
+
+    async function updateLearningStats() {
+        // Quick update of learning statistics after a correction
+        try {
+            await loadLearningData();
+        } catch (error) {
+            console.error('Error updating learning stats:', error);
+        }
+    }
+
+    function updateLexiconDisplay(data) {
+        const lexiconSizeSpan = document.getElementById('lexicon-size');
+        const lexiconList = document.getElementById('lexicon-list');
+
+        if (lexiconSizeSpan) {
+            lexiconSizeSpan.textContent = data.lexicon_size || 0;
+        }
+
+        if (lexiconList && data.lexicon) {
+            const lexiconEntries = Object.entries(data.lexicon);
+            
+            if (lexiconEntries.length === 0) {
+                lexiconList.innerHTML = '<li class="no-data">No patterns learned yet - make some corrections to see them here!</li>';
+            } else {
+                lexiconList.innerHTML = '';
+                
+                // Show up to 5 most recent entries
+                lexiconEntries.slice(0, 5).forEach(([original, corrected]) => {
+                    const li = document.createElement('li');
+                    li.className = 'lexicon-pattern-item';
+                    
+                    // Create expandable display for long patterns
+                    const isLong = original.length > 30 || corrected.length > 30;
+                    
+                    if (isLong) {
+                        li.innerHTML = `
+                            <div class="pattern-display">
+                                <div class="pattern-short" onclick="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                    <span class="correction-item">'${original.substring(0, 20)}...' → '${corrected.substring(0, 20)}...'</span>
+                                    <small class="expand-hint">(click to expand)</small>
+                                </div>
+                                <div class="pattern-full" style="display: none;" onclick="this.style.display='none'; this.previousElementSibling.style.display='block';">
+                                    <span class="correction-item-full">'${original}' → '${corrected}'</span>
+                                    <small class="collapse-hint">(click to collapse)</small>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        li.innerHTML = `<span class="correction-item">'${original}' → '${corrected}'</span>`;
+                    }
+                    
+                    lexiconList.appendChild(li);
+                });
+                
+                if (lexiconEntries.length > 5) {
+                    const li = document.createElement('li');
+                    li.className = 'more-items';
+                    li.textContent = `... and ${lexiconEntries.length - 5} more patterns`;
+                    lexiconList.appendChild(li);
+                }
+            }
+        }
+    }
+
+    function updateTrainingDisplay(data) {
+        const trainingSamplesSpan = document.getElementById('training-samples');
+        const trainingSamplesForRetrain = document.getElementById('training-samples-for-retrain');
+
+        if (trainingSamplesSpan) {
+            trainingSamplesSpan.textContent = data.total_samples || 0;
+        }
+
+        if (trainingSamplesForRetrain) {
+            trainingSamplesForRetrain.textContent = data.total_samples || 0;
+        }
+    }
+
+    function updateDocumentCorrectionsDisplay(data) {
+        // Update document-specific correction counters
+        const docCorrectionsSpan = document.getElementById('doc-corrections-count');
+        const autoCorrectionsSpan = document.getElementById('auto-corrections-count');
+        
+        if (docCorrectionsSpan) {
+            docCorrectionsSpan.textContent = data.total_corrections || 0;
+        }
+        
+        if (autoCorrectionsSpan) {
+            autoCorrectionsSpan.textContent = data.auto_corrections_applied || 0;
+        }
+        
+        // Show auto-corrections applied to this document
+        const autoCorrectionsContainer = document.getElementById('auto-corrections-list');
+        if (autoCorrectionsContainer && data.lexicon_patterns_used) {
+            if (data.lexicon_patterns_used.length === 0) {
+                autoCorrectionsContainer.innerHTML = '<div class="no-data">No auto-corrections yet - upload documents with similar errors to see learning in action!</div>';
+            } else {
+                autoCorrectionsContainer.innerHTML = '';
+                data.lexicon_patterns_used.slice(0, 5).forEach(pattern => {
+                    const item = document.createElement('div');
+                    item.className = 'correction-item-display';
+                    item.innerHTML = `<span class="auto-correction-item">✅ ${pattern}</span>`;
+                    autoCorrectionsContainer.appendChild(item);
+                });
+                
+                if (data.lexicon_patterns_used.length > 5) {
+                    const moreItem = document.createElement('div');
+                    moreItem.className = 'more-items';
+                    moreItem.textContent = `... and ${data.lexicon_patterns_used.length - 5} more`;
+                    autoCorrectionsContainer.appendChild(moreItem);
+                }
+            }
+        }
+        
+        // Update the training samples count for retraining section
+        const trainingSamplesForRetrain = document.getElementById('training-samples-for-retrain');
+        if (trainingSamplesForRetrain) {
+            // This will be updated when training data loads
+        }
+    }
+
+    async function triggerRetraining() {
+        const retrainBtn = document.getElementById('retrain-btn');
+        const retrainStatus = document.getElementById('retrain-status');
+
+        if (!retrainBtn || !retrainStatus) return;
+
+        try {
+            retrainBtn.disabled = true;
+            retrainStatus.textContent = 'Starting retraining...';
+            retrainStatus.className = 'loading';
+
+            const response = await fetch('/api/retrain_stub', { method: 'POST' });
+            const data = await response.json();
+
+            if (response.ok) {
+                retrainStatus.textContent = `${data.message} (${data.samples_used} samples)`;
+                retrainStatus.className = 'success';
+            } else {
+                retrainStatus.textContent = data.error || 'Retraining failed';
+                retrainStatus.className = 'error';
+            }
+
+        } catch (error) {
+            console.error('Retraining error:', error);
+            retrainStatus.textContent = 'Retraining failed - network error';
+            retrainStatus.className = 'error';
+        } finally {
+            retrainBtn.disabled = false;
+            setTimeout(() => {
+                retrainStatus.textContent = '';
+                retrainStatus.className = '';
+            }, 5000);
+        }
+    }
+
+    // --- Configuration Functions ---
+    function updateConfigDisplay(configData) {
+        const currentThresholdSpan = document.getElementById('current-threshold');
+        const autoCorrectStatusSpan = document.getElementById('auto-correction-status');
+        const learningThresholdInput = document.getElementById('learning-threshold');
+
+        if (currentThresholdSpan) {
+            currentThresholdSpan.textContent = configData.lexicon_learning_threshold || 3;
+        }
+
+        if (autoCorrectStatusSpan) {
+            const enabled = configData.auto_correction_enabled;
+            autoCorrectStatusSpan.textContent = enabled ? 'Enabled' : 'Disabled';
+            autoCorrectStatusSpan.style.color = enabled ? '#28a745' : '#dc3545';
+        }
+
+        if (learningThresholdInput) {
+            learningThresholdInput.value = configData.lexicon_learning_threshold || 3;
+        }
+    }
+
+    async function updateLearningThreshold() {
+        const thresholdInput = document.getElementById('learning-threshold');
+        const updateBtn = document.getElementById('update-threshold-btn');
+
+        if (!thresholdInput || !updateBtn) return;
+
+        const newThreshold = parseInt(thresholdInput.value);
+        if (isNaN(newThreshold) || newThreshold < 1) {
+            alert('Please enter a valid threshold (1 or higher)');
+            return;
+        }
+
+        try {
+            updateBtn.disabled = true;
+            updateBtn.textContent = 'Updating...';
+
+            const formData = new FormData();
+            formData.append('key', 'lexicon_learning_threshold');
+            formData.append('value', newThreshold.toString());
+
+            const response = await fetch('/api/config/update', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // Update the display
+                const currentThresholdSpan = document.getElementById('current-threshold');
+                if (currentThresholdSpan) {
+                    currentThresholdSpan.textContent = newThreshold;
+                }
+                
+                // Show success message
+                updateBtn.textContent = 'Updated!';
+                updateBtn.style.backgroundColor = '#28a745';
+                
+                setTimeout(() => {
+                    updateBtn.textContent = 'Update';
+                    updateBtn.style.backgroundColor = '';
+                }, 2000);
+            } else {
+                alert(`Failed to update threshold: ${result.error}`);
+                updateBtn.textContent = 'Update';
+            }
+
+        } catch (error) {
+            console.error('Error updating threshold:', error);
+            alert('Failed to update threshold');
+            updateBtn.textContent = 'Update';
+        } finally {
+            updateBtn.disabled = false;
+        }
+    }
+
+    // --- Document Classification Functions ---
+    async function loadDocumentClassification() {
+        try {
+            const response = await fetch(`/api/document_classification/${docId}`);
+            if (response.ok) {
+                const classificationData = await response.json();
+                updateClassificationDisplay(classificationData);
+            } else {
+                console.warn('Failed to load document classification');
+                updateClassificationDisplay({
+                    document_type: 'unknown',
+                    classification_confidence: 0.0,
+                    type_description: 'Document type could not be determined'
+                });
+            }
+        } catch (error) {
+            console.error('Error loading document classification:', error);
+        }
+    }
+
+    function updateClassificationDisplay(data) {
+        const docTypeSpan = document.getElementById('doc-type');
+        const docConfidenceSpan = document.getElementById('doc-confidence');
+        const docDescriptionP = document.getElementById('doc-description');
+
+        if (docTypeSpan) {
+            docTypeSpan.textContent = data.document_type.replace('_', ' ');
+            docTypeSpan.className = data.document_type; // Add type-specific CSS class
+        }
+
+        if (docConfidenceSpan) {
+            const confidence = data.classification_confidence || 0;
+            docConfidenceSpan.textContent = `(${(confidence * 100).toFixed(1)}% confidence)`;
+        }
+
+        if (docDescriptionP) {
+            docDescriptionP.textContent = data.type_description || 'No description available';
         }
     }
 });

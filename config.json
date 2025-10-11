@@ -1,0 +1,35 @@
+{
+  "lexicon_learning_threshold": 1,
+  "auto_correction_enabled": true,
+  "document_types": {
+    "invoice": {
+      "lexicon_learning_threshold": 1,
+      "auto_correction_enabled": true
+    },
+    "receipt": {
+      "lexicon_learning_threshold": 1,
+      "auto_correction_enabled": true
+    },
+    "identity_document": {
+      "lexicon_learning_threshold": 1,
+      "auto_correction_enabled": true
+    },
+    "contract": {
+      "lexicon_learning_threshold": 1,
+      "auto_correction_enabled": true
+    },
+    "bank_statement": {
+      "lexicon_learning_threshold": 1,
+      "auto_correction_enabled": true
+    }
+  },
+  "ui_settings": {
+    "show_autocorrection_indicators": true,
+    "highlight_corrected_words": true,
+    "show_correction_tooltips": true
+  },
+  "export_settings": {
+    "include_correction_metadata": true,
+    "use_corrected_text_only": true
+  }
+}

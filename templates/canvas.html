@@ -27,6 +27,15 @@
                 <a href="/" class="btn">Upload New</a>
             </div>
             
+            <!-- Document Classification Info -->
+            <div id="classification-info" class="classification-info">
+                <div class="classification-badge">
+                    <span id="doc-type">Loading...</span>
+                    <span id="doc-confidence" class="confidence-score">-</span>
+                </div>
+                <p id="doc-description" class="doc-description">Loading document type...</p>
+            </div>
+            
             {% if quality_level %}
             <div class="quality-info">
                 <div class="quality-badge quality-{{ quality_level }}">
@@ -52,6 +61,7 @@
                 <div class="panel-tabs">
                     <button class="tab-btn active" data-tab="edit">Edit Selection</button>
                     <button class="tab-btn" data-tab="raw-text">Raw OCR Text</button>
+                    <button class="tab-btn" data-tab="learning">Learning Stats</button>
                 </div>
                 
                 <div id="edit-tab" class="tab-content active">
@@ -84,6 +94,95 @@
                         <div class="text-stats">
                             <p><strong>Total Words:</strong> <span id="word-count">-</span></p>
                             <p><strong>Avg Confidence:</strong> <span id="avg-confidence">-</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="learning-tab" class="tab-content">
+                    <h2>🧠 Smart Learning System</h2>
+                    <div id="learning-container">
+                        
+                        <div class="learning-section highlight-section">
+                            <h3>📊 This Document</h3>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number" id="doc-corrections-count">0</div>
+                                    <div class="stat-label">Corrections Made</div>
+                                    <div class="stat-description">Manual edits you've made</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number" id="auto-corrections-count">0</div>
+                                    <div class="stat-label">Auto-Fixed</div>
+                                    <div class="stat-description">Words fixed automatically</div>
+                                </div>
+                            </div>
+                            
+                            <div id="auto-corrections-applied" class="corrections-display">
+                                <h4>🤖 Words Auto-Fixed in This Document:</h4>
+                                <div id="auto-corrections-list" class="corrections-container">
+                                    <div class="no-data">No auto-corrections yet - upload documents with similar errors to see learning in action!</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="learning-section">
+                            <h3>🎯 Learning Progress</h3>
+                            <div class="learning-progress">
+                                <div class="progress-item">
+                                    <div class="progress-header">
+                                        <span class="progress-title">Smart Corrections Learned</span>
+                                        <span class="progress-number" id="lexicon-size">0</span>
+                                    </div>
+                                    <div class="progress-description">Patterns the system now fixes automatically</div>
+                                </div>
+                                
+                                <div class="progress-item">
+                                    <div class="progress-header">
+                                        <span class="progress-title">Training Samples Collected</span>
+                                        <span class="progress-number" id="training-samples">0</span>
+                                    </div>
+                                    <div class="progress-description">Data prepared for model improvement</div>
+                                </div>
+                            </div>
+                            
+                            <div id="recent-corrections" class="recent-activity">
+                                <h4>🆕 Recently Learned Patterns:</h4>
+                                <ul id="lexicon-list" class="activity-list">
+                                    <li class="no-data">No patterns learned yet - make some corrections to see them here!</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="learning-section">
+                            <h3>⚙️ Learning Settings</h3>
+                            <div id="config-section">
+                                <div class="setting-explanation">
+                                    <p><strong>Learning Threshold:</strong> How many times the same correction is needed before the system learns it automatically.</p>
+                                    <p><em>Current setting: After <span id="current-threshold" class="threshold-highlight">1</span> correction(s), the system will auto-fix that error in future documents.</em></p>
+                                </div>
+                                
+                                <div class="config-item">
+                                    <label for="learning-threshold">Set new threshold:</label>
+                                    <input type="number" id="learning-threshold" min="1" max="10" value="1">
+                                    <button id="update-threshold-btn" class="btn-small">Apply</button>
+                                </div>
+                                
+                                <div class="config-status">
+                                    <p><strong>Auto-correction status:</strong> <span id="auto-correction-status">Loading...</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="learning-section">
+                            <h3>🔄 Advanced</h3>
+                            <div id="retraining-section">
+                                <p>Retrain the OCR model using collected correction data to improve base accuracy.</p>
+                                <button id="retrain-btn" class="btn">Start Model Retraining</button>
+                                <div id="retrain-status"></div>
+                                <div class="retrain-info">
+                                    <small>Requires at least 10 training samples. Currently available: <span id="training-samples-for-retrain">0</span></small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

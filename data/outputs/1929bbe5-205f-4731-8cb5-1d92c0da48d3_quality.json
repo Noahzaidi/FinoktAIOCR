@@ -1,0 +1,31 @@
+{
+  "quality_metrics": {
+    "ocr_confidence": 0.932522240357976,
+    "layout_confidence": 0.0,
+    "field_extraction_confidence": 0.0,
+    "overall_quality": 0.37300889614319044,
+    "quality_level": "low",
+    "recommendations": [
+      "Layout analysis uncertain - verify field positions",
+      "Manual field labeling may be required",
+      "Few fields extracted successfully - full manual review needed",
+      "Check document format compatibility",
+      "Low quality - comprehensive manual review required"
+    ]
+  },
+  "routing_decision": {
+    "document_id": "1929bbe5-205f-4731-8cb5-1d92c0da48d3",
+    "quality_level": "low",
+    "overall_quality": 0.37300889614319044,
+    "routing_queue": "full_review",
+    "priority": 1,
+    "estimated_review_time": 15,
+    "recommendations": [
+      "Layout analysis uncertain - verify field positions",
+      "Manual field labeling may be required",
+      "Few fields extracted successfully - full manual review needed",
+      "Check document format compatibility",
+      "Low quality - comprehensive manual review required"
+    ]
+  }
+}

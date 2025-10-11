@@ -1,0 +1,1386 @@
+{
+  "pages": [
+    {
+      "page_idx": 0,
+      "dimensions": [
+        2534,
+        3989
+      ],
+      "orientation": {
+        "value": 0,
+        "confidence": null
+      },
+      "language": {
+        "value": null,
+        "confidence": null
+      },
+      "blocks": [
+        {
+          "geometry": [
+            [
+              0.0341796875,
+              0.024975566668310967
+            ],
+            [
+              0.990234375,
+              0.9888600964384373
+            ]
+          ],
+          "objectness_score": 0.8046311321003097,
+          "lines": [
+            {
+              "geometry": [
+                [
+                  0.0390625,
+                  0.024975566668310967
+                ],
+                [
+                  0.2685546875,
+                  0.0511095969810576
+                ]
+              ],
+              "objectness_score": 0.762769897778829,
+              "words": [
+                {
+                  "value": "OBSERVATIONS",
+                  "confidence": 0.9824122786521912,
+                  "geometry": [
+                    [
+                      0.0390625,
+                      0.024975566668310967
+                    ],
+                    [
+                      0.1708984375,
+                      0.0511095969810576
+                    ]
+                  ],
+                  "objectness_score": 0.7347320318222046,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "/",
+                  "confidence": 0.9903683662414551,
+                  "geometry": [
+                    [
+                      0.1708984375,
+                      0.024975566668310967
+                    ],
+                    [
+                      0.18359375,
+                      0.0511095969810576
+                    ]
+                  ],
+                  "objectness_score": 0.7338813543319702,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "REMARKS",
+                  "confidence": 0.9989514350891113,
+                  "geometry": [
+                    [
+                      0.18359375,
+                      0.024975566668310967
+                    ],
+                    [
+                      0.2685546875,
+                      0.0511095969810576
+                    ]
+                  ],
+                  "objectness_score": 0.819696307182312,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0400390625,
+                  0.052646892881807406
+                ],
+                [
+                  0.3212890625,
+                  0.08646740269830305
+                ]
+              ],
+              "objectness_score": 0.8158298134803772,
+              "words": [
+                {
+                  "value": "RECHERCHE",
+                  "confidence": 0.9994334578514099,
+                  "geometry": [
+                    [
+                      0.0400390625,
+                      0.05418418878255721
+                    ],
+                    [
+                      0.181640625,
+                      0.08646740269830305
+                    ]
+                  ],
+                  "objectness_score": 0.8003143668174744,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "D'EMPLOI",
+                  "confidence": 0.7185095548629761,
+                  "geometry": [
+                    [
+                      0.197265625,
+                      0.052646892881807406
+                    ],
+                    [
+                      0.3212890625,
+                      0.08646740269830305
+                    ]
+                  ],
+                  "objectness_score": 0.83134526014328,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.3681640625,
+                  0.0511095969810576
+                ],
+                [
+                  0.7001953125,
+                  0.08646740269830305
+                ]
+              ],
+              "objectness_score": 0.8260659873485565,
+              "words": [
+                {
+                  "value": "CREATION",
+                  "confidence": 0.9984914064407349,
+                  "geometry": [
+                    [
+                      0.3681640625,
+                      0.052646892881807406
+                    ],
+                    [
+                      0.4951171875,
+                      0.08646740269830305
+                    ]
+                  ],
+                  "objectness_score": 0.8212659358978271,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "D'ENTREPRISE",
+                  "confidence": 0.9434458017349243,
+                  "geometry": [
+                    [
+                      0.51171875,
+                      0.0511095969810576
+                    ],
+                    [
+                      0.7001953125,
+                      0.08493010679755325
+                    ]
+                  ],
+                  "objectness_score": 0.8308660387992859,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0400390625,
+                  0.08646740269830305
+                ],
+                [
+                  0.7314453125,
+                  0.12797439201854777
+                ]
+              ],
+              "objectness_score": 0.8284304216504097,
+              "words": [
+                {
+                  "value": "AUTORISE",
+                  "confidence": 0.999819815158844,
+                  "geometry": [
+                    [
+                      0.0400390625,
+                      0.09261658630130226
+                    ],
+                    [
+                      0.166015625,
+                      0.12489980021704816
+                    ]
+                  ],
+                  "objectness_score": 0.8133434057235718,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "A",
+                  "confidence": 0.9996262788772583,
+                  "geometry": [
+                    [
+                      0.1796875,
+                      0.09261658630130226
+                    ],
+                    [
+                      0.19921875,
+                      0.12643709611779796
+                    ]
+                  ],
+                  "objectness_score": 0.8488813042640686,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "RECHERCHER",
+                  "confidence": 0.9995923638343811,
+                  "geometry": [
+                    [
+                      0.2138671875,
+                      0.09261658630130226
+                    ],
+                    [
+                      0.369140625,
+                      0.12489980021704816
+                    ]
+                  ],
+                  "objectness_score": 0.8143569827079773,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "UN",
+                  "confidence": 0.9998968839645386,
+                  "geometry": [
+                    [
+                      0.384765625,
+                      0.08800469859905286
+                    ],
+                    [
+                      0.41796875,
+                      0.12797439201854777
+                    ]
+                  ],
+                  "objectness_score": 0.8262192606925964,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "EMPLOI",
+                  "confidence": 0.9995867609977722,
+                  "geometry": [
+                    [
+                      0.4326171875,
+                      0.08954199449980266
+                    ],
+                    [
+                      0.5244140625,
+                      0.12489980021704816
+                    ]
+                  ],
+                  "objectness_score": 0.7542319297790527,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "OU",
+                  "confidence": 0.99928218126297,
+                  "geometry": [
+                    [
+                      0.5400390625,
+                      0.08646740269830305
+                    ],
+                    [
+                      0.5751953125,
+                      0.12643709611779796
+                    ]
+                  ],
+                  "objectness_score": 0.8300098180770874,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "CREER",
+                  "confidence": 0.96866375207901,
+                  "geometry": [
+                    [
+                      0.5888671875,
+                      0.08954199449980266
+                    ],
+                    [
+                      0.66796875,
+                      0.12489980021704816
+                    ]
+                  ],
+                  "objectness_score": 0.8590551018714905,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "UNE",
+                  "confidence": 0.9996150732040405,
+                  "geometry": [
+                    [
+                      0.6826171875,
+                      0.08954199449980266
+                    ],
+                    [
+                      0.7314453125,
+                      0.12489980021704816
+                    ]
+                  ],
+                  "objectness_score": 0.8813455700874329,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.810546875,
+                  0.07878092319455404
+                ],
+                [
+                  0.955078125,
+                  0.11721332071329915
+                ]
+              ],
+              "objectness_score": 0.8081939220428467,
+              "words": [
+                {
+                  "value": "2103046677",
+                  "confidence": 0.9939910769462585,
+                  "geometry": [
+                    [
+                      0.810546875,
+                      0.07878092319455404
+                    ],
+                    [
+                      0.955078125,
+                      0.11721332071329915
+                    ]
+                  ],
+                  "objectness_score": 0.8081939220428467,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0419921875,
+                  0.13104898382004737
+                ],
+                [
+                  0.1962890625,
+                  0.16486949363654302
+                ]
+              ],
+              "objectness_score": 0.7226090431213379,
+              "words": [
+                {
+                  "value": "ENTREPRISE",
+                  "confidence": 0.9917676448822021,
+                  "geometry": [
+                    [
+                      0.0419921875,
+                      0.13104898382004737
+                    ],
+                    [
+                      0.1962890625,
+                      0.16486949363654302
+                    ]
+                  ],
+                  "objectness_score": 0.7226090431213379,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0390625,
+                  0.16640678953729282
+                ],
+                [
+                  0.533203125,
+                  0.20176459525453827
+                ]
+              ],
+              "objectness_score": 0.8300491690635681,
+              "words": [
+                {
+                  "value": "DATE",
+                  "confidence": 0.9983629584312439,
+                  "geometry": [
+                    [
+                      0.0390625,
+                      0.16948138133879243
+                    ],
+                    [
+                      0.0869140625,
+                      0.20022729935378847
+                    ]
+                  ],
+                  "objectness_score": 0.8088275790214539,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "ET",
+                  "confidence": 0.998364269733429,
+                  "geometry": [
+                    [
+                      0.0888671875,
+                      0.17101867723954223
+                    ],
+                    [
+                      0.1123046875,
+                      0.19869000345303867
+                    ]
+                  ],
+                  "objectness_score": 0.8539520502090454,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "LIEU",
+                  "confidence": 0.9999066591262817,
+                  "geometry": [
+                    [
+                      0.11328125,
+                      0.16948138133879243
+                    ],
+                    [
+                      0.1533203125,
+                      0.19869000345303867
+                    ]
+                  ],
+                  "objectness_score": 0.845086395740509,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "DE",
+                  "confidence": 0.9956955909729004,
+                  "geometry": [
+                    [
+                      0.154296875,
+                      0.16794408543804262
+                    ],
+                    [
+                      0.181640625,
+                      0.20176459525453827
+                    ]
+                  ],
+                  "objectness_score": 0.8224962949752808,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "DÉLIVRANCE/",
+                  "confidence": 0.8774673342704773,
+                  "geometry": [
+                    [
+                      0.18359375,
+                      0.16640678953729282
+                    ],
+                    [
+                      0.302734375,
+                      0.20022729935378847
+                    ]
+                  ],
+                  "objectness_score": 0.8047306537628174,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "DATE",
+                  "confidence": 0.9979845285415649,
+                  "geometry": [
+                    [
+                      0.306640625,
+                      0.16948138133879243
+                    ],
+                    [
+                      0.35546875,
+                      0.19869000345303867
+                    ]
+                  ],
+                  "objectness_score": 0.7786357998847961,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "AND",
+                  "confidence": 0.9986751675605774,
+                  "geometry": [
+                    [
+                      0.353515625,
+                      0.16948138133879243
+                    ],
+                    [
+                      0.3955078125,
+                      0.20022729935378847
+                    ]
+                  ],
+                  "objectness_score": 0.8489722609519958,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "PLACE",
+                  "confidence": 0.9985275268554688,
+                  "geometry": [
+                    [
+                      0.396484375,
+                      0.16948138133879243
+                    ],
+                    [
+                      0.4521484375,
+                      0.19715270755228886
+                    ]
+                  ],
+                  "objectness_score": 0.8570361733436584,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "OF",
+                  "confidence": 0.9998366832733154,
+                  "geometry": [
+                    [
+                      0.4541015625,
+                      0.16948138133879243
+                    ],
+                    [
+                      0.4794921875,
+                      0.19715270755228886
+                    ]
+                  ],
+                  "objectness_score": 0.8520280122756958,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "ISSUE",
+                  "confidence": 0.9994471669197083,
+                  "geometry": [
+                    [
+                      0.48046875,
+                      0.16948138133879243
+                    ],
+                    [
+                      0.533203125,
+                      0.19715270755228886
+                    ]
+                  ],
+                  "objectness_score": 0.8287264704704285,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0390625,
+                  0.19561541165153906
+                ],
+                [
+                  0.40234375,
+                  0.24327158457478293
+                ]
+              ],
+              "objectness_score": 0.851447868347168,
+              "words": [
+                {
+                  "value": "18",
+                  "confidence": 0.7220166921615601,
+                  "geometry": [
+                    [
+                      0.0390625,
+                      0.19561541165153906
+                    ],
+                    [
+                      0.083984375,
+                      0.24173428867403313
+                    ]
+                  ],
+                  "objectness_score": 0.8643863797187805,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "10",
+                  "confidence": 0.676034152507782,
+                  "geometry": [
+                    [
+                      0.1015625,
+                      0.19561541165153906
+                    ],
+                    [
+                      0.1455078125,
+                      0.24173428867403313
+                    ]
+                  ],
+                  "objectness_score": 0.8553479313850403,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "2024",
+                  "confidence": 0.996206521987915,
+                  "geometry": [
+                    [
+                      0.1650390625,
+                      0.19715270755228886
+                    ],
+                    [
+                      0.2470703125,
+                      0.24019699277328332
+                    ]
+                  ],
+                  "objectness_score": 0.8638474941253662,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "COTE",
+                  "confidence": 0.9989915490150452,
+                  "geometry": [
+                    [
+                      0.2607421875,
+                      0.20483918705603787
+                    ],
+                    [
+                      0.32421875,
+                      0.24019699277328332
+                    ]
+                  ],
+                  "objectness_score": 0.8541500568389893,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "D'OR",
+                  "confidence": 0.9992243051528931,
+                  "geometry": [
+                    [
+                      0.337890625,
+                      0.20022729935378847
+                    ],
+                    [
+                      0.40234375,
+                      0.24327158457478293
+                    ]
+                  ],
+                  "objectness_score": 0.8195074796676636,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.296875,
+                  0.24019699277328332
+                ],
+                [
+                  0.6171875,
+                  0.27248020668902917
+                ]
+              ],
+              "objectness_score": 0.8230083882808685,
+              "words": [
+                {
+                  "value": "LIEU",
+                  "confidence": 0.9990635514259338,
+                  "geometry": [
+                    [
+                      0.296875,
+                      0.24173428867403313
+                    ],
+                    [
+                      0.3359375,
+                      0.27094291078827937
+                    ]
+                  ],
+                  "objectness_score": 0.8360046744346619,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "DE",
+                  "confidence": 0.9954322576522827,
+                  "geometry": [
+                    [
+                      0.3369140625,
+                      0.24019699277328332
+                    ],
+                    [
+                      0.3642578125,
+                      0.27248020668902917
+                    ]
+                  ],
+                  "objectness_score": 0.7584047913551331,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "NAISSANCE/",
+                  "confidence": 0.8805682063102722,
+                  "geometry": [
+                    [
+                      0.365234375,
+                      0.24327158457478293
+                    ],
+                    [
+                      0.4736328125,
+                      0.27094291078827937
+                    ]
+                  ],
+                  "objectness_score": 0.7869574427604675,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "PLACE",
+                  "confidence": 0.9433792233467102,
+                  "geometry": [
+                    [
+                      0.478515625,
+                      0.24327158457478293
+                    ],
+                    [
+                      0.5341796875,
+                      0.27094291078827937
+                    ]
+                  ],
+                  "objectness_score": 0.8686726689338684,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "OF",
+                  "confidence": 0.9997202754020691,
+                  "geometry": [
+                    [
+                      0.5361328125,
+                      0.24327158457478293
+                    ],
+                    [
+                      0.5615234375,
+                      0.27094291078827937
+                    ]
+                  ],
+                  "objectness_score": 0.817826509475708,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "BIRTH",
+                  "confidence": 0.9949159622192383,
+                  "geometry": [
+                    [
+                      0.5634765625,
+                      0.24327158457478293
+                    ],
+                    [
+                      0.6171875,
+                      0.27094291078827937
+                    ]
+                  ],
+                  "objectness_score": 0.8701842427253723,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.296875,
+                  0.2801666861927782
+                ],
+                [
+                  0.4814453125,
+                  0.3232109714137727
+                ]
+              ],
+              "objectness_score": 0.8389855623245239,
+              "words": [
+                {
+                  "value": "AGADIR",
+                  "confidence": 0.97655189037323,
+                  "geometry": [
+                    [
+                      0.296875,
+                      0.2832412779942778
+                    ],
+                    [
+                      0.3916015625,
+                      0.3170617878107735
+                    ]
+                  ],
+                  "objectness_score": 0.820458173751831,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "(MAR)",
+                  "confidence": 0.9778051376342773,
+                  "geometry": [
+                    [
+                      0.41015625,
+                      0.2801666861927782
+                    ],
+                    [
+                      0.4814453125,
+                      0.3232109714137727
+                    ]
+                  ],
+                  "objectness_score": 0.8575129508972168,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.2958984375,
+                  0.3339720427190213
+                ],
+                [
+                  0.4755859375,
+                  0.36471796073401735
+                ]
+              ],
+              "objectness_score": 0.7646793127059937,
+              "words": [
+                {
+                  "value": "ADRESSE /",
+                  "confidence": 0.782974898815155,
+                  "geometry": [
+                    [
+                      0.2958984375,
+                      0.3355093386197711
+                    ],
+                    [
+                      0.38671875,
+                      0.36471796073401735
+                    ]
+                  ],
+                  "objectness_score": 0.7451756000518799,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "ADRESSEI",
+                  "auto_corrected": true,
+                  "corrected_by_lexicon": true,
+                  "correction_source": "lexicon",
+                  "auto_corrected_at": "2025-10-10T23:43:43.010069"
+                },
+                {
+                  "value": "ADDRESS",
+                  "confidence": 0.9992744326591492,
+                  "geometry": [
+                    [
+                      0.3916015625,
+                      0.3339720427190213
+                    ],
+                    [
+                      0.4755859375,
+                      0.36164336893251775
+                    ]
+                  ],
+                  "objectness_score": 0.7841830253601074,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.2978515625,
+                  0.36471796073401735
+                ],
+                [
+                  0.6103515625,
+                  0.40007576645126286
+                ]
+              ],
+              "objectness_score": 0.8223614692687988,
+              "words": [
+                {
+                  "value": "CHEZ",
+                  "confidence": 0.9995334148406982,
+                  "geometry": [
+                    [
+                      0.2978515625,
+                      0.36471796073401735
+                    ],
+                    [
+                      0.361328125,
+                      0.40007576645126286
+                    ]
+                  ],
+                  "objectness_score": 0.891591489315033,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "MAUREL",
+                  "confidence": 0.944325864315033,
+                  "geometry": [
+                    [
+                      0.375,
+                      0.36471796073401735
+                    ],
+                    [
+                      0.4697265625,
+                      0.40007576645126286
+                    ]
+                  ],
+                  "objectness_score": 0.8166370391845703,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "MATTHIEU",
+                  "confidence": 0.9997022747993469,
+                  "geometry": [
+                    [
+                      0.4853515625,
+                      0.36471796073401735
+                    ],
+                    [
+                      0.6103515625,
+                      0.40007576645126286
+                    ]
+                  ],
+                  "objectness_score": 0.7588558793067932,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.2958984375,
+                  0.40161306235201266
+                ],
+                [
+                  0.51953125,
+                  0.4477319393745067
+                ]
+              ],
+              "objectness_score": 0.7998920281728109,
+              "words": [
+                {
+                  "value": "30",
+                  "confidence": 0.9995450377464294,
+                  "geometry": [
+                    [
+                      0.2958984375,
+                      0.40161306235201266
+                    ],
+                    [
+                      0.3310546875,
+                      0.4477319393745067
+                    ]
+                  ],
+                  "objectness_score": 0.8015557527542114,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "RUE,",
+                  "confidence": 0.8724605441093445,
+                  "geometry": [
+                    [
+                      0.3427734375,
+                      0.40161306235201266
+                    ],
+                    [
+                      0.400390625,
+                      0.4461946434737569
+                    ]
+                  ],
+                  "objectness_score": 0.8126375079154968,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "CHANZY",
+                  "confidence": 0.9992541670799255,
+                  "geometry": [
+                    [
+                      0.421875,
+                      0.40161306235201266
+                    ],
+                    [
+                      0.51953125,
+                      0.4415827557715075
+                    ]
+                  ],
+                  "objectness_score": 0.7854828238487244,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.294921875,
+                  0.4385081639700079
+                ],
+                [
+                  0.5009765625,
+                  0.4815524491910024
+                ]
+              ],
+              "objectness_score": 0.7384354174137115,
+              "words": [
+                {
+                  "value": "21000.DIJON.",
+                  "confidence": 0.7098134160041809,
+                  "geometry": [
+                    [
+                      0.294921875,
+                      0.4400454598707577
+                    ],
+                    [
+                      0.4736328125,
+                      0.4815524491910024
+                    ]
+                  ],
+                  "objectness_score": 0.7592273354530334,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "E",
+                  "confidence": 0.9823377132415771,
+                  "geometry": [
+                    [
+                      0.482421875,
+                      0.4385081639700079
+                    ],
+                    [
+                      0.5009765625,
+                      0.46310489838200475
+                    ]
+                  ],
+                  "objectness_score": 0.7176434993743896,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0380859375,
+                  0.6721771408839778
+                ],
+                [
+                  0.978515625,
+                  0.7229079056087214
+                ]
+              ],
+              "objectness_score": 0.7570328712463379,
+              "words": [
+                {
+                  "value": "IRFRAIWG31OTUC8<2103046677<<<<",
+                  "confidence": 0.743240068356196,
+                  "geometry": [
+                    [
+                      0.0380859375,
+                      0.6721771408839778
+                    ],
+                    [
+                      0.978515625,
+                      0.7229079056087214
+                    ]
+                  ],
+                  "objectness_score": 0.7570328712463379,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0341796875,
+                  0.7521165277229677
+                ],
+                [
+                  0.974609375,
+                  0.8028472924477111
+                ]
+              ],
+              "objectness_score": 0.7313263416290283,
+              "words": [
+                {
+                  "value": "0001018M2510170MAR<<<<<<<<<<<6",
+                  "confidence": 0.7765992018911574,
+                  "geometry": [
+                    [
+                      0.0341796875,
+                      0.7521165277229677
+                    ],
+                    [
+                      0.974609375,
+                      0.8028472924477111
+                    ]
+                  ],
+                  "objectness_score": 0.7313263416290283,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "0001018M2510170MAR<<<<<<<<6",
+                  "auto_corrected": true,
+                  "corrected_by_lexicon": true,
+                  "correction_source": "lexicon",
+                  "auto_corrected_at": "2025-10-10T23:43:43.010069"
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.0361328125,
+                  0.8366678022642068
+                ],
+                [
+                  0.9794921875,
+                  0.8827866792867008
+                ]
+              ],
+              "objectness_score": 0.7313523292541504,
+              "words": [
+                {
+                  "value": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<",
+                  "confidence": 0.7436825722455979,
+                  "geometry": [
+                    [
+                      0.0361328125,
+                      0.8366678022642068
+                    ],
+                    [
+                      0.9794921875,
+                      0.8827866792867008
+                    ]
+                  ],
+                  "objectness_score": 0.7313523292541504,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  },
+                  "original_value": "ZAIDIS<NOUR<EDDINE<<<<<<<<<<",
+                  "auto_corrected": true,
+                  "corrected_by_lexicon": true,
+                  "correction_source": "lexicon",
+                  "auto_corrected_at": "2025-10-10T23:43:43.010069"
+                }
+              ]
+            },
+            {
+              "geometry": [
+                [
+                  0.93359375,
+                  0.9565768825226915
+                ],
+                [
+                  0.990234375,
+                  0.9888600964384373
+                ]
+              ],
+              "objectness_score": 0.6875139276186625,
+              "words": [
+                {
+                  "value": "CamScanner",
+                  "confidence": 0.5134633183479309,
+                  "geometry": [
+                    [
+                      0.93359375,
+                      0.9658006579271903
+                    ],
+                    [
+                      0.990234375,
+                      0.9888600964384373
+                    ]
+                  ],
+                  "objectness_score": 0.6061590313911438,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "Scanned",
+                  "confidence": 0.9956295490264893,
+                  "geometry": [
+                    [
+                      0.94140625,
+                      0.9565768825226915
+                    ],
+                    [
+                      0.96875,
+                      0.9719498415301895
+                    ]
+                  ],
+                  "objectness_score": 0.7713664174079895,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                },
+                {
+                  "value": "with",
+                  "confidence": 0.5517772436141968,
+                  "geometry": [
+                    [
+                      0.9658203125,
+                      0.9565768825226915
+                    ],
+                    [
+                      0.982421875,
+                      0.9734871374309393
+                    ]
+                  ],
+                  "objectness_score": 0.6850163340568542,
+                  "crop_orientation": {
+                    "value": 0,
+                    "confidence": null
+                  }
+                }
+              ]
+            }
+          ],
+          "artefacts": []
+        }
+      ]
+    }
+  ]
+}

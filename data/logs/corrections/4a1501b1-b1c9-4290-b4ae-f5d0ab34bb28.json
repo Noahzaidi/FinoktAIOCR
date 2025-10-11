@@ -1,0 +1,62 @@
+{
+  "corrections": [
+    {
+      "document_id": "4a1501b1-b1c9-4290-b4ae-f5d0ab34bb28",
+      "page": 1,
+      "word_id": "p1_w52",
+      "original_text": "ZAIDI<NOUR<EDDINE<<<<<<<<<<",
+      "corrected_text": "ZAIDI<NOUR<EDDINE<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.0361328125,
+          0.8366796875
+        ],
+        [
+          0.9794921875,
+          0.8828001926369863
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T11:25:53.362659"
+    },
+    {
+      "document_id": "4a1501b1-b1c9-4290-b4ae-f5d0ab34bb28",
+      "page": 1,
+      "word_id": "p1_w52",
+      "original_text": "ZAIDI<NOUR<EDDINE<<<<<<<<<<<<",
+      "corrected_text": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.0361328125,
+          0.8366796875
+        ],
+        [
+          0.9794921875,
+          0.8828001926369863
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T11:26:03.420256"
+    },
+    {
+      "document_id": "4a1501b1-b1c9-4290-b4ae-f5d0ab34bb28",
+      "page": 1,
+      "word_id": "p1_w50",
+      "original_text": "IRFRAIWG31OTUC8<2103046677<<<",
+      "corrected_text": "IRFRAIWG3I0TUC8<2103046677<<<<",
+      "corrected_bbox": [
+        [
+          0.0390625,
+          0.6737205693493151
+        ],
+        [
+          0.9775390625,
+          0.7198410744863013
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T11:27:23.998952"
+    }
+  ],
+  "document_id": "4a1501b1-b1c9-4290-b4ae-f5d0ab34bb28"
+}

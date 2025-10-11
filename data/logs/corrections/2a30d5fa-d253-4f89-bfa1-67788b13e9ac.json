@@ -1,0 +1,25 @@
+{
+  "corrections": [
+    {
+      "document_id": "2a30d5fa-d253-4f89-bfa1-67788b13e9ac",
+      "page": 0,
+      "word_id": "p0_w52",
+      "original_text": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<",
+      "corrected_text": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<<<",
+      "corrected_bbox": [
+        [
+          0.0361328125,
+          0.8366678022642068
+        ],
+        [
+          0.9794921875,
+          0.8827866792867008
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T00:02:04.450457",
+      "document_type": "document"
+    }
+  ],
+  "document_id": "2a30d5fa-d253-4f89-bfa1-67788b13e9ac"
+}

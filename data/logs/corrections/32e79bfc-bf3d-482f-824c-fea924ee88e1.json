@@ -1,0 +1,43 @@
+{
+  "corrections": [
+    {
+      "document_id": "32e79bfc-bf3d-482f-824c-fea924ee88e1",
+      "page": 0,
+      "word_id": "p0_w13",
+      "original_text": "ZAIDI*",
+      "corrected_text": "ZAIDI",
+      "corrected_bbox": [
+        [
+          0.4091796875,
+          0.219384489759887
+        ],
+        [
+          0.5283203125,
+          0.2674457097457627
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T13:10:51.829804"
+    },
+    {
+      "document_id": "32e79bfc-bf3d-482f-824c-fea924ee88e1",
+      "page": 0,
+      "word_id": "p0_w13",
+      "original_text": "ZAIDI",
+      "corrected_text": "ZAIDI *",
+      "corrected_bbox": [
+        [
+          0.4091796875,
+          0.219384489759887
+        ],
+        [
+          0.5283203125,
+          0.2674457097457627
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-11T13:11:07.835832"
+    }
+  ],
+  "document_id": "32e79bfc-bf3d-482f-824c-fea924ee88e1"
+}

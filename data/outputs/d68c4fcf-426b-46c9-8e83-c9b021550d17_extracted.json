@@ -1,0 +1,15 @@
+{
+  "invoice_number": null,
+  "date": null,
+  "amount": null,
+  "currency": null,
+  "country": null,
+  "corrections_applied": [],
+  "document_type": "document",
+  "classification_confidence": 0.05000000000000001,
+  "auto_corrections_applied": [
+    "'ADRESSEI' -> 'ADRESSE /'",
+    "'0001018M2510170MAR<<<<<<<<6' -> '0001018M2510170MAR<<<<<<<<<<<6'",
+    "'ZAIDIS<NOUR<EDDINE<<<<<<<<<<' -> 'ZAIDI<<NOUR<EDDINE<<<<<<<<<<<<'"
+  ]
+}

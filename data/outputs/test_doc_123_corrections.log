@@ -1,0 +1,1 @@
+{"document_id": "test_doc_123", "page": 0, "word_id": "p0_w1", "original_text": "TEST_ORIGINAL", "corrected_text": "TEST_CORRECTED", "corrected_bbox": [[0.1, 0.1], [0.2, 0.2]], "user_id": "test_user", "timestamp": "2025-10-10T23:50:06.370398", "document_type": "document"}
