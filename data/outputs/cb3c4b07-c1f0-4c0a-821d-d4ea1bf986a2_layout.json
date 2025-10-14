@@ -1,0 +1,13 @@
+{
+  "document_id": "cb3c4b07-c1f0-4c0a-821d-d4ea1bf986a2",
+  "entities": [],
+  "field_relationships": {
+    "label_value_pairs": [],
+    "table_structures": [],
+    "field_groups": []
+  },
+  "layout_confidence": 0.0,
+  "total_words": 0,
+  "total_entities": 0,
+  "error": "not enough values to unpack (expected 4, got 2)"
+}

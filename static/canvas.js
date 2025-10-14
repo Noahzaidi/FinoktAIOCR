@@ -390,20 +390,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function scrollToPage(index) {
+        console.log(`Attempting to scroll to page ${index}`);
         const el = document.getElementById(`page-container-${index}`);
         const viewer = document.getElementById('document-viewer-container');
-        if (!el || !viewer) return;
+        
+        if (!el) {
+            console.error(`Page container element not found: page-container-${index}`);
+            return;
+        }
+        
+        if (!viewer) {
+            console.error('Document viewer container not found');
+            return;
+        }
+        
+        console.log(`Found page element and viewer, scrolling...`);
         
         // Calculate accurate scroll position relative to the viewer's scroll container
         const viewerRect = viewer.getBoundingClientRect();
         const elementRect = el.getBoundingClientRect();
         const relativeTop = elementRect.top - viewerRect.top + viewer.scrollTop;
         
+        console.log(`Scroll calculation: relativeTop=${relativeTop}, viewerScrollTop=${viewer.scrollTop}`);
+        
         // Scroll with some padding at the top
         viewer.scrollTo({ 
             top: relativeTop - 16, 
             behavior: 'smooth' 
         });
+        
+        console.log(`Scroll command issued to position: ${relativeTop - 16}`);
         
         // Visual feedback: highlight the page briefly
         el.style.transition = 'box-shadow 0.3s ease';
@@ -1173,82 +1189,157 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Zoom and Navigation Controls ---
     function initializeZoomControls() {
+        console.log('Initializing zoom and navigation controls...');
+        
         // Zoom controls
-        document.getElementById('zoom-in-btn').addEventListener('click', () => {
-            currentZoom = Math.min(currentZoom * 1.2, 3.0);
-            updateZoom();
+        const zoomInBtn = document.getElementById('zoom-in-btn');
+        const zoomOutBtn = document.getElementById('zoom-out-btn');
+        const prevPageBtn = document.getElementById('prev-page-btn');
+        const nextPageBtn = document.getElementById('next-page-btn');
+        const panLeftBtn = document.getElementById('pan-left-btn');
+        const panRightBtn = document.getElementById('pan-right-btn');
+        
+        // Check if all buttons exist
+        console.log('Button elements found:', {
+            zoomIn: !!zoomInBtn,
+            zoomOut: !!zoomOutBtn,
+            prevPage: !!prevPageBtn,
+            nextPage: !!nextPageBtn,
+            panLeft: !!panLeftBtn,
+            panRight: !!panRightBtn
         });
+        
+        if (zoomInBtn) {
+            zoomInBtn.addEventListener('click', () => {
+                console.log('Zoom in clicked');
+                currentZoom = Math.min(currentZoom * 1.2, 3.0);
+                updateZoom();
+            });
+        }
 
-        document.getElementById('zoom-out-btn').addEventListener('click', () => {
-            currentZoom = Math.max(currentZoom / 1.2, 0.3);
-            updateZoom();
-        });
+        if (zoomOutBtn) {
+            zoomOutBtn.addEventListener('click', () => {
+                console.log('Zoom out clicked');
+                currentZoom = Math.max(currentZoom / 1.2, 0.3);
+                updateZoom();
+            });
+        }
 
         // Page navigation controls
-        document.getElementById('prev-page-btn').addEventListener('click', () => {
-            const currentPage = getCurrentPageIndex();
-            if (currentPage > 0) {
-                scrollToPage(currentPage - 1);
-            }
-        });
+        if (prevPageBtn) {
+            prevPageBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Previous page button clicked');
+                const currentPage = getCurrentPageIndex();
+                console.log('Current page:', currentPage);
+                if (currentPage > 0) {
+                    console.log('Navigating to page:', currentPage - 1);
+                    scrollToPage(currentPage - 1);
+                } else {
+                    console.log('Already on first page');
+                }
+            });
+        } else {
+            console.error('Previous page button not found!');
+        }
 
-        document.getElementById('next-page-btn').addEventListener('click', () => {
-            const currentPage = getCurrentPageIndex();
-            if (currentPage < ocrData.pages.length - 1) {
-                scrollToPage(currentPage + 1);
-            }
-        });
+        if (nextPageBtn) {
+            nextPageBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Next page button clicked');
+                const currentPage = getCurrentPageIndex();
+                console.log('Current page:', currentPage, 'Total pages:', ocrData?.pages?.length);
+                if (ocrData && ocrData.pages && currentPage < ocrData.pages.length - 1) {
+                    console.log('Navigating to page:', currentPage + 1);
+                    scrollToPage(currentPage + 1);
+                } else {
+                    console.log('Already on last page or no OCR data');
+                }
+            });
+        } else {
+            console.error('Next page button not found!');
+        }
 
         // Panning controls (for horizontal navigation within zoomed pages)
-        document.getElementById('pan-left-btn').addEventListener('click', () => {
-            panHorizontally(-200); // Pan left by 200px
-        });
+        if (panLeftBtn) {
+            panLeftBtn.addEventListener('click', () => {
+                console.log('Pan left clicked');
+                panHorizontally(-200); // Pan left by 200px
+            });
+        }
 
-        document.getElementById('pan-right-btn').addEventListener('click', () => {
-            panHorizontally(200); // Pan right by 200px
-        });
+        if (panRightBtn) {
+            panRightBtn.addEventListener('click', () => {
+                console.log('Pan right clicked');
+                panHorizontally(200); // Pan right by 200px
+            });
+        }
 
         // Keyboard navigation
+        console.log('Setting up keyboard navigation...');
         document.addEventListener('keydown', (e) => {
             // Only handle navigation when not in input fields
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
                 return;
             }
 
+            if (!ocrData || !ocrData.pages) {
+                console.warn('Cannot navigate - OCR data not loaded');
+                return;
+            }
+
             const currentPage = getCurrentPageIndex();
+            console.log(`Keyboard navigation: key=${e.key}, currentPage=${currentPage}, totalPages=${ocrData.pages.length}`);
+            
             switch (e.key) {
                 case 'ArrowLeft':
+                    console.log('ArrowLeft pressed');
                     if (currentPage > 0) {
+                        console.log('Navigating to previous page');
                         scrollToPage(currentPage - 1);
                         e.preventDefault();
+                    } else {
+                        console.log('Already on first page');
                     }
                     break;
                 case 'ArrowRight':
+                    console.log('ArrowRight pressed');
                     if (currentPage < ocrData.pages.length - 1) {
+                        console.log('Navigating to next page');
                         scrollToPage(currentPage + 1);
                         e.preventDefault();
+                    } else {
+                        console.log('Already on last page');
                     }
                     break;
                 case 'Home':
+                    console.log('Home pressed - navigating to first page');
                     scrollToPage(0);
                     e.preventDefault();
                     break;
                 case 'End':
+                    console.log('End pressed - navigating to last page');
                     scrollToPage(ocrData.pages.length - 1);
                     e.preventDefault();
                     break;
                 case 'h':
                 case 'H':
+                    console.log('H pressed - panning left');
                     panHorizontally(-200); // Pan left
                     e.preventDefault();
                     break;
                 case 'l':
                 case 'L':
+                    console.log('L pressed - panning right');
                     panHorizontally(200); // Pan right
                     e.preventDefault();
                     break;
             }
         });
+        
+        console.log('Zoom and navigation controls initialized successfully');
     }
 
     function updateZoom() {
@@ -1409,7 +1500,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getCurrentPageIndex() {
         const viewer = document.getElementById('document-viewer-container');
-        if (!viewer || !ocrData || !ocrData.pages) return 0;
+        if (!viewer) {
+            console.warn('Viewer container not found in getCurrentPageIndex');
+            return 0;
+        }
+        
+        if (!ocrData || !ocrData.pages) {
+            console.warn('OCR data not available in getCurrentPageIndex');
+            return 0;
+        }
 
         const viewerRect = viewer.getBoundingClientRect();
         const viewerMidpoint = viewerRect.top + (viewerRect.height / 3);
@@ -1439,6 +1538,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        console.log(`Current page determined: ${currentPageIndex}`);
         return currentPageIndex;
     }
 

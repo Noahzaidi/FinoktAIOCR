@@ -542,6 +542,9 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
 }
 
 .zoom-controls {
@@ -557,11 +560,20 @@ footer {
     font-size: 1.2rem;
     padding: 0.5rem 0.75rem;
     min-width: 40px;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
 }
 
 #prev-page-btn:hover:not(:disabled), #next-page-btn:hover:not(:disabled),
 #pan-left-btn:hover:not(:disabled), #pan-right-btn:hover:not(:disabled) {
     background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+#prev-page-btn:active:not(:disabled), #next-page-btn:active:not(:disabled),
+#pan-left-btn:active:not(:disabled), #pan-right-btn:active:not(:disabled) {
+    transform: scale(0.95);
 }
 
 #prev-page-btn:disabled, #next-page-btn:disabled,
