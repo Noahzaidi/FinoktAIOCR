@@ -1,0 +1,11 @@
+{
+  "invoice_number": null,
+  "date": null,
+  "amount": null,
+  "currency": "USD",
+  "country": "US",
+  "corrections_applied": [],
+  "document_type": "document",
+  "classification_confidence": 0.41000000000000003,
+  "auto_corrections_applied": []
+}

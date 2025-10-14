@@ -181,12 +181,14 @@ async def upload_and_process_document(request: Request, file: UploadFile = File(
                    f"Level: {quality_metrics.quality_level.value})")
         
         # Return to review page with processing results
+        import time
         return templates.TemplateResponse(request, "canvas.html", {
             "doc_id": doc_id,
             "message": f"Document processed successfully! Quality: {quality_metrics.quality_level.value.title()}",
             "quality_level": quality_metrics.quality_level.value,
             "overall_quality": f"{quality_metrics.overall_quality:.1%}",
-            "recommendations": quality_metrics.recommendations
+            "recommendations": quality_metrics.recommendations,
+            "timestamp": int(time.time())
         })
     except Exception as e:
         error_details = traceback.format_exc()
@@ -198,7 +200,11 @@ async def upload_and_process_document(request: Request, file: UploadFile = File(
 @app.get("/review/{doc_id}", response_class=HTMLResponse)
 async def get_review_ui(request: Request, doc_id: str):
     """Serves the human-in-the-loop review UI."""
-    return templates.TemplateResponse(request, "canvas.html", {"doc_id": doc_id})
+    import time
+    return templates.TemplateResponse(request, "canvas.html", {
+        "doc_id": doc_id,
+        "timestamp": int(time.time())
+    })
 
 @app.get("/data/document/{doc_id}")
 async def get_document_data(doc_id: str):
@@ -1013,6 +1019,39 @@ async def update_ocr_data_realtime(
     except Exception as e:
         logger.error(f"Failed to update OCR data: {e}")
         return JSONResponse(status_code=500, content={"error": f"Failed to update OCR data: {str(e)}"})
+
+@app.get("/api/documents/list")
+async def get_documents_list():
+    """Get list of all processed documents."""
+    try:
+        documents = []
+
+        # Look for all JSON files in output directory that represent processed documents
+        for file_path in OUTPUT_DIR.glob("*.json"):
+            if file_path.name.endswith('_quality.json') or file_path.name.endswith('_corrections.log'):
+                continue
+
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+
+                # Extract document info
+                doc_id = data.get('document_id', file_path.stem)
+                documents.append({
+                    'id': doc_id,
+                    'filename': file_path.name,
+                    'processed_at': data.get('processed_at', ''),
+                    'quality_score': data.get('overall_quality', 0),
+                    'document_type': data.get('document_type', 'unknown')
+                })
+            except Exception as e:
+                logger.warning(f"Error reading document file {file_path}: {e}")
+
+        return {"documents": documents, "total": len(documents)}
+
+    except Exception as e:
+        logger.error(f"Error getting documents list: {e}")
+        return {"error": str(e)}, 500
 
 @app.get("/api/config")
 async def get_system_config():

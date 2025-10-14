@@ -1,0 +1,24 @@
+{
+  "corrections": [
+    {
+      "document_id": "24abf059-0f4b-4492-9287-d47bb276f916",
+      "page": 0,
+      "word_id": "p0_w21",
+      "original_text": "NACIMIENTO /NAIXEMENT",
+      "corrected_text": "NACIMIENTO / NAIXEMENT",
+      "corrected_bbox": [
+        [
+          0.7805376838235294,
+          0.4892578125
+        ],
+        [
+          0.9422268907563025,
+          0.5029296875
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-13T22:29:09.949769"
+    }
+  ],
+  "document_id": "24abf059-0f4b-4492-9287-d47bb276f916"
+}

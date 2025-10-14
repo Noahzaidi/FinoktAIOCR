@@ -1,0 +1,1265 @@
+{
+  "document_id": "5658ca4a-e47a-4434-94bd-d979216a9202",
+  "extraction_timestamp": "2025-10-13T23:00:22.889011",
+  "pages": [
+    {
+      "page_num": 1,
+      "words": [
+        {
+          "text": "19",
+          "bbox": [
+            0.4228515625,
+            0.0038841807909604786
+          ],
+          "confidence": 0.4974,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "EE",
+          "bbox": [
+            0.6962890625,
+            0.022488524011299416
+          ],
+          "confidence": 0.745,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "a",
+          "bbox": [
+            0.0673828125,
+            0.045743953036723184
+          ],
+          "confidence": 0.3387,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "là",
+          "bbox": [
+            0.0810546875,
+            0.04109286723163841
+          ],
+          "confidence": 0.3058,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "JA",
+          "bbox": [
+            0.12109375,
+            0.03489141949152541
+          ],
+          "confidence": 0.664,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TITRE",
+          "bbox": [
+            0.41015625,
+            0.014736714336158196
+          ],
+          "confidence": 0.8644,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DESEJOUR",
+          "bbox": [
+            0.5166015625,
+            0.016287076271186418
+          ],
+          "confidence": 0.7312,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IWG31OTUC",
+          "bbox": [
+            0.7451171875,
+            0.01318635240112992
+          ],
+          "confidence": 0.5272,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IWG3IOTUC",
+          "bbox": [
+            0.060546875,
+            0.1651218220338983
+          ],
+          "confidence": 0.9052,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NOMS",
+          "bbox": [
+            0.408203125,
+            0.1744239936440678
+          ],
+          "confidence": 0.9947,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Prénoms/",
+          "bbox": [
+            0.4619140625,
+            0.17287363170903952
+          ],
+          "confidence": 0.9219,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SURNAMES",
+          "bbox": [
+            0.5537109375,
+            0.1744239936440678
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Forenames",
+          "bbox": [
+            0.6513671875,
+            0.1744239936440678
+          ],
+          "confidence": 0.9969,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ZAIDI *",
+          "bbox": [
+            0.4091796875,
+            0.219384489759887
+          ],
+          "confidence": 0.852,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "ZAIDI*"
+        },
+        {
+          "text": "Nour-Eddine",
+          "bbox": [
+            0.4111328125,
+            0.2984529484463277
+          ],
+          "confidence": 0.9965,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SEXE/SEX",
+          "bbox": [
+            0.4072265625,
+            0.3821724929378531
+          ],
+          "confidence": 0.9981,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NATIONALITÉ",
+          "bbox": [
+            0.5107421875,
+            0.3775214071327684
+          ],
+          "confidence": 0.8092,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "/",
+          "bbox": [
+            0.619140625,
+            0.3790717690677966
+          ],
+          "confidence": 0.9928,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NAT.",
+          "bbox": [
+            0.6357421875,
+            0.3821724929378531
+          ],
+          "confidence": 0.9908,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.6953125,
+            0.3852732168079096
+          ],
+          "confidence": 0.697,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DE",
+          "bbox": [
+            0.7431640625,
+            0.3837228548728814
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NAISSANCE",
+          "bbox": [
+            0.7705078125,
+            0.3837228548728814
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "/",
+          "bbox": [
+            0.8662109375,
+            0.3852732168079096
+          ],
+          "confidence": 0.6268,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BIRTH",
+          "bbox": [
+            0.87890625,
+            0.3852732168079096
+          ],
+          "confidence": 0.9986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.93359375,
+            0.3852732168079096
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "M",
+          "bbox": [
+            0.4072265625,
+            0.4224819032485876
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MAR",
+          "bbox": [
+            0.5126953125,
+            0.4255826271186441
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "01",
+          "bbox": [
+            0.7802734375,
+            0.4240322651836158
+          ],
+          "confidence": 0.9992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "01",
+          "bbox": [
+            0.841796875,
+            0.4255826271186441
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2000",
+          "bbox": [
+            0.904296875,
+            0.4255826271186441
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CAT,",
+          "bbox": [
+            0.40625,
+            0.4767445709745763
+          ],
+          "confidence": 0.6771,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DUTITRE/TYPE",
+          "bbox": [
+            0.44921875,
+            0.4736438471045198
+          ],
+          "confidence": 0.9811,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.5830078125,
+            0.4782949329096045
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PERMIT",
+          "bbox": [
+            0.611328125,
+            0.4782949329096045
+          ],
+          "confidence": 0.9883,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "VALABLE",
+          "bbox": [
+            0.6982421875,
+            0.4782949329096045
+          ],
+          "confidence": 0.9985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "JUSQU'AU/",
+          "bbox": [
+            0.7763671875,
+            0.4798452948446328
+          ],
+          "confidence": 0.6573,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "I",
+          "bbox": [
+            0.8623046875,
+            0.481395656779661
+          ],
+          "confidence": 0.7255,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "VALID",
+          "bbox": [
+            0.873046875,
+            0.4782949329096045
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "UNTIL",
+          "bbox": [
+            0.927734375,
+            0.4798452948446328
+          ],
+          "confidence": 0.8609,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CARTE",
+          "bbox": [
+            0.4091796875,
+            0.518604343220339
+          ],
+          "confidence": 0.9961,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DE",
+          "bbox": [
+            0.53125,
+            0.518604343220339
+          ],
+          "confidence": 0.9934,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SEJOUR",
+          "bbox": [
+            0.59375,
+            0.5201547051553672
+          ],
+          "confidence": 0.7263,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "17",
+          "bbox": [
+            0.779296875,
+            0.5170539812853108
+          ],
+          "confidence": 0.5034,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "10",
+          "bbox": [
+            0.841796875,
+            0.5201547051553672
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2025",
+          "bbox": [
+            0.9052734375,
+            0.5232554290254238
+          ],
+          "confidence": 0.6702,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TEMPORAIRE",
+          "bbox": [
+            0.41015625,
+            0.5790684586864406
+          ],
+          "confidence": 0.9516,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NUMERO",
+          "bbox": [
+            0.4072265625,
+            0.6472843838276836
+          ],
+          "confidence": 0.817,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PERSONNEL/",
+          "bbox": [
+            0.482421875,
+            0.65038510769774
+          ],
+          "confidence": 0.9376,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PERSONAL",
+          "bbox": [
+            0.599609375,
+            0.65038510769774
+          ],
+          "confidence": 0.9982,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NUMBER",
+          "bbox": [
+            0.69140625,
+            0.65038510769774
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2103046677",
+          "bbox": [
+            0.412109375,
+            0.693795241878531
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "964817",
+          "bbox": [
+            0.8095703125,
+            0.8255760063559322
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "RESIDENCE",
+          "bbox": [
+            0.40625,
+            0.9061948269774012
+          ],
+          "confidence": 0.9941,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PERMIT",
+          "bbox": [
+            0.5322265625,
+            0.9077451889124294
+          ],
+          "confidence": 0.9958,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Scannod",
+          "bbox": [
+            0.931640625,
+            0.9511553230932204
+          ],
+          "confidence": 0.6311,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "with",
+          "bbox": [
+            0.9609375,
+            0.9511553230932204
+          ],
+          "confidence": 0.992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CamScanner",
+          "bbox": [
+            0.9345703125,
+            0.9651085805084746
+          ],
+          "confidence": 0.885,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 57,
+      "average_confidence": 0.8671
+    },
+    {
+      "page_num": 2,
+      "words": [
+        {
+          "text": "OBSERVATIONS",
+          "bbox": [
+            0.0400390625,
+            0.026496147260273994
+          ],
+          "confidence": 0.9378,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "/",
+          "bbox": [
+            0.1708984375,
+            0.024958797089041085
+          ],
+          "confidence": 0.9743,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "REMARKS",
+          "bbox": [
+            0.18359375,
+            0.02342144691780823
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "RECHERCHE",
+          "bbox": [
+            0.041015625,
+            0.05570580051369861
+          ],
+          "confidence": 0.7934,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "D\"EMPLOI",
+          "bbox": [
+            0.1982421875,
+            0.0526311001712329
+          ],
+          "confidence": 0.6185,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CREATION",
+          "bbox": [
+            0.369140625,
+            0.05109374999999999
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "D'ENTREPRISE",
+          "bbox": [
+            0.51171875,
+            0.05109374999999999
+          ],
+          "confidence": 0.9684,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AUTORISE",
+          "bbox": [
+            0.0400390625,
+            0.09260220462328766
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "A",
+          "bbox": [
+            0.177734375,
+            0.0895275042808219
+          ],
+          "confidence": 0.9975,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "RECHERCHER",
+          "bbox": [
+            0.2138671875,
+            0.09106485445205481
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "UN",
+          "bbox": [
+            0.384765625,
+            0.08799015410958905
+          ],
+          "confidence": 0.9988,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "EMPLOI",
+          "bbox": [
+            0.4326171875,
+            0.0895275042808219
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OU",
+          "bbox": [
+            0.5400390625,
+            0.08645280393835614
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CREER",
+          "bbox": [
+            0.5888671875,
+            0.08799015410958905
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "UNE",
+          "bbox": [
+            0.6826171875,
+            0.08799015410958905
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2103046677",
+          "bbox": [
+            0.810546875,
+            0.0772287029109589
+          ],
+          "confidence": 0.9988,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ENTREPRISE",
+          "bbox": [
+            0.0419921875,
+            0.13103595890410957
+          ],
+          "confidence": 0.9135,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.0390625,
+            0.16946971318493148
+          ],
+          "confidence": 0.8697,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ET",
+          "bbox": [
+            0.0888671875,
+            0.1710070633561644
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LIEU",
+          "bbox": [
+            0.11328125,
+            0.16946971318493148
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DE",
+          "bbox": [
+            0.154296875,
+            0.16793236301369863
+          ],
+          "confidence": 0.9966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DÉLIVRANCE/",
+          "bbox": [
+            0.1826171875,
+            0.16485766267123286
+          ],
+          "confidence": 0.7014,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.306640625,
+            0.16946971318493148
+          ],
+          "confidence": 0.9897,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AND",
+          "bbox": [
+            0.3544921875,
+            0.16793236301369863
+          ],
+          "confidence": 0.9875,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PLACE",
+          "bbox": [
+            0.396484375,
+            0.16946971318493148
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.4541015625,
+            0.16946971318493148
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ISSUE",
+          "bbox": [
+            0.48046875,
+            0.16946971318493148
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "18",
+          "bbox": [
+            0.0390625,
+            0.19406731592465754
+          ],
+          "confidence": 0.5966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "10",
+          "bbox": [
+            0.1015625,
+            0.1956046660958904
+          ],
+          "confidence": 0.669,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2024",
+          "bbox": [
+            0.1650390625,
+            0.1971420162671233
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "COTE",
+          "bbox": [
+            0.2607421875,
+            0.20482876712328768
+          ],
+          "confidence": 0.9977,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "D'OR",
+          "bbox": [
+            0.337890625,
+            0.20021671660958906
+          ],
+          "confidence": 0.5036,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LIEU",
+          "bbox": [
+            0.296875,
+            0.24172517123287673
+          ],
+          "confidence": 0.9992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DE",
+          "bbox": [
+            0.3369140625,
+            0.24018782106164382
+          ],
+          "confidence": 0.9971,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NAISSANCE/",
+          "bbox": [
+            0.365234375,
+            0.2432625214041096
+          ],
+          "confidence": 0.5381,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PLACE",
+          "bbox": [
+            0.478515625,
+            0.2432625214041096
+          ],
+          "confidence": 0.9977,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.5361328125,
+            0.2432625214041096
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BIRTH",
+          "bbox": [
+            0.5634765625,
+            0.24172517123287673
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AGADIR",
+          "bbox": [
+            0.296875,
+            0.2832336258561644
+          ],
+          "confidence": 0.9831,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "(MAR)",
+          "bbox": [
+            0.41015625,
+            0.28015892551369864
+          ],
+          "confidence": 0.9006,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ADRESSE /",
+          "bbox": [
+            0.294921875,
+            0.3324288313356164
+          ],
+          "confidence": 0.6374,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "ADRESSEI"
+        },
+        {
+          "text": "ADDRESS",
+          "bbox": [
+            0.3916015625,
+            0.3339661815068493
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CHEZ",
+          "bbox": [
+            0.2978515625,
+            0.36471318493150684
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MAUREL",
+          "bbox": [
+            0.375,
+            0.36471318493150684
+          ],
+          "confidence": 0.9834,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MATTHIEU",
+          "bbox": [
+            0.4853515625,
+            0.36471318493150684
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "30",
+          "bbox": [
+            0.2958984375,
+            0.4016095890410959
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "RUE,",
+          "bbox": [
+            0.3427734375,
+            0.4016095890410959
+          ],
+          "confidence": 0.927,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CHANZY",
+          "bbox": [
+            0.421875,
+            0.4016095890410959
+          ],
+          "confidence": 0.8225,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "21000.DIJON.",
+          "bbox": [
+            0.294921875,
+            0.4400433433219178
+          ],
+          "confidence": 0.8799,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "a",
+          "bbox": [
+            0.4833984375,
+            0.4400433433219178
+          ],
+          "confidence": 0.2638,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IRFRAIWG3I0TUC8<2103046677<<<<",
+          "bbox": [
+            0.0390625,
+            0.6737205693493151
+          ],
+          "confidence": 0.7123,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "IRFRAIWG31OTUC8<2103046677<<<"
+        },
+        {
+          "text": "0001018M2510170MAR<<<<<<<<<<<6",
+          "bbox": [
+            0.03515625,
+            0.7521254280821918
+          ],
+          "confidence": 0.8217,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "0001018M2510170MAR<<<<<<<<6"
+        },
+        {
+          "text": "ZAIDI<<NOUR<EDDINE<<<<<<<<<<<<",
+          "bbox": [
+            0.0361328125,
+            0.8366796875
+          ],
+          "confidence": 0.7398,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "ZAIDI<NOUR<EDDINE<<<<<<<<<<"
+        },
+        {
+          "text": "CamScanner",
+          "bbox": [
+            0.93359375,
+            0.9673544520547945
+          ],
+          "confidence": 0.8356,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Scanned",
+          "bbox": [
+            0.94140625,
+            0.9565930008561644
+          ],
+          "confidence": 0.9961,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "with",
+          "bbox": [
+            0.9658203125,
+            0.9565930008561644
+          ],
+          "confidence": 0.7981,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 56,
+      "average_confidence": 0.8989
+    }
+  ],
+  "total_words": 113,
+  "overall_confidence": 0.8829
+}

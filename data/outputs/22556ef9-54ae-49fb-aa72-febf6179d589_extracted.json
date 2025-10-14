@@ -1,0 +1,26 @@
+{
+  "invoice_number": "erences",
+  "date": "02/01/2020",
+  "amount": null,
+  "currency": "USD",
+  "country": "US",
+  "corrections_applied": [
+    "'-' → '<'"
+  ],
+  "document_type": "contract",
+  "classification_confidence": 0.81,
+  "auto_corrections_applied": [
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'-' -> '<'"
+  ]
+}

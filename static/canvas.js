@@ -29,10 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedWord = null;
     let hoveredWord = null;
     let tooltip = null;
-    let currentZoom = 1.0;
+    let currentZoom = 1.0; // Global zoom for ALL pages
     let isResizing = false;
     let startX = 0;
     let startLeftWidth = 0;
+    let currentPageIndex = 0;
+    let pageScrollPositions = {}; // Store scroll positions for each page
 
     // --- History for Undo/Redo ---
     let history = [];
@@ -74,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Initialize the multi-page viewer
-            await initializeMultiPageViewer(ocrResult.imageUrl);
+            await initializeMultiPageViewer(ocrResult.imageUrl, 0);
             
             // Initialize other components
             displayRawText();
@@ -181,23 +183,42 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeLearningTab();
 
     // --- Multi-Page Viewer Functions ---
-    async function initializeMultiPageViewer(baseImageUrl) {
+    async function initializeMultiPageViewer(baseImageUrl, targetPageIndex = null) {
         if (!ocrData || !ocrData.pages) {
             throw new Error("No OCR pages data available");
         }
 
         console.log(`Initializing ${ocrData.pages.length} pages...`);
-        
-        // Clear existing pages
-        pagesContainer.innerHTML = '';
-        pages = [];
 
-        // Create pages
-        for (let pageIndex = 0; pageIndex < ocrData.pages.length; pageIndex++) {
-            await createPageViewer(pageIndex, baseImageUrl);
+        // Clear existing pages only if this is the initial load
+        if (pages.length === 0) {
+            pagesContainer.innerHTML = '';
+            pages = [];
+
+            // Create pages
+            for (let pageIndex = 0; pageIndex < ocrData.pages.length; pageIndex++) {
+                await createPageViewer(pageIndex, baseImageUrl);
+            }
         }
 
         updatePageIndicator();
+
+        // Scroll to target page after initialization if specified
+        if (targetPageIndex !== null && targetPageIndex >= 0 && targetPageIndex < pages.length) {
+            setTimeout(() => {
+                scrollToPage(targetPageIndex);
+
+                // Restore scroll position within the page if available
+                const viewer = document.getElementById('document-viewer-container');
+                const savedScrollTop = pageScrollPositions[targetPageIndex];
+                if (savedScrollTop && viewer) {
+                    setTimeout(() => {
+                        viewer.scrollTop = savedScrollTop;
+                    }, 200); // Additional delay for page rendering
+                }
+            }, 100); // Small delay to ensure pages are rendered
+        }
+
         console.log(`Multi-page viewer initialized with ${pages.length} pages`);
     }
 
@@ -233,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tryLoadImage = (imageUrl, isFallback = false) => {
                 pageImage.onload = () => {
                     try {
-                        // Set canvas dimensions
+                        // Set canvas dimensions using global zoom
                         const maxWidth = 800;
                         const scale = Math.min(maxWidth / pageImage.width, 1.0) * currentZoom;
                         canvas.width = pageImage.width * scale;
@@ -268,12 +289,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         pagesContainer.appendChild(pageContainer);
 
                         if (isFallback && pageIndex > 0) {
-                            console.log(`Page ${pageIndex + 1} using fallback image (page 0) with ${pageWords.length} words`);
                             // Add visual indicator for fallback
                             pageHeader.innerHTML = `Page ${pageIndex + 1} <span class="fallback-indicator">(using page 1 image)</span>`;
                             pageHeader.classList.add('fallback-page');
-                        } else {
-                            console.log(`Page ${pageIndex + 1} loaded with ${pageWords.length} words`);
                         }
                         resolve();
                     } catch (error) {
@@ -420,14 +438,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function drawBoundingBoxes(ctx, words, canvasWidth, canvasHeight) {
         console.log(`Drawing ${words.length} bounding boxes on ${canvasWidth}x${canvasHeight} canvas`);
-        
+
         let drawnCount = 0;
         words.forEach((word, index) => {
             if (!word.geometry) {
                 console.log(`Word ${index} missing geometry:`, word);
                 return;
             }
-            
+
             // Handle DocTR geometry format: [[x1, y1], [x2, y2]]
             let x1, y1, x2, y2;
             if (word.geometry.length === 2 && Array.isArray(word.geometry[0])) {
@@ -441,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(`Word ${index} has invalid geometry format:`, word.geometry);
                 return;
             }
-            
+
             const canvasX = x1 * canvasWidth;
             const canvasY = y1 * canvasHeight;
             const width = (x2 - x1) * canvasWidth;
@@ -519,7 +537,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const clickedWord = findWordAt(clickX, clickY, pageWords);
             if (clickedWord) {
                 selectWord(clickedWord, pageIndex);
-                redrawPage(pageIndex);
+                // Immediately redraw to show selection highlight
+                redrawAllPages();
             } else {
                 console.log(`No word found at click position on page ${pageIndex + 1}`);
                 console.log(`Available words on page ${pageIndex + 1}:`, pageWords.length);
@@ -686,18 +705,6 @@ document.addEventListener('DOMContentLoaded', () => {
         textEditor.focus();
     }
 
-    function redrawPage(pageIndex) {
-        const page = pages.find(p => p.index === pageIndex);
-        if (!page) return;
-
-        const ctx = page.context;
-        const canvas = page.canvas;
-        
-        // Clear and redraw
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(page.image, 0, 0, canvas.width, canvas.height);
-        drawBoundingBoxes(ctx, page.words, canvas.width, canvas.height);
-    }
 
     function showNearbyWords(clickX, clickY, pageWords, pageIndex) {
         console.log(`Nearby words on page ${pageIndex + 1}:`);
@@ -907,8 +914,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     textEditor.value = word.value;
                 }
                 
-                // Redraw the page to show updated text and styling
-                redrawPage(page.index);
+                // Update canvas display for the page
+                redrawAllPages();
                 break;
             }
         }
@@ -1164,8 +1171,9 @@ document.addEventListener('DOMContentLoaded', () => {
         tooltip.style.top = `${top}px`;
     }
 
-    // --- Zoom Controls ---
+    // --- Zoom and Navigation Controls ---
     function initializeZoomControls() {
+        // Zoom controls
         document.getElementById('zoom-in-btn').addEventListener('click', () => {
             currentZoom = Math.min(currentZoom * 1.2, 3.0);
             updateZoom();
@@ -1175,19 +1183,221 @@ document.addEventListener('DOMContentLoaded', () => {
             currentZoom = Math.max(currentZoom / 1.2, 0.3);
             updateZoom();
         });
+
+        // Page navigation controls
+        document.getElementById('prev-page-btn').addEventListener('click', () => {
+            const currentPage = getCurrentPageIndex();
+            if (currentPage > 0) {
+                scrollToPage(currentPage - 1);
+            }
+        });
+
+        document.getElementById('next-page-btn').addEventListener('click', () => {
+            const currentPage = getCurrentPageIndex();
+            if (currentPage < ocrData.pages.length - 1) {
+                scrollToPage(currentPage + 1);
+            }
+        });
+
+        // Panning controls (for horizontal navigation within zoomed pages)
+        document.getElementById('pan-left-btn').addEventListener('click', () => {
+            panHorizontally(-200); // Pan left by 200px
+        });
+
+        document.getElementById('pan-right-btn').addEventListener('click', () => {
+            panHorizontally(200); // Pan right by 200px
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // Only handle navigation when not in input fields
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                return;
+            }
+
+            const currentPage = getCurrentPageIndex();
+            switch (e.key) {
+                case 'ArrowLeft':
+                    if (currentPage > 0) {
+                        scrollToPage(currentPage - 1);
+                        e.preventDefault();
+                    }
+                    break;
+                case 'ArrowRight':
+                    if (currentPage < ocrData.pages.length - 1) {
+                        scrollToPage(currentPage + 1);
+                        e.preventDefault();
+                    }
+                    break;
+                case 'Home':
+                    scrollToPage(0);
+                    e.preventDefault();
+                    break;
+                case 'End':
+                    scrollToPage(ocrData.pages.length - 1);
+                    e.preventDefault();
+                    break;
+                case 'h':
+                case 'H':
+                    panHorizontally(-200); // Pan left
+                    e.preventDefault();
+                    break;
+                case 'l':
+                case 'L':
+                    panHorizontally(200); // Pan right
+                    e.preventDefault();
+                    break;
+            }
+        });
     }
 
     function updateZoom() {
+        // Update zoom level display
         zoomLevel.textContent = `${Math.round(currentZoom * 100)}%`;
+
+        const viewer = document.getElementById('document-viewer-container');
+        if (!viewer) return;
+
+        const viewerRect = viewer.getBoundingClientRect();
         
-        // Recreate all pages with new zoom
-        if (ocrData) {
-            const baseImageUrl = pages.length > 0 ? pages[0].image.src : null;
-            if (baseImageUrl) {
-                initializeMultiPageViewer(baseImageUrl);
+        // Store reference point for centering
+        let centerTarget = null;
+        
+        if (selectedWord) {
+            // Zoom will center on selected BB
+            centerTarget = { type: 'bb', word: selectedWord };
+        } else {
+            // Zoom will maintain current viewport center
+            const currentPage = getCurrentPageIndex();
+            const pageElement = document.getElementById(`page-container-${currentPage}`);
+            if (pageElement) {
+                const pageRect = pageElement.getBoundingClientRect();
+                const relativeScrollY = viewer.scrollTop - pageElement.offsetTop + (viewerRect.height / 2);
+                centerTarget = { 
+                    type: 'viewport', 
+                    pageIndex: currentPage,
+                    relativeY: relativeScrollY / pageRect.height  // Store as ratio
+                };
             }
         }
+
+        // Apply zoom to ALL pages
+        applyZoomToAllPages();
+
+        // After zoom, restore centering
+        requestAnimationFrame(() => {
+            if (centerTarget && centerTarget.type === 'bb') {
+                centerOnBoundingBox(centerTarget.word);
+            } else if (centerTarget && centerTarget.type === 'viewport') {
+                const pageElement = document.getElementById(`page-container-${centerTarget.pageIndex}`);
+                if (pageElement) {
+                    const pageRect = pageElement.getBoundingClientRect();
+                    const targetY = pageElement.offsetTop + (centerTarget.relativeY * pageRect.height) - (viewerRect.height / 2);
+                    viewer.scrollTop = Math.max(0, targetY);
+                }
+            }
+        });
     }
+
+    function applyZoomToAllPages() {
+        // Apply global zoom to ALL pages
+        pages.forEach(page => {
+            const canvas = page.canvas;
+            const ctx = page.context;
+            const image = page.image;
+
+            if (!canvas || !ctx || !image) return;
+
+            // Calculate new dimensions based on global zoom
+            const maxWidth = 800;
+            const scale = Math.min(maxWidth / image.width, 1.0) * currentZoom;
+            const newWidth = image.width * scale;
+            const newHeight = image.height * scale;
+
+            // Resize canvas if dimensions changed
+            if (canvas.width !== newWidth || canvas.height !== newHeight) {
+                canvas.width = newWidth;
+                canvas.height = newHeight;
+            }
+
+            // Clear and redraw
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(image, 0, 0, newWidth, newHeight);
+
+            // Redraw bounding boxes at new scale
+            const pageWords = page.words;
+            drawBoundingBoxes(ctx, pageWords, newWidth, newHeight);
+
+            // Update page scale for future reference
+            page.scale = scale;
+        });
+    }
+
+    function redrawAllPages() {
+        // Redraw all pages at current global zoom level
+        applyZoomToAllPages();
+    }
+
+
+    function centerOnBoundingBox(word) {
+        if (!word || !word.geometry) return;
+
+        const viewer = document.getElementById('document-viewer-container');
+        if (!viewer) return;
+
+        // Find the page containing this word
+        const pageIndex = word.pageIndex || 0;
+        const pageElement = document.getElementById(`page-container-${pageIndex}`);
+        if (!pageElement) return;
+
+        // Get the current page data
+        const page = pages.find(p => p.index === pageIndex);
+        if (!page) return;
+
+        // Get canvas for this page
+        const canvas = page.canvas;
+        if (!canvas) return;
+
+        // Get bounding box coordinates (handle DocTR format - normalized 0-1)
+        let x1, y1, x2, y2;
+        if (word.geometry.length === 2 && Array.isArray(word.geometry[0])) {
+            [x1, y1] = word.geometry[0];
+            [x2, y2] = word.geometry[1];
+        } else if (word.geometry[0] && word.geometry[0].length === 4) {
+            [x1, y1, x2, y2] = word.geometry[0];
+        } else {
+            return;
+        }
+
+        // Calculate BB center in normalized coordinates (0-1)
+        const normalizedCenterX = (x1 + x2) / 2;
+        const normalizedCenterY = (y1 + y2) / 2;
+
+        // Convert to canvas pixel coordinates
+        const canvasCenterX = normalizedCenterX * canvas.width;
+        const canvasCenterY = normalizedCenterY * canvas.height;
+
+        // Get the canvas container to account for any padding/centering
+        const canvasContainer = canvas.parentElement;
+        const canvasRect = canvas.getBoundingClientRect();
+        const viewerRect = viewer.getBoundingClientRect();
+
+        // Calculate BB center position relative to viewer's top-left
+        const bbScreenX = canvasRect.left - viewerRect.left + canvasCenterX;
+        const bbScreenY = canvasRect.top - viewerRect.top + canvasCenterY;
+
+        // Calculate how much to scroll to center the BB
+        const targetScrollX = viewer.scrollLeft + bbScreenX - (viewerRect.width / 2);
+        const targetScrollY = viewer.scrollTop + bbScreenY - (viewerRect.height / 2);
+
+        // Apply scroll with smooth scrolling
+        viewer.scrollTo({
+            left: Math.max(0, targetScrollX),
+            top: Math.max(0, targetScrollY),
+            behavior: 'smooth'
+        });
+    }
+
 
     function updatePageIndicator() {
         if (pages.length > 0) {
@@ -1195,6 +1405,49 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             pageIndicator.textContent = 'Loading...';
         }
+    }
+
+    function getCurrentPageIndex() {
+        const viewer = document.getElementById('document-viewer-container');
+        if (!viewer || !ocrData || !ocrData.pages) return 0;
+
+        const viewerRect = viewer.getBoundingClientRect();
+        const viewerMidpoint = viewerRect.top + (viewerRect.height / 3);
+
+        let currentPageIndex = 0;
+        let closestDistance = Infinity;
+
+        // Find which page is closest to the viewport midpoint
+        for (let i = 0; i < ocrData.pages.length; i++) {
+            const pageEl = document.getElementById(`page-container-${i}`);
+            if (!pageEl) continue;
+
+            const pageRect = pageEl.getBoundingClientRect();
+            const pageTop = pageRect.top;
+
+            // Check if page is in view
+            if (pageTop <= viewerMidpoint && pageTop + pageRect.height >= viewerMidpoint) {
+                currentPageIndex = i;
+                break;
+            }
+
+            // Otherwise find closest
+            const distanceFromMidpoint = Math.abs(pageTop - viewerMidpoint);
+            if (distanceFromMidpoint < closestDistance) {
+                closestDistance = distanceFromMidpoint;
+                currentPageIndex = i;
+            }
+        }
+
+        return currentPageIndex;
+    }
+
+    function panHorizontally(deltaX) {
+        const viewer = document.getElementById('document-viewer-container');
+        if (!viewer) return;
+
+        // Pan horizontally by the specified amount
+        viewer.scrollLeft += deltaX;
     }
 
     // --- Text Panel Linking Functions ---

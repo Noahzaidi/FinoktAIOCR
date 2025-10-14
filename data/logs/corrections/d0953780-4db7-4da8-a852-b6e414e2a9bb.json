@@ -1,0 +1,43 @@
+{
+  "corrections": [
+    {
+      "document_id": "d0953780-4db7-4da8-a852-b6e414e2a9bb",
+      "page": 1,
+      "word_id": "p1_w20",
+      "original_text": "NACIONALIDAD/WACIDAD7NACIONALITAT",
+      "corrected_text": "NACIONALIDAD / NACIONALITAT",
+      "corrected_bbox": [
+        [
+          0.5262572216386555,
+          0.486328125
+        ],
+        [
+          0.7238773634453781,
+          0.5029296875
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-13T22:21:20.170666"
+    },
+    {
+      "document_id": "d0953780-4db7-4da8-a852-b6e414e2a9bb",
+      "page": 0,
+      "word_id": "p0_w26",
+      "original_text": "FILLAD",
+      "corrected_text": "FILL/A",
+      "corrected_bbox": [
+        [
+          0.3783876050420168,
+          0.5
+        ],
+        [
+          0.42813813025210085,
+          0.513671875
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-13T22:25:41.778092"
+    }
+  ],
+  "document_id": "d0953780-4db7-4da8-a852-b6e414e2a9bb"
+}

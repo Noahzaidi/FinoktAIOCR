@@ -4,38 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinoktAI - Upload Document</title>
+    <title>FinoktAI - Intelligent Document Processing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glancyr:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>FinoktAI OCR Learning & Structuring System</h1>
-            <p>Upload a document (PDF or Image) to begin processing.</p>
-        </header>
-        <main>
-            <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="file-input">Choose a file:</label>
-                    <input id="file-input" type="file" name="file" accept=".pdf,.png,.jpg,.jpeg" required>
+    <div class="home-container">
+        <!-- Header with Branding -->
+        <header class="home-header">
+            <div class="home-brand">
+                <div class="logo-section">
+                    <div class="finoktai-logo">
+                        <div class="logo-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10L40 10L40 40L10 40L10 10Z" stroke="var(--primary-color)" stroke-width="3" fill="none"/>
+                                <path d="M15 15L35 15L35 35L15 35L15 15Z" stroke="var(--accent-color)" stroke-width="2" fill="none"/>
+                                <path d="M20 20L30 20L30 30L20 30L20 20Z" stroke="var(--secondary-color)" stroke-width="1.5" fill="var(--baby-blue)"/>
+                                <circle cx="25" cy="25" r="3" fill="var(--primary-color)"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-finokt">Finokt</span><span class="logo-ai">AI</span>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="btn">Upload and Process</button>
-            </form>
-            <div id="loading-indicator" class="hidden">
-                <div class="spinner"></div>
-                <p>Processing document, please wait...</p>
+                <div class="home-title">
+                    <h1>Intelligent Document Processing</h1>
+                    <p>Upload, process, and learn from your documents with AI-powered OCR</p>
+                </div>
             </div>
+        </header>
+
+        <main class="home-main">
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2>🚀 Quick Start</h2>
+                <div class="action-cards">
+                    <div class="action-card primary">
+                        <h3>📄 Upload Document</h3>
+                        <p>Upload PDF or image files for OCR processing</p>
+                        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data" class="inline-form">
+                            <input id="file-input" type="file" name="file" accept=".pdf,.png,.jpg,.jpeg" required>
+                            <button type="submit" class="btn">Upload & Process</button>
+                        </form>
+                    </div>
+                    <div class="action-card">
+                        <h3>📊 View Documents</h3>
+                        <p>Browse and manage your uploaded documents</p>
+                        <a href="/documents" class="btn">Browse Documents</a>
+                    </div>
+                    <div class="action-card">
+                        <h3>⚙️ Configuration</h3>
+                        <p>Configure system settings and learning parameters</p>
+                        <a href="/config" class="btn">System Config</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Status -->
+            <section class="system-status">
+                <h2>📈 System Overview</h2>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <div class="status-number" id="total-documents">0</div>
+                        <div class="status-label">Documents Processed</div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-number" id="lexicon-size">0</div>
+                        <div class="status-label">Auto-Corrections Learned</div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-number" id="training-samples">0</div>
+                        <div class="status-label">Training Samples</div>
+                    </div>
+                    <div class="status-card">
+                        <div class="status-number" id="avg-accuracy">0%</div>
+                        <div class="status-label">Avg OCR Accuracy</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Progress -->
+            <section class="learning-progress">
+                <h2>🧠 Learning Progress</h2>
+                <div class="progress-section">
+                    <div class="progress-card">
+                        <h3>📚 Lexicon Learning</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="lexicon-progress" style="width: 0%"></div>
+                        </div>
+                        <p>Auto-correction patterns learned from your corrections</p>
+                    </div>
+                    <div class="progress-card">
+                        <h3>🎓 Training Data</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="training-progress" style="width: 0%"></div>
+                        </div>
+                        <p>Samples collected for model improvement</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h2>🕐 Recent Activity</h2>
+                <div class="activity-container">
+                    <div class="activity-tabs">
+                        <button class="activity-tab active" data-tab="corrections">Recent Corrections</button>
+                        <button class="activity-tab" data-tab="documents">Recent Documents</button>
+                        <button class="activity-tab" data-tab="training">Training Activity</button>
+                    </div>
+                    <div class="activity-content">
+                        <div id="corrections-tab" class="activity-tab-content active">
+                            <div class="no-data">No recent corrections yet</div>
+                        </div>
+                        <div id="documents-tab" class="activity-tab-content">
+                            <div class="no-data">No recent documents yet</div>
+                        </div>
+                        <div id="training-tab" class="activity-tab-content">
+                            <div class="no-data">No training activity yet</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Stats -->
+            <section class="quick-stats">
+                <h2>📊 Quick Analytics</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="today-corrections">0</span>
+                        <span class="stat-label">Corrections Today</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="week-accuracy">0%</span>
+                        <span class="stat-label">This Week's Accuracy</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="month-improvement">0%</span>
+                        <span class="stat-label">Monthly Improvement</span>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer>
-            <p>FinoktAI - CPU-based Document Intelligence</p>
+
+        <footer class="home-footer">
+            <p>FinoktAI - CPU-based Document Intelligence | © 2025</p>
         </footer>
     </div>
 
     <script>
-        document.getElementById('upload-form').addEventListener('submit', function() {
-            document.getElementById('loading-indicator').classList.remove('hidden');
-            this.querySelector('button').disabled = true;
+        // Load system statistics on page load
+        async function loadSystemStats() {
+            try {
+                const [lexiconResponse, trainingResponse, documentsResponse] = await Promise.all([
+                    fetch('/api/lexicon').catch(() => ({ ok: false })),
+                    fetch('/api/training_data/stats').catch(() => ({ ok: false })),
+                    fetch('/api/documents/list').catch(() => ({ ok: false }))
+                ]);
+
+                // Update lexicon size
+                if (lexiconResponse.ok) {
+                    const lexiconData = await lexiconResponse.json();
+                    document.getElementById('lexicon-size').textContent = lexiconData.lexicon_size || 0;
+                    updateProgressBar('lexicon-progress', Math.min((lexiconData.lexicon_size || 0) * 10, 100));
+                }
+
+                // Update training samples
+                if (trainingResponse.ok) {
+                    const trainingData = await trainingResponse.json();
+                    document.getElementById('training-samples').textContent = trainingData.total_samples || 0;
+                    updateProgressBar('training-progress', Math.min((trainingData.total_samples || 0) * 5, 100));
+                }
+
+                // Update document count
+                if (documentsResponse.ok) {
+                    const docsData = await documentsResponse.json();
+                    document.getElementById('total-documents').textContent = docsData.documents?.length || 0;
+                }
+
+            } catch (error) {
+                console.error('Error loading system stats:', error);
+            }
+        }
+
+        function updateProgressBar(elementId, percentage) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.style.width = `${percentage}%`;
+            }
+        }
+
+        // Activity tab switching
+        document.querySelectorAll('.activity-tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                const targetTab = e.target.dataset.tab;
+
+                // Update tab buttons
+                document.querySelectorAll('.activity-tab').forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+
+                // Update tab content
+                document.querySelectorAll('.activity-tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(`${targetTab}-tab`).classList.add('active');
+            });
         });
+
+        // Load data on page load
+        loadSystemStats();
+
+        // Auto-refresh every 30 seconds
+        setInterval(loadSystemStats, 30000);
     </script>
 </body>
 </html>

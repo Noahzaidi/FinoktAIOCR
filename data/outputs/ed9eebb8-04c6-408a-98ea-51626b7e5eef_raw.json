@@ -1,0 +1,4781 @@
+{
+  "document_id": "ed9eebb8-04c6-408a-98ea-51626b7e5eef",
+  "extraction_timestamp": "2025-10-13T23:55:20.371060",
+  "pages": [
+    {
+      "page_num": 1,
+      "words": [
+        {
+          "text": "MT700",
+          "bbox": [
+            0.11707261029411764,
+            0.09375
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ISSUE",
+          "bbox": [
+            0.18531709558823528,
+            0.09375
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.24850643382352944,
+            0.0927734375
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "A",
+          "bbox": [
+            0.28010110294117646,
+            0.09375
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DOCUMENTARY",
+          "bbox": [
+            0.30158547794117646,
+            0.0947265625
+          ],
+          "confidence": 0.9235,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CREDIT",
+          "bbox": [
+            0.45955882352941174,
+            0.09375
+          ],
+          "confidence": 0.9573,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1:1700PROFIUS33XXXXNI",
+          "bbox": [
+            0.5404411764705882,
+            0.095703125
+          ],
+          "confidence": 0.5518,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Page",
+          "bbox": [
+            0.822265625,
+            0.09375
+          ],
+          "confidence": 0.9992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.8677619485294117,
+            0.09375
+          ],
+          "confidence": 0.9843,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sending",
+          "bbox": [
+            0.11707261029411764,
+            0.125
+          ],
+          "confidence": 0.9535,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bank:",
+          "bbox": [
+            0.18784466911764708,
+            0.125
+          ],
+          "confidence": 0.9738,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CONPUS33XXX",
+          "bbox": [
+            0.24471507352941174,
+            0.1259765625
+          ],
+          "confidence": 0.9865,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Receiving",
+          "bbox": [
+            0.11707261029411764,
+            0.1396484375
+          ],
+          "confidence": 0.7061,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bank:",
+          "bbox": [
+            0.2004825367647059,
+            0.140625
+          ],
+          "confidence": 0.504,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TRAFDEHHXXX",
+          "bbox": [
+            0.2510340073529412,
+            0.140625
+          ],
+          "confidence": 0.9889,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "27",
+          "bbox": [
+            0.11580882352941174,
+            0.1845703125
+          ],
+          "confidence": 0.9842,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sequence",
+          "bbox": [
+            0.14234834558823528,
+            0.185546875
+          ],
+          "confidence": 0.9736,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.22575827205882354,
+            0.1845703125
+          ],
+          "confidence": 0.5737,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Total:",
+          "bbox": [
+            0.24724264705882354,
+            0.185546875
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1/1",
+          "bbox": [
+            0.11707261029411764,
+            0.2001953125
+          ],
+          "confidence": 0.9902,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "40A",
+          "bbox": [
+            0.11580882352941174,
+            0.23046875
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Form",
+          "bbox": [
+            0.15372242647058826,
+            0.2314453125
+          ],
+          "confidence": 0.9802,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.1979549632352941,
+            0.23046875
+          ],
+          "confidence": 0.5582,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Documentary",
+          "bbox": [
+            0.2219669117647059,
+            0.2314453125
+          ],
+          "confidence": 0.9964,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Credit:",
+          "bbox": [
+            0.33444393382352944,
+            0.2314453125
+          ],
+          "confidence": 0.9395,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IRREVOCABLE",
+          "bbox": [
+            0.11833639705882354,
+            0.2470703125
+          ],
+          "confidence": 0.88,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "20:",
+          "bbox": [
+            0.11580882352941174,
+            0.2763671875
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Documentary",
+          "bbox": [
+            0.14866727941176472,
+            0.2783203125
+          ],
+          "confidence": 0.9948,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Credit",
+          "bbox": [
+            0.25988051470588236,
+            0.2763671875
+          ],
+          "confidence": 0.9967,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Number:",
+          "bbox": [
+            0.3142233455882353,
+            0.27734375
+          ],
+          "confidence": 0.992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BASELINE2022567",
+          "bbox": [
+            0.11707261029411764,
+            0.2919921875
+          ],
+          "confidence": 0.8618,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "31C",
+          "bbox": [
+            0.11580882352941174,
+            0.322265625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Date",
+          "bbox": [
+            0.1549862132352941,
+            0.322265625
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.19669117647058826,
+            0.322265625
+          ],
+          "confidence": 0.9841,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Issue:",
+          "bbox": [
+            0.21817555147058826,
+            0.322265625
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "201103",
+          "bbox": [
+            0.11707261029411764,
+            0.337890625
+          ],
+          "confidence": 0.7922,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "40E",
+          "bbox": [
+            0.11580882352941174,
+            0.3671875
+          ],
+          "confidence": 0.9923,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Applicable",
+          "bbox": [
+            0.15245863970588236,
+            0.3681640625
+          ],
+          "confidence": 0.9909,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Rules:",
+          "bbox": [
+            0.2434512867647059,
+            0.3681640625
+          ],
+          "confidence": 0.9974,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "UCP",
+          "bbox": [
+            0.11707261029411764,
+            0.3828125
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LATEST",
+          "bbox": [
+            0.16004136029411764,
+            0.3818359375
+          ],
+          "confidence": 0.9304,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "VERSION",
+          "bbox": [
+            0.22702205882352944,
+            0.3828125
+          ],
+          "confidence": 0.605,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "31D",
+          "bbox": [
+            0.11580882352941174,
+            0.4130859375
+          ],
+          "confidence": 0.9973,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Date",
+          "bbox": [
+            0.1549862132352941,
+            0.4130859375
+          ],
+          "confidence": 0.9979,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "and",
+          "bbox": [
+            0.19669117647058826,
+            0.4130859375
+          ],
+          "confidence": 0.9967,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Place",
+          "bbox": [
+            0.23334099264705882,
+            0.4130859375
+          ],
+          "confidence": 0.9968,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.28010110294117646,
+            0.412109375
+          ],
+          "confidence": 0.9672,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Expiry:",
+          "bbox": [
+            0.30284926470588236,
+            0.412109375
+          ],
+          "confidence": 0.9827,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "210218",
+          "bbox": [
+            0.11707261029411764,
+            0.4287109375
+          ],
+          "confidence": 0.9921,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NEW",
+          "bbox": [
+            0.18152573529411764,
+            0.427734375
+          ],
+          "confidence": 0.9976,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "YORK",
+          "bbox": [
+            0.22702205882352944,
+            0.4287109375
+          ],
+          "confidence": 0.962,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "50",
+          "bbox": [
+            0.11580882352941174,
+            0.4580078125
+          ],
+          "confidence": 0.9787,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "APPLICANT:",
+          "bbox": [
+            0.14108455882352944,
+            0.458984375
+          ],
+          "confidence": 0.708,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Technical",
+          "bbox": [
+            0.11707261029411764,
+            0.4736328125
+          ],
+          "confidence": 0.7489,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Buyers",
+          "bbox": [
+            0.1979549632352941,
+            0.474609375
+          ],
+          "confidence": 0.9856,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Association",
+          "bbox": [
+            0.2560891544117647,
+            0.47265625
+          ],
+          "confidence": 0.9979,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "23",
+          "bbox": [
+            0.1145450367647059,
+            0.48828125
+          ],
+          "confidence": 0.9902,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Third",
+          "bbox": [
+            0.14108455882352944,
+            0.48828125
+          ],
+          "confidence": 0.9983,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Lane",
+          "bbox": [
+            0.18784466911764708,
+            0.4892578125
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Square",
+          "bbox": [
+            0.23081341911764708,
+            0.48828125
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "4456",
+          "bbox": [
+            0.11580882352941174,
+            0.50390625
+          ],
+          "confidence": 0.9988,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LONDON",
+          "bbox": [
+            0.16256893382352944,
+            0.50390625
+          ],
+          "confidence": 0.9836,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SE55,",
+          "bbox": [
+            0.2421875,
+            0.501953125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "United",
+          "bbox": [
+            0.2952665441176471,
+            0.50390625
+          ],
+          "confidence": 0.992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Kingdom",
+          "bbox": [
+            0.35466452205882354,
+            0.5048828125
+          ],
+          "confidence": 0.9937,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "51A",
+          "bbox": [
+            0.11580882352941174,
+            0.5341796875
+          ],
+          "confidence": 0.9756,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "APPLICANT",
+          "bbox": [
+            0.15245863970588236,
+            0.5341796875
+          ],
+          "confidence": 0.9217,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BANK:",
+          "bbox": [
+            0.2560891544117647,
+            0.5341796875
+          ],
+          "confidence": 0.9913,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TRAFDEFFXXX",
+          "bbox": [
+            0.11580882352941174,
+            0.5498046875
+          ],
+          "confidence": 0.967,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "59",
+          "bbox": [
+            0.11580882352941174,
+            0.5791015625
+          ],
+          "confidence": 0.989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Beneficiary:",
+          "bbox": [
+            0.14234834558823528,
+            0.580078125
+          ],
+          "confidence": 0.6439,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Metal",
+          "bbox": [
+            0.11707261029411764,
+            0.5947265625
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sellers",
+          "bbox": [
+            0.16636029411764708,
+            0.5947265625
+          ],
+          "confidence": 0.9687,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Corp.",
+          "bbox": [
+            0.22449448529411764,
+            0.59375
+          ],
+          "confidence": 0.9974,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "79",
+          "bbox": [
+            0.11580882352941174,
+            0.609375
+          ],
+          "confidence": 0.996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Liberty",
+          "bbox": [
+            0.14234834558823528,
+            0.611328125
+          ],
+          "confidence": 0.9494,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Square",
+          "bbox": [
+            0.2004825367647059,
+            0.609375
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LP",
+          "bbox": [
+            0.11580882352941174,
+            0.6240234375
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "56",
+          "bbox": [
+            0.14234834558823528,
+            0.6240234375
+          ],
+          "confidence": 0.9467,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "New",
+          "bbox": [
+            0.16888786764705882,
+            0.625
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "York",
+          "bbox": [
+            0.20932904411764708,
+            0.625
+          ],
+          "confidence": 0.9986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "<",
+          "bbox": [
+            0.24850643382352944,
+            0.6279296875
+          ],
+          "confidence": 0.9257,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "-"
+        },
+        {
+          "text": "NY55,",
+          "bbox": [
+            0.26493566176470584,
+            0.6259765625
+          ],
+          "confidence": 0.9915,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "U.S.A.",
+          "bbox": [
+            0.3192784926470588,
+            0.625
+          ],
+          "confidence": 0.9977,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "32B:",
+          "bbox": [
+            0.11580882352941174,
+            0.6552734375
+          ],
+          "confidence": 0.9621,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Currency",
+          "bbox": [
+            0.15877757352941174,
+            0.6552734375
+          ],
+          "confidence": 0.9965,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Code,",
+          "bbox": [
+            0.23586856617647056,
+            0.654296875
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Amount:",
+          "bbox": [
+            0.29021139705882354,
+            0.6552734375
+          ],
+          "confidence": 0.9939,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "USD",
+          "bbox": [
+            0.11707261029411764,
+            0.669921875
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "520,000.00",
+          "bbox": [
+            0.15877757352941174,
+            0.669921875
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "39A",
+          "bbox": [
+            0.11580882352941174,
+            0.701171875
+          ],
+          "confidence": 0.9973,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Percentage",
+          "bbox": [
+            0.15372242647058826,
+            0.701171875
+          ],
+          "confidence": 0.9901,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Credit",
+          "bbox": [
+            0.24977022058823528,
+            0.701171875
+          ],
+          "confidence": 0.9983,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Amount",
+          "bbox": [
+            0.30284926470588236,
+            0.701171875
+          ],
+          "confidence": 0.9337,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Tolerance:",
+          "bbox": [
+            0.37109375,
+            0.701171875
+          ],
+          "confidence": 0.9558,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "05/05",
+          "bbox": [
+            0.11707261029411764,
+            0.7158203125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "41A:",
+          "bbox": [
+            0.11580882352941174,
+            0.74609375
+          ],
+          "confidence": 0.9703,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Available",
+          "bbox": [
+            0.1575137867647059,
+            0.7470703125
+          ],
+          "confidence": 0.9812,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "with",
+          "bbox": [
+            0.23460477941176472,
+            0.74609375
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": ":",
+          "bbox": [
+            0.2712545955882353,
+            0.751953125
+          ],
+          "confidence": 0.9971,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "By",
+          "bbox": [
+            0.2940027573529412,
+            0.74609375
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CONPUS33XXX",
+          "bbox": [
+            0.11707261029411764,
+            0.76171875
+          ],
+          "confidence": 0.9954,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BY",
+          "bbox": [
+            0.11707261029411764,
+            0.775390625
+          ],
+          "confidence": 0.999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PAYMENT",
+          "bbox": [
+            0.14613970588235292,
+            0.77734375
+          ],
+          "confidence": 0.9345,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "42C",
+          "bbox": [
+            0.11580882352941174,
+            0.806640625
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Drafts",
+          "bbox": [
+            0.1549862132352941,
+            0.806640625
+          ],
+          "confidence": 0.917,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "at:",
+          "bbox": [
+            0.20680147058823528,
+            0.806640625
+          ],
+          "confidence": 0.9962,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "30",
+          "bbox": [
+            0.11580882352941174,
+            0.8212890625
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DAYS",
+          "bbox": [
+            0.14234834558823528,
+            0.822265625
+          ],
+          "confidence": 0.9483,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AFTER",
+          "bbox": [
+            0.19163602941176472,
+            0.822265625
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BL",
+          "bbox": [
+            0.2535615808823529,
+            0.8212890625
+          ],
+          "confidence": 0.9919,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.28136488970588236,
+            0.822265625
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "42D",
+          "bbox": [
+            0.11580882352941174,
+            0.8515625
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Drawee:",
+          "bbox": [
+            0.1549862132352941,
+            0.8525390625
+          ],
+          "confidence": 0.9819,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Technical",
+          "bbox": [
+            0.11580882352941174,
+            0.8681640625
+          ],
+          "confidence": 0.9711,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Buyers",
+          "bbox": [
+            0.19669117647058826,
+            0.8671875
+          ],
+          "confidence": 0.9971,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Association,",
+          "bbox": [
+            0.25861672794117646,
+            0.869140625
+          ],
+          "confidence": 0.967,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "London.",
+          "bbox": [
+            0.11707261029411764,
+            0.8828125
+          ],
+          "confidence": 0.9977,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 118,
+      "average_confidence": 0.9536
+    },
+    {
+      "page_num": 2,
+      "words": [
+        {
+          "text": "Page",
+          "bbox": [
+            0.6453354779411764,
+            0.08984375
+          ],
+          "confidence": 0.9983,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2",
+          "bbox": [
+            0.6908318014705882,
+            0.0908203125
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.7047334558823529,
+            0.08984375
+          ],
+          "confidence": 0.7213,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "3",
+          "bbox": [
+            0.7262178308823529,
+            0.0908203125
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "42P",
+          "bbox": [
+            0.11580882352941174,
+            0.12109375
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NEGOTIATION/Deferred",
+          "bbox": [
+            0.1549862132352941,
+            0.1220703125
+          ],
+          "confidence": 0.8182,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Payment",
+          "bbox": [
+            0.35340073529411764,
+            0.1220703125
+          ],
+          "confidence": 0.7781,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Details:",
+          "bbox": [
+            0.4279641544117647,
+            0.12109375
+          ],
+          "confidence": 0.9168,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "30",
+          "bbox": [
+            0.11580882352941174,
+            0.1357421875
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DAYS",
+          "bbox": [
+            0.14234834558823528,
+            0.13671875
+          ],
+          "confidence": 0.9984,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AFTER",
+          "bbox": [
+            0.19163602941176472,
+            0.13671875
+          ],
+          "confidence": 0.9781,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BL",
+          "bbox": [
+            0.2535615808823529,
+            0.1357421875
+          ],
+          "confidence": 0.9916,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.28136488970588236,
+            0.13671875
+          ],
+          "confidence": 0.997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "43P",
+          "bbox": [
+            0.11580882352941174,
+            0.166015625
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Partial",
+          "bbox": [
+            0.15372242647058826,
+            0.1669921875
+          ],
+          "confidence": 0.5449,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Shipments:",
+          "bbox": [
+            0.20932904411764708,
+            0.1669921875
+          ],
+          "confidence": 0.9786,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ALLOWED",
+          "bbox": [
+            0.1145450367647059,
+            0.1806640625
+          ],
+          "confidence": 0.9938,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "43T",
+          "bbox": [
+            0.11580882352941174,
+            0.2119140625
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Transshipment:",
+          "bbox": [
+            0.15119485294117646,
+            0.2119140625
+          ],
+          "confidence": 0.7461,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ALLOWED",
+          "bbox": [
+            0.11580882352941174,
+            0.2275390625
+          ],
+          "confidence": 0.9835,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "44A",
+          "bbox": [
+            0.11580882352941174,
+            0.2578125
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Taking",
+          "bbox": [
+            0.15372242647058826,
+            0.2587890625
+          ],
+          "confidence": 0.6005,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "charge",
+          "bbox": [
+            0.20932904411764708,
+            0.2578125
+          ],
+          "confidence": 0.9969,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "place:",
+          "bbox": [
+            0.26872702205882354,
+            0.2568359375
+          ],
+          "confidence": 0.9872,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MANNHEIM",
+          "bbox": [
+            0.11707261029411764,
+            0.2734375
+          ],
+          "confidence": 0.946,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "44E",
+          "bbox": [
+            0.11580882352941174,
+            0.302734375
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Port",
+          "bbox": [
+            0.15372242647058826,
+            0.302734375
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.18910845588235292,
+            0.302734375
+          ],
+          "confidence": 0.8348,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Loading/Airport",
+          "bbox": [
+            0.21438419117647056,
+            0.3046875
+          ],
+          "confidence": 0.569,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.3420266544117647,
+            0.3037109375
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Departure:",
+          "bbox": [
+            0.3635110294117647,
+            0.3037109375
+          ],
+          "confidence": 0.9911,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FRANKFURT",
+          "bbox": [
+            0.11833639705882354,
+            0.318359375
+          ],
+          "confidence": 0.7929,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "44F",
+          "bbox": [
+            0.11580882352941174,
+            0.3486328125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Port",
+          "bbox": [
+            0.15245863970588236,
+            0.3486328125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.18910845588235292,
+            0.34765625
+          ],
+          "confidence": 0.909,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Discharge/Airport",
+          "bbox": [
+            0.21185661764705882,
+            0.3486328125
+          ],
+          "confidence": 0.7062,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.35466452205882354,
+            0.34765625
+          ],
+          "confidence": 0.7133,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Destination",
+          "bbox": [
+            0.3786764705882353,
+            0.349609375
+          ],
+          "confidence": 0.927,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": ":",
+          "bbox": [
+            0.4709329044117647,
+            0.349609375
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TORONTO",
+          "bbox": [
+            0.11580882352941174,
+            0.3642578125
+          ],
+          "confidence": 0.5284,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "44B:",
+          "bbox": [
+            0.11580882352941174,
+            0.3935546875
+          ],
+          "confidence": 0.9972,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Place",
+          "bbox": [
+            0.16004136029411764,
+            0.39453125
+          ],
+          "confidence": 0.9763,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.20680147058823528,
+            0.3935546875
+          ],
+          "confidence": 0.5548,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Final",
+          "bbox": [
+            0.22954963235294118,
+            0.3935546875
+          ],
+          "confidence": 0.9923,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Destination/For",
+          "bbox": [
+            0.2725183823529412,
+            0.39453125
+          ],
+          "confidence": 0.8634,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Transportation",
+          "bbox": [
+            0.4014246323529412,
+            0.3955078125
+          ],
+          "confidence": 0.9747,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "to...",
+          "bbox": [
+            0.5189568014705882,
+            0.39453125
+          ],
+          "confidence": 0.9734,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "/Place",
+          "bbox": [
+            0.5543428308823529,
+            0.3935546875
+          ],
+          "confidence": 0.9902,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.6099494485294118,
+            0.3935546875
+          ],
+          "confidence": 0.6504,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Delivery:",
+          "bbox": [
+            0.6339613970588236,
+            0.3955078125
+          ],
+          "confidence": 0.5669,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NEW",
+          "bbox": [
+            0.11707261029411764,
+            0.4091796875
+          ],
+          "confidence": 0.9945,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "YORK",
+          "bbox": [
+            0.16130514705882354,
+            0.4091796875
+          ],
+          "confidence": 0.7096,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "44C",
+          "bbox": [
+            0.11580882352941174,
+            0.439453125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Latest",
+          "bbox": [
+            0.1549862132352941,
+            0.439453125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Date",
+          "bbox": [
+            0.20932904411764708,
+            0.439453125
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.24977022058823528,
+            0.4384765625
+          ],
+          "confidence": 0.9852,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Shipment:",
+          "bbox": [
+            0.2725183823529412,
+            0.439453125
+          ],
+          "confidence": 0.637,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "200803",
+          "bbox": [
+            0.11707261029411764,
+            0.455078125
+          ],
+          "confidence": 0.9741,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "45A:",
+          "bbox": [
+            0.11707261029411764,
+            0.484375
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Description",
+          "bbox": [
+            0.15877757352941174,
+            0.4853515625
+          ],
+          "confidence": 0.814,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.2548253676470588,
+            0.4853515625
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Goods",
+          "bbox": [
+            0.2750459558823529,
+            0.4853515625
+          ],
+          "confidence": 0.9968,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "and/or",
+          "bbox": [
+            0.33444393382352944,
+            0.4853515625
+          ],
+          "confidence": 0.9388,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Services:",
+          "bbox": [
+            0.392578125,
+            0.4853515625
+          ],
+          "confidence": 0.9166,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "100,000",
+          "bbox": [
+            0.11833639705882354,
+            0.5009765625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bottles",
+          "bbox": [
+            0.18784466911764708,
+            0.5
+          ],
+          "confidence": 0.9843,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "(",
+          "bbox": [
+            0.24597886029411764,
+            0.4990234375
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "+/-",
+          "bbox": [
+            0.2560891544117647,
+            0.4990234375
+          ],
+          "confidence": 0.9806,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "05/05",
+          "bbox": [
+            0.28642003676470584,
+            0.5
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "%)",
+          "bbox": [
+            0.3382352941176471,
+            0.5
+          ],
+          "confidence": 0.7545,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.3635110294117647,
+            0.4990234375
+          ],
+          "confidence": 0.8454,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "First",
+          "bbox": [
+            0.38625919117647056,
+            0.5
+          ],
+          "confidence": 0.9988,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Class",
+          "bbox": [
+            0.4254365808823529,
+            0.5
+          ],
+          "confidence": 0.9934,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Technical",
+          "bbox": [
+            0.47472426470588236,
+            0.5
+          ],
+          "confidence": 0.9973,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Machinery",
+          "bbox": [
+            0.5556066176470589,
+            0.5
+          ],
+          "confidence": 0.8801,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Soda,",
+          "bbox": [
+            0.6428079044117647,
+            0.4990234375
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "packed",
+          "bbox": [
+            0.6971507352941176,
+            0.5009765625
+          ],
+          "confidence": 0.999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "in",
+          "bbox": [
+            0.7603400735294117,
+            0.5
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "blue",
+          "bbox": [
+            0.11707261029411764,
+            0.5146484375
+          ],
+          "confidence": 0.9764,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "crates",
+          "bbox": [
+            0.1549862132352941,
+            0.515625
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "labelled",
+          "bbox": [
+            0.21059283088235292,
+            0.515625
+          ],
+          "confidence": 0.5324,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Test",
+          "bbox": [
+            0.2775735294117647,
+            0.5146484375
+          ],
+          "confidence": 0.5357,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Machine",
+          "bbox": [
+            0.32180606617647056,
+            0.515625
+          ],
+          "confidence": 0.9478,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "London'",
+          "bbox": [
+            0.3951056985294118,
+            0.515625
+          ],
+          "confidence": 0.6636,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Unit",
+          "bbox": [
+            0.11707261029411764,
+            0.5302734375
+          ],
+          "confidence": 0.9922,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Price:",
+          "bbox": [
+            0.1549862132352941,
+            0.5302734375
+          ],
+          "confidence": 0.9639,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Usd",
+          "bbox": [
+            0.20553768382352944,
+            0.5302734375
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "5,00",
+          "bbox": [
+            0.2421875,
+            0.5302734375
+          ],
+          "confidence": 0.9971,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DELIVERY",
+          "bbox": [
+            0.11707261029411764,
+            0.5458984375
+          ],
+          "confidence": 0.9935,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TERMS;",
+          "bbox": [
+            0.20553768382352944,
+            0.5458984375
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CIF",
+          "bbox": [
+            0.2763097426470588,
+            0.544921875
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TORONTO.",
+          "bbox": [
+            0.3091681985294118,
+            0.5458984375
+          ],
+          "confidence": 0.8784,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "HS",
+          "bbox": [
+            0.11707261029411764,
+            0.560546875
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Code:",
+          "bbox": [
+            0.14613970588235292,
+            0.560546875
+          ],
+          "confidence": 0.6906,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "55678.334",
+          "bbox": [
+            0.2004825367647059,
+            0.5615234375
+          ],
+          "confidence": 0.9808,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Origin",
+          "bbox": [
+            0.11580882352941174,
+            0.5751953125
+          ],
+          "confidence": 0.9056,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.16762408088235292,
+            0.5751953125
+          ],
+          "confidence": 0.6218,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "the",
+          "bbox": [
+            0.18910845588235292,
+            0.576171875
+          ],
+          "confidence": 0.9972,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "goods:",
+          "bbox": [
+            0.220703125,
+            0.5771484375
+          ],
+          "confidence": 0.8919,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Germany",
+          "bbox": [
+            0.2826286764705882,
+            0.5771484375
+          ],
+          "confidence": 0.9821,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "46A:",
+          "bbox": [
+            0.11580882352941174,
+            0.62109375
+          ],
+          "confidence": 0.9986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Documents",
+          "bbox": [
+            0.15877757352941174,
+            0.6220703125
+          ],
+          "confidence": 0.9947,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Required:",
+          "bbox": [
+            0.2560891544117647,
+            0.62109375
+          ],
+          "confidence": 0.7791,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1)",
+          "bbox": [
+            0.11833639705882354,
+            0.6533203125
+          ],
+          "confidence": 0.8168,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SIGNED",
+          "bbox": [
+            0.17520680147058826,
+            0.6513671875
+          ],
+          "confidence": 0.9951,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "COMMERCIAL",
+          "bbox": [
+            0.24724264705882354,
+            0.65234375
+          ],
+          "confidence": 0.9949,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "INVOICE",
+          "bbox": [
+            0.37235753676470584,
+            0.6513671875
+          ],
+          "confidence": 0.6913,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IN",
+          "bbox": [
+            0.4494485294117647,
+            0.65234375
+          ],
+          "confidence": 0.9939,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "4",
+          "bbox": [
+            0.4696691176470588,
+            0.6513671875
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ORIGINALS",
+          "bbox": [
+            0.4860983455882353,
+            0.65234375
+          ],
+          "confidence": 0.992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2)",
+          "bbox": [
+            0.11833639705882354,
+            0.6669921875
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "WEIGHT",
+          "bbox": [
+            0.18026194852941174,
+            0.6669921875
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LIST",
+          "bbox": [
+            0.2548253676470588,
+            0.6669921875
+          ],
+          "confidence": 0.9967,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IN",
+          "bbox": [
+            0.2952665441176471,
+            0.666015625
+          ],
+          "confidence": 0.983,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2",
+          "bbox": [
+            0.3180147058823529,
+            0.6669921875
+          ],
+          "confidence": 0.9971,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ORIGINALS",
+          "bbox": [
+            0.33318014705882354,
+            0.6669921875
+          ],
+          "confidence": 0.994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AND",
+          "bbox": [
+            0.4330193014705882,
+            0.6669921875
+          ],
+          "confidence": 0.9981,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ONE",
+          "bbox": [
+            0.47598805147058826,
+            0.6669921875
+          ],
+          "confidence": 0.9979,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "COPY",
+          "bbox": [
+            0.5189568014705882,
+            0.6669921875
+          ],
+          "confidence": 0.9985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "3)",
+          "bbox": [
+            0.11833639705882354,
+            0.6826171875
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CERTIFICATE",
+          "bbox": [
+            0.17520680147058826,
+            0.6826171875
+          ],
+          "confidence": 0.9957,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.29021139705882354,
+            0.681640625
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ORIGIN",
+          "bbox": [
+            0.3192784926470588,
+            0.681640625
+          ],
+          "confidence": 0.999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IN",
+          "bbox": [
+            0.3849954044117647,
+            0.6806640625
+          ],
+          "confidence": 0.9695,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2",
+          "bbox": [
+            0.40774356617647056,
+            0.681640625
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ORIGINALS",
+          "bbox": [
+            0.4241727941176471,
+            0.6826171875
+          ],
+          "confidence": 0.9925,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "4)",
+          "bbox": [
+            0.11833639705882354,
+            0.6982421875
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BENEFICIARY'S",
+          "bbox": [
+            0.1764705882352941,
+            0.697265625
+          ],
+          "confidence": 0.9648,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CERTIFICATE",
+          "bbox": [
+            0.31169577205882354,
+            0.697265625
+          ],
+          "confidence": 0.9018,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "STATING",
+          "bbox": [
+            0.4267003676470588,
+            0.697265625
+          ],
+          "confidence": 0.9966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "THAT",
+          "bbox": [
+            0.5037913602941176,
+            0.697265625
+          ],
+          "confidence": 0.9985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "THE",
+          "bbox": [
+            0.5518152573529411,
+            0.697265625
+          ],
+          "confidence": 0.908,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "GOODS",
+          "bbox": [
+            0.5922564338235294,
+            0.697265625
+          ],
+          "confidence": 0.9714,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ARE",
+          "bbox": [
+            0.6605009191176471,
+            0.697265625
+          ],
+          "confidence": 0.9985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NOT",
+          "bbox": [
+            0.7022058823529411,
+            0.697265625
+          ],
+          "confidence": 0.9866,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DUTCH.",
+          "bbox": [
+            0.7451746323529411,
+            0.697265625
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FULL",
+          "bbox": [
+            0.1764705882352941,
+            0.7119140625
+          ],
+          "confidence": 0.9984,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SET",
+          "bbox": [
+            0.22323069852941174,
+            0.7119140625
+          ],
+          "confidence": 0.9992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ORIGINAL",
+          "bbox": [
+            0.26240808823529416,
+            0.712890625
+          ],
+          "confidence": 0.8558,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OCEAN",
+          "bbox": [
+            0.349609375,
+            0.712890625
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BILLS",
+          "bbox": [
+            0.41785386029411764,
+            0.7119140625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.4696691176470588,
+            0.7119140625
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LADING,",
+          "bbox": [
+            0.5012637867647058,
+            0.712890625
+          ],
+          "confidence": 0.6095,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PLUS",
+          "bbox": [
+            0.5758272058823529,
+            0.7119140625
+          ],
+          "confidence": 0.9931,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2",
+          "bbox": [
+            0.6251148897058824,
+            0.7119140625
+          ],
+          "confidence": 0.9986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NN",
+          "bbox": [
+            0.6415441176470589,
+            0.7119140625
+          ],
+          "confidence": 0.9844,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "COPIES",
+          "bbox": [
+            0.6731387867647058,
+            0.7119140625
+          ],
+          "confidence": 0.9965,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MADE",
+          "bbox": [
+            0.17520680147058826,
+            0.7275390625
+          ],
+          "confidence": 0.9716,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OUT",
+          "bbox": [
+            0.23081341911764708,
+            0.7275390625
+          ],
+          "confidence": 0.9992,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TO",
+          "bbox": [
+            0.2712545955882353,
+            0.7265625
+          ],
+          "confidence": 0.8397,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "THE",
+          "bbox": [
+            0.30158547794117646,
+            0.7275390625
+          ],
+          "confidence": 0.9918,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ORDER",
+          "bbox": [
+            0.3420266544117647,
+            0.7275390625
+          ],
+          "confidence": 0.9047,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF:",
+          "bbox": [
+            0.40774356617647056,
+            0.7275390625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CONPEND",
+          "bbox": [
+            0.4431295955882353,
+            0.7275390625
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BANK",
+          "bbox": [
+            0.5366498161764706,
+            0.7275390625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LTD.,",
+          "bbox": [
+            0.5897288602941176,
+            0.7275390625
+          ],
+          "confidence": 0.9856,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NEW",
+          "bbox": [
+            0.6352251838235294,
+            0.7265625
+          ],
+          "confidence": 0.9966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "YORK.",
+          "bbox": [
+            0.6807215073529411,
+            0.7275390625
+          ],
+          "confidence": 0.5286,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NOTIFY",
+          "bbox": [
+            0.1764705882352941,
+            0.7431640625
+          ],
+          "confidence": 0.9969,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PARTY:",
+          "bbox": [
+            0.24471507352941174,
+            0.7431640625
+          ],
+          "confidence": 0.9365,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "'THE",
+          "bbox": [
+            0.30790441176470584,
+            0.7421875
+          ],
+          "confidence": 0.7308,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BUYERS",
+          "bbox": [
+            0.35340073529411764,
+            0.7431640625
+          ],
+          "confidence": 0.5618,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LTD.,",
+          "bbox": [
+            0.43049172794117646,
+            0.7431640625
+          ],
+          "confidence": 0.9982,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LONDON',",
+          "bbox": [
+            0.4772518382352941,
+            0.744140625
+          ],
+          "confidence": 0.6825,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FREIGHT",
+          "bbox": [
+            0.1764705882352941,
+            0.7578125
+          ],
+          "confidence": 0.7915,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TERMS:",
+          "bbox": [
+            0.2548253676470588,
+            0.7578125
+          ],
+          "confidence": 0.9732,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "'FREIGHT",
+          "bbox": [
+            0.32686121323529416,
+            0.7578125
+          ],
+          "confidence": 0.8404,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PAYABLE",
+          "bbox": [
+            0.4115349264705882,
+            0.7578125
+          ],
+          "confidence": 0.985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AT",
+          "bbox": [
+            0.4911534926470588,
+            0.7568359375
+          ],
+          "confidence": 0.9991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DESTINATION.",
+          "bbox": [
+            0.5189568014705882,
+            0.7578125
+          ],
+          "confidence": 0.6826,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "47A:",
+          "bbox": [
+            0.11580882352941174,
+            0.802734375
+          ],
+          "confidence": 0.9184,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Additional",
+          "bbox": [
+            0.1575137867647059,
+            0.8037109375
+          ],
+          "confidence": 0.5115,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Conditions:",
+          "bbox": [
+            0.24471507352941174,
+            0.8037109375
+          ],
+          "confidence": 0.9069,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "+",
+          "bbox": [
+            0.11580882352941174,
+            0.8212890625
+          ],
+          "confidence": 0.9812,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ALL",
+          "bbox": [
+            0.12971047794117646,
+            0.8173828125
+          ],
+          "confidence": 0.9983,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DOCUMENTS",
+          "bbox": [
+            0.16888786764705882,
+            0.818359375
+          ],
+          "confidence": 0.9974,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SHOULD",
+          "bbox": [
+            0.28642003676470584,
+            0.818359375
+          ],
+          "confidence": 0.9981,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BEAR",
+          "bbox": [
+            0.36603860294117646,
+            0.818359375
+          ],
+          "confidence": 0.9988,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "L/C",
+          "bbox": [
+            0.41785386029411764,
+            0.818359375
+          ],
+          "confidence": 0.9878,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NO.",
+          "bbox": [
+            0.45197610294117646,
+            0.818359375
+          ],
+          "confidence": 0.9737,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BASELINE2022567",
+          "bbox": [
+            0.4898897058823529,
+            0.8193359375
+          ],
+          "confidence": 0.688,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "+",
+          "bbox": [
+            0.11580882352941174,
+            0.8359375
+          ],
+          "confidence": 0.9293,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ALL",
+          "bbox": [
+            0.13097426470588236,
+            0.8330078125
+          ],
+          "confidence": 0.9984,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DOCUMENTS",
+          "bbox": [
+            0.17015165441176472,
+            0.833984375
+          ],
+          "confidence": 0.9718,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SHOULD",
+          "bbox": [
+            0.28894761029411764,
+            0.833984375
+          ],
+          "confidence": 0.9586,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BE",
+          "bbox": [
+            0.36603860294117646,
+            0.8330078125
+          ],
+          "confidence": 0.9782,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ORIGINALLY",
+          "bbox": [
+            0.3951056985294118,
+            0.833984375
+          ],
+          "confidence": 0.9872,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SIGNED",
+          "bbox": [
+            0.5037913602941176,
+            0.833984375
+          ],
+          "confidence": 0.8653,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "+",
+          "bbox": [
+            0.11580882352941174,
+            0.8505859375
+          ],
+          "confidence": 0.9963,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "THIS",
+          "bbox": [
+            0.13097426470588236,
+            0.8486328125
+          ],
+          "confidence": 0.9531,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LETTER",
+          "bbox": [
+            0.177734375,
+            0.8486328125
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.24597886029411764,
+            0.84765625
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CREDIT",
+          "bbox": [
+            0.2763097426470588,
+            0.8486328125
+          ],
+          "confidence": 0.9708,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IS",
+          "bbox": [
+            0.34455422794117646,
+            0.8486328125
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SUBJECT",
+          "bbox": [
+            0.36603860294117646,
+            0.8486328125
+          ],
+          "confidence": 0.8323,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TO",
+          "bbox": [
+            0.45071231617647056,
+            0.8486328125
+          ],
+          "confidence": 0.9852,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "THE",
+          "bbox": [
+            0.4797794117647059,
+            0.8486328125
+          ],
+          "confidence": 0.8977,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "'UNIFORM",
+          "bbox": [
+            0.5202205882352942,
+            0.8486328125
+          ],
+          "confidence": 0.9417,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CUSTOMS",
+          "bbox": [
+            0.6124770220588235,
+            0.8486328125
+          ],
+          "confidence": 0.9985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "AND",
+          "bbox": [
+            0.7047334558823529,
+            0.8486328125
+          ],
+          "confidence": 0.8382,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PRACTICE",
+          "bbox": [
+            0.11707261029411764,
+            0.8642578125
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FOR",
+          "bbox": [
+            0.20932904411764708,
+            0.8642578125
+          ],
+          "confidence": 0.9359,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DOCUMENTARY",
+          "bbox": [
+            0.2510340073529412,
+            0.8642578125
+          ],
+          "confidence": 0.8671,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CREDITS'",
+          "bbox": [
+            0.3913143382352941,
+            0.8642578125
+          ],
+          "confidence": 0.9944,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "(2007",
+          "bbox": [
+            0.4772518382352941,
+            0.8642578125
+          ],
+          "confidence": 0.9976,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "REVISION)",
+          "bbox": [
+            0.5265395220588235,
+            0.86328125
+          ],
+          "confidence": 0.6435,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.6162683823529411,
+            0.86328125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "THE",
+          "bbox": [
+            0.6453354779411764,
+            0.8642578125
+          ],
+          "confidence": 0.8841,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DOCUMENTS",
+          "bbox": [
+            0.11707261029411764,
+            0.87890625
+          ],
+          "confidence": 0.9964,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TO",
+          "bbox": [
+            0.23460477941176472,
+            0.87890625
+          ],
+          "confidence": 0.9552,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BE",
+          "bbox": [
+            0.263671875,
+            0.87890625
+          ],
+          "confidence": 0.9799,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SENT",
+          "bbox": [
+            0.2927389705882353,
+            0.87890625
+          ],
+          "confidence": 0.9979,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "TO",
+          "bbox": [
+            0.3420266544117647,
+            0.87890625
+          ],
+          "confidence": 0.9047,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PROFERUS",
+          "bbox": [
+            0.3736213235294118,
+            0.87890625
+          ],
+          "confidence": 0.9902,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BANK",
+          "bbox": [
+            0.47346047794117646,
+            0.8779296875
+          ],
+          "confidence": 0.9942,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BY",
+          "bbox": [
+            0.5278033088235294,
+            0.8779296875
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "COURIER",
+          "bbox": [
+            0.5556066176470589,
+            0.8779296875
+          ],
+          "confidence": 0.9928,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SERVICE",
+          "bbox": [
+            0.6415441176470589,
+            0.87890625
+          ],
+          "confidence": 0.9978,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IN",
+          "bbox": [
+            0.7198988970588236,
+            0.876953125
+          ],
+          "confidence": 0.9966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ONE",
+          "bbox": [
+            0.7426470588235294,
+            0.87890625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LOT",
+          "bbox": [
+            0.7856158088235294,
+            0.87890625
+          ],
+          "confidence": 0.5716,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 221,
+      "average_confidence": 0.9227
+    },
+    {
+      "page_num": 3,
+      "words": [
+        {
+          "text": "Page",
+          "bbox": [
+            0.6453354779411764,
+            0.1201171875
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "3",
+          "bbox": [
+            0.6908318014705882,
+            0.12109375
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.7047334558823529,
+            0.1201171875
+          ],
+          "confidence": 0.7213,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "3",
+          "bbox": [
+            0.7274816176470589,
+            0.12109375
+          ],
+          "confidence": 1.0,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "49G",
+          "bbox": [
+            0.11580882352941174,
+            0.1357421875
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Special",
+          "bbox": [
+            0.15625,
+            0.1376953125
+          ],
+          "confidence": 0.9772,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Payment",
+          "bbox": [
+            0.2219669117647059,
+            0.1376953125
+          ],
+          "confidence": 0.7991,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Conditions",
+          "bbox": [
+            0.2952665441176471,
+            0.13671875
+          ],
+          "confidence": 0.9004,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "for",
+          "bbox": [
+            0.38625919117647056,
+            0.1357421875
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Beneficiary:",
+          "bbox": [
+            0.4140625,
+            0.13671875
+          ],
+          "confidence": 0.8048,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ALL",
+          "bbox": [
+            0.11580882352941174,
+            0.1513671875
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CHARGES",
+          "bbox": [
+            0.15245863970588236,
+            0.150390625
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IN",
+          "bbox": [
+            0.2434512867647059,
+            0.150390625
+          ],
+          "confidence": 0.99,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CANADA",
+          "bbox": [
+            0.26746323529411764,
+            0.15234375
+          ],
+          "confidence": 0.9853,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ARE",
+          "bbox": [
+            0.34455422794117646,
+            0.1513671875
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FOR",
+          "bbox": [
+            0.38625919117647056,
+            0.1513671875
+          ],
+          "confidence": 0.8497,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "YOUR",
+          "bbox": [
+            0.4267003676470588,
+            0.1513671875
+          ],
+          "confidence": 0.5934,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ACCOUNT",
+          "bbox": [
+            0.48230698529411764,
+            0.1513671875
+          ],
+          "confidence": 0.9766,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "49H",
+          "bbox": [
+            0.11580882352941174,
+            0.181640625
+          ],
+          "confidence": 0.8894,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Special",
+          "bbox": [
+            0.1549862132352941,
+            0.181640625
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Payment",
+          "bbox": [
+            0.220703125,
+            0.18359375
+          ],
+          "confidence": 0.9966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Conditions",
+          "bbox": [
+            0.2952665441176471,
+            0.1826171875
+          ],
+          "confidence": 0.9944,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "for",
+          "bbox": [
+            0.3849954044117647,
+            0.181640625
+          ],
+          "confidence": 0.8546,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bank",
+          "bbox": [
+            0.4140625,
+            0.181640625
+          ],
+          "confidence": 0.954,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Only:",
+          "bbox": [
+            0.45955882352941174,
+            0.1826171875
+          ],
+          "confidence": 0.9879,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ALL",
+          "bbox": [
+            0.11580882352941174,
+            0.1962890625
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CHARGES",
+          "bbox": [
+            0.15245863970588236,
+            0.1953125
+          ],
+          "confidence": 0.9959,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FOR",
+          "bbox": [
+            0.24471507352941174,
+            0.1962890625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LC",
+          "bbox": [
+            0.28515625,
+            0.1962890625
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ISSUANCE",
+          "bbox": [
+            0.3142233455882353,
+            0.197265625
+          ],
+          "confidence": 0.9756,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ARE",
+          "bbox": [
+            0.4064797794117647,
+            0.197265625
+          ],
+          "confidence": 0.9198,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "FOR",
+          "bbox": [
+            0.4481847426470588,
+            0.1962890625
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "YOUR",
+          "bbox": [
+            0.4898897058823529,
+            0.1962890625
+          ],
+          "confidence": 0.9934,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ACCOUNT",
+          "bbox": [
+            0.5442325367647058,
+            0.197265625
+          ],
+          "confidence": 0.7067,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "71D:",
+          "bbox": [
+            0.11707261029411764,
+            0.2275390625
+          ],
+          "confidence": 0.9952,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Charges:",
+          "bbox": [
+            0.16004136029411764,
+            0.2275390625
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BENEF",
+          "bbox": [
+            0.11707261029411764,
+            0.2431640625
+          ],
+          "confidence": 0.9967,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "48",
+          "bbox": [
+            0.1145450367647059,
+            0.2724609375
+          ],
+          "confidence": 0.9965,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Period",
+          "bbox": [
+            0.14234834558823528,
+            0.2724609375
+          ],
+          "confidence": 0.8437,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "for",
+          "bbox": [
+            0.19669117647058826,
+            0.2724609375
+          ],
+          "confidence": 0.9978,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Presentation",
+          "bbox": [
+            0.22575827205882354,
+            0.2734375
+          ],
+          "confidence": 0.9586,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "in",
+          "bbox": [
+            0.3306525735294118,
+            0.2724609375
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "days;",
+          "bbox": [
+            0.349609375,
+            0.2724609375
+          ],
+          "confidence": 0.9977,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "15/",
+          "bbox": [
+            0.11707261029411764,
+            0.287109375
+          ],
+          "confidence": 0.9928,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "From",
+          "bbox": [
+            0.15372242647058826,
+            0.2880859375
+          ],
+          "confidence": 0.7726,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "shipmentdate",
+          "bbox": [
+            0.19921875,
+            0.2880859375
+          ],
+          "confidence": 0.9777,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "49",
+          "bbox": [
+            0.1145450367647059,
+            0.3173828125
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Confirmation",
+          "bbox": [
+            0.14234834558823528,
+            0.318359375
+          ],
+          "confidence": 0.7168,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Instructions:",
+          "bbox": [
+            0.2510340073529412,
+            0.318359375
+          ],
+          "confidence": 0.6118,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CONFIRM",
+          "bbox": [
+            0.11707261029411764,
+            0.333984375
+          ],
+          "confidence": 0.9693,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "58a",
+          "bbox": [
+            0.11707261029411764,
+            0.36328125
+          ],
+          "confidence": 0.9982,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Requested",
+          "bbox": [
+            0.15372242647058826,
+            0.365234375
+          ],
+          "confidence": 0.9959,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Confirmation",
+          "bbox": [
+            0.2434512867647059,
+            0.3642578125
+          ],
+          "confidence": 0.754,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Party:",
+          "bbox": [
+            0.3521369485294118,
+            0.36328125
+          ],
+          "confidence": 0.9999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "CONPUS33XXX",
+          "bbox": [
+            0.11580882352941174,
+            0.3779296875
+          ],
+          "confidence": 0.5809,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "53A",
+          "bbox": [
+            0.11707261029411764,
+            0.4091796875
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Reimbursing",
+          "bbox": [
+            0.15372242647058826,
+            0.4091796875
+          ],
+          "confidence": 0.5484,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bank:",
+          "bbox": [
+            0.25988051470588236,
+            0.4091796875
+          ],
+          "confidence": 0.9562,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "COBADEFFXXX",
+          "bbox": [
+            0.11833639705882354,
+            0.4248046875
+          ],
+          "confidence": 0.9985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "78",
+          "bbox": [
+            0.11580882352941174,
+            0.4541015625
+          ],
+          "confidence": 0.7152,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Instructions",
+          "bbox": [
+            0.14234834558823528,
+            0.455078125
+          ],
+          "confidence": 0.6858,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "to",
+          "bbox": [
+            0.23965992647058826,
+            0.455078125
+          ],
+          "confidence": 0.9953,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "the",
+          "bbox": [
+            0.25988051470588236,
+            0.4541015625
+          ],
+          "confidence": 0.9947,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Paying/Accepting",
+          "bbox": [
+            0.2927389705882353,
+            0.455078125
+          ],
+          "confidence": 0.756,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Negotiating",
+          "bbox": [
+            0.4456571691176471,
+            0.455078125
+          ],
+          "confidence": 0.9646,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bank:",
+          "bbox": [
+            0.54296875,
+            0.455078125
+          ],
+          "confidence": 0.7076,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PLS",
+          "bbox": [
+            0.11707261029411764,
+            0.4697265625
+          ],
+          "confidence": 0.9971,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "REIMBURSE",
+          "bbox": [
+            0.15625,
+            0.4697265625
+          ],
+          "confidence": 0.989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "YOURSELVES",
+          "bbox": [
+            0.263671875,
+            0.4697265625
+          ],
+          "confidence": 0.9995,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "UPON",
+          "bbox": [
+            0.3849954044117647,
+            0.4697265625
+          ],
+          "confidence": 0.9713,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "INSTRUCTIONS",
+          "bbox": [
+            0.44060202205882354,
+            0.4697265625
+          ],
+          "confidence": 0.5658,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "57a:",
+          "bbox": [
+            0.11580882352941174,
+            0.5
+          ],
+          "confidence": 0.9945,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Advise",
+          "bbox": [
+            0.1575137867647059,
+            0.5
+          ],
+          "confidence": 0.9923,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Through'",
+          "bbox": [
+            0.2219669117647059,
+            0.5009765625
+          ],
+          "confidence": 0.9893,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bank:",
+          "bbox": [
+            0.2977941176470588,
+            0.5
+          ],
+          "confidence": 0.9961,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IRVTUS3NXXX",
+          "bbox": [
+            0.11707261029411764,
+            0.515625
+          ],
+          "confidence": 0.979,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "72Z",
+          "bbox": [
+            0.11707261029411764,
+            0.544921875
+          ],
+          "confidence": 0.999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sender",
+          "bbox": [
+            0.15245863970588236,
+            0.544921875
+          ],
+          "confidence": 0.9658,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "to",
+          "bbox": [
+            0.21312040441176472,
+            0.544921875
+          ],
+          "confidence": 0.9898,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Receiver",
+          "bbox": [
+            0.23713235294117646,
+            0.5458984375
+          ],
+          "confidence": 0.8417,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Information:",
+          "bbox": [
+            0.31169577205882354,
+            0.5458984375
+          ],
+          "confidence": 0.695,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PLEASE",
+          "bbox": [
+            0.11707261029411764,
+            0.560546875
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PHONE/FAX/TELEX",
+          "bbox": [
+            0.19037224264705882,
+            0.5615234375
+          ],
+          "confidence": 0.5727,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ADVISE",
+          "bbox": [
+            0.3521369485294118,
+            0.560546875
+          ],
+          "confidence": 0.839,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BENEFICIARY.",
+          "bbox": [
+            0.11707261029411764,
+            0.576171875
+          ],
+          "confidence": 0.9605,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "KINDLY",
+          "bbox": [
+            0.23965992647058826,
+            0.576171875
+          ],
+          "confidence": 0.9946,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ACKNOWLEDGE",
+          "bbox": [
+            0.30537683823529416,
+            0.576171875
+          ],
+          "confidence": 0.9695,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "RECEIPT.",
+          "bbox": [
+            0.4494485294117647,
+            0.576171875
+          ],
+          "confidence": 0.9805,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "-}",
+          "bbox": [
+            0.1145450367647059,
+            0.650390625
+          ],
+          "confidence": 0.9863,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "END",
+          "bbox": [
+            0.134765625,
+            0.6513671875
+          ],
+          "confidence": 0.9934,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "OF",
+          "bbox": [
+            0.17520680147058826,
+            0.6513671875
+          ],
+          "confidence": 0.999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MESSAGE",
+          "bbox": [
+            0.20427389705882354,
+            0.650390625
+          ],
+          "confidence": 0.9983,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "+++++++",
+          "bbox": [
+            0.11580882352941174,
+            0.6845703125
+          ],
+          "confidence": 0.9882,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 93,
+      "average_confidence": 0.9203
+    }
+  ],
+  "total_words": 432,
+  "overall_confidence": 0.9306
+}

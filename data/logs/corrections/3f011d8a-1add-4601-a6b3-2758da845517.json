@@ -1,0 +1,43 @@
+{
+  "corrections": [
+    {
+      "document_id": "3f011d8a-1add-4601-a6b3-2758da845517",
+      "page": 0,
+      "word_id": "p0_w18",
+      "original_text": "SEXOI",
+      "corrected_text": "SEXO/",
+      "corrected_bbox": [
+        [
+          0.4115546218487395,
+          0.486328125
+        ],
+        [
+          0.45854122899159666,
+          0.5009765625
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-13T22:27:47.181370"
+    },
+    {
+      "document_id": "3f011d8a-1add-4601-a6b3-2758da845517",
+      "page": 0,
+      "word_id": "p0_w21",
+      "original_text": "NACIMIENTO/NAIXEMENT",
+      "corrected_text": "NACIMIENTO /NAIXEMENT",
+      "corrected_bbox": [
+        [
+          0.7805376838235294,
+          0.4892578125
+        ],
+        [
+          0.9422268907563025,
+          0.5029296875
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-13T22:28:44.849609"
+    }
+  ],
+  "document_id": "3f011d8a-1add-4601-a6b3-2758da845517"
+}

@@ -1,23 +1,319 @@
 
 :root {
-    --primary-color: #0a4f7a;
-    --secondary-color: #0077b6;
+    --primary-color: #3B639E;     /* Queen Blue */
+    --secondary-color: #0077b6;   /* Blue (keeping for consistency) */
+    --accent-color: #9C0001;      /* Crimson Red */
     --background-color: #f0f8ff;
-    --font-color: #333;
+    --font-color: #111111;        /* Chinese Black */
     --light-gray: #f4f4f4;
-    --dark-gray: #ccc;
+    --dark-gray: #868A94;         /* Roman Silver */
     --white: #fff;
     --error-color: #d9534f;
     --success-color: #5cb85c;
+    --baby-blue: #9CC9FF;         /* Baby Blue Eyes for highlights */
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Glancyr", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: var(--font-color);
     line-height: 1.6;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--white);
+    min-height: 100vh;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--dark-gray);
+}
+
+.home-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.finoktai-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-text {
+    font-family: "Glancyr", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+}
+
+.logo-finokt {
+    color: var(--primary-color);
+}
+
+.logo-ai {
+    color: var(--accent-color);
+    font-weight: 900;
+}
+
+.home-title h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.home-title p {
+    margin: 0;
+    color: var(--font-color);
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+.home-main {
+    margin-bottom: 3rem;
+}
+
+.home-main section {
+    margin-bottom: 3rem;
+}
+
+.home-main h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Quick Actions */
+.action-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.action-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.action-card.primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-color: var(--accent-color);
+}
+
+.action-card.primary h3,
+.action-card.primary p {
+    color: var(--white);
+}
+
+.action-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.action-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.action-card p {
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.inline-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.inline-form input[type="file"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+}
+
+/* System Status */
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.status-card {
+    background: linear-gradient(135deg, var(--light-gray), #e8f4fd);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid var(--primary-color);
+}
+
+.status-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.status-label {
+    color: var(--font-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Learning Progress */
+.progress-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.progress-card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.progress-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: var(--dark-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Recent Activity */
+.activity-container {
+    background: var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.activity-tabs {
+    display: flex;
+    background: var(--dark-gray);
+}
+
+.activity-tab {
+    flex: 1;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--font-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.activity-tab.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.activity-tab-content {
+    padding: 2rem;
+    display: none;
+}
+
+.activity-tab-content.active {
+    display: block;
+}
+
+/* Quick Stats */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+.home-footer {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--dark-gray);
+    color: var(--font-color);
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 1rem;
+    }
+
+    .home-brand {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .action-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .status-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress-section {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .activity-tabs {
+        flex-direction: column;
+    }
 }
 
 .container {
@@ -30,15 +326,58 @@ body {
 }
 
 header {
-    text-align: center;
     margin-bottom: 2rem;
     border-bottom: 1px solid var(--dark-gray);
     padding-bottom: 1rem;
 }
 
-header h1 {
+.header-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.finoktai-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-family: "Glancyr", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+}
+
+.logo-finokt {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+}
+
+.logo-ai {
+    color: var(--accent-color);
+    font-weight: 900;
+}
+
+.header-title {
+    text-align: right;
+}
+
+.header-title h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    font-size: 1.75rem;
+}
+
+.header-title p {
+    margin: 0;
+    color: var(--font-color);
+    opacity: 0.8;
 }
 
 .form-group {
@@ -202,7 +541,42 @@ footer {
 .viewer-controls {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+}
+
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-left: 1px solid var(--dark-gray);
+    padding-left: 0.75rem;
+}
+
+#prev-page-btn, #next-page-btn, #pan-left-btn, #pan-right-btn {
+    background: var(--primary-color);
+    font-size: 1.2rem;
+    padding: 0.5rem 0.75rem;
+    min-width: 40px;
+}
+
+#prev-page-btn:hover:not(:disabled), #next-page-btn:hover:not(:disabled),
+#pan-left-btn:hover:not(:disabled), #pan-right-btn:hover:not(:disabled) {
+    background: var(--secondary-color);
+}
+
+#prev-page-btn:disabled, #next-page-btn:disabled,
+#pan-left-btn:disabled, #pan-right-btn:disabled {
+    background: var(--dark-gray);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#pan-left-btn, #pan-right-btn {
+    background: var(--accent-color);
+}
+
+#pan-left-btn:hover:not(:disabled), #pan-right-btn:hover:not(:disabled) {
+    background: var(--secondary-color);
 }
 
 .btn-small {
@@ -230,7 +604,7 @@ footer {
     flex: 1;
     min-height: 0; /* allow flex item to scroll */
     overflow-y: scroll; /* Force visible vertical scrollbar */
-    overflow-x: hidden;
+    overflow-x: scroll; /* Enable horizontal scrolling for zoomed pages */
     background: #f8f9fa;
     scrollbar-width: thin;
     scrollbar-color: var(--dark-gray) transparent;
@@ -250,6 +624,8 @@ footer {
 
 #pages-container {
     padding: 1rem;
+    width: fit-content;
+    min-width: 100%;
 }
 
 /* Individual Page Styles */
@@ -259,7 +635,9 @@ footer {
     border-radius: 8px;
     background: var(--white);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: visible;
+    width: fit-content;
+    min-width: calc(100% - 2rem);
 }
 
 .page-header {
@@ -285,16 +663,19 @@ footer {
 
 .page-canvas-container {
     position: relative;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     padding: 1rem;
     background: var(--white);
+    min-width: 100%;
+    width: fit-content;
 }
 
 .page-canvas {
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: crosshair;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Legacy canvas container (hidden) */

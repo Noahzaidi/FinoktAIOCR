@@ -1,0 +1,2039 @@
+{
+  "document_id": "45d54990-e9dc-4fbd-8d7e-bc47a695cb4a",
+  "extraction_timestamp": "2025-10-13T23:54:29.478582",
+  "pages": [
+    {
+      "page_num": 1,
+      "words": [
+        {
+          "text": "Baseline",
+          "bbox": [
+            0.4326171875,
+            0.034279805672268904
+          ],
+          "confidence": 0.9843,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Test",
+          "bbox": [
+            0.4580078125,
+            0.03289784663865547
+          ],
+          "confidence": 0.9968,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Set",
+          "bbox": [
+            0.4716796875,
+            0.03289784663865547
+          ],
+          "confidence": 0.9973,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Documents_InfoSheet.xisx",
+          "bbox": [
+            0.482421875,
+            0.034279805672268904
+          ],
+          "confidence": 0.5966,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Action",
+          "bbox": [
+            0.046875,
+            0.09232208508403361
+          ],
+          "confidence": 0.5127,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Manual",
+          "bbox": [
+            0.076171875,
+            0.09232208508403361
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Document",
+          "bbox": [
+            0.1318359375,
+            0.09370404411764705
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LCI",
+          "bbox": [
+            0.26171875,
+            0.09232208508403361
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Number",
+          "bbox": [
+            0.271484375,
+            0.09232208508403361
+          ],
+          "confidence": 0.9906,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LC",
+          "bbox": [
+            0.3232421875,
+            0.09094012605042018
+          ],
+          "confidence": 0.613,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Amount",
+          "bbox": [
+            0.3330078125,
+            0.09232208508403361
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Expiry",
+          "bbox": [
+            0.388671875,
+            0.09232208508403361
+          ],
+          "confidence": 0.9865,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Latest:",
+          "bbox": [
+            0.4287109375,
+            0.09370404411764705
+          ],
+          "confidence": 0.9951,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Shipment",
+          "bbox": [
+            0.44921875,
+            0.09232208508403361
+          ],
+          "confidence": 0.8815,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Tolerance",
+          "bbox": [
+            0.482421875,
+            0.09232208508403361
+          ],
+          "confidence": 0.9988,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LCA",
+          "bbox": [
+            0.525390625,
+            0.09094012605042018
+          ],
+          "confidence": 0.9845,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Amount",
+          "bbox": [
+            0.53515625,
+            0.09232208508403361
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "LCBalance",
+          "bbox": [
+            0.58203125,
+            0.08955816701680674
+          ],
+          "confidence": 0.9977,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Issue/Amend",
+          "bbox": [
+            0.638671875,
+            0.09094012605042018
+          ],
+          "confidence": 0.7921,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Date",
+          "bbox": [
+            0.681640625,
+            0.09232208508403361
+          ],
+          "confidence": 0.9942,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PDF",
+          "bbox": [
+            0.869140625,
+            0.09232208508403361
+          ],
+          "confidence": 0.9986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Sequence",
+          "bbox": [
+            0.0419921875,
+            0.10337775735294119
+          ],
+          "confidence": 0.6837,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.052734375,
+            0.12272518382352943
+          ],
+          "confidence": 0.6745,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Chapter3",
+          "bbox": [
+            0.076171875,
+            0.12272518382352943
+          ],
+          "confidence": 0.997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MT700",
+          "bbox": [
+            0.107421875,
+            0.11857930672268907
+          ],
+          "confidence": 0.9922,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "yC",
+          "bbox": [
+            0.1884765625,
+            0.11719734768907564
+          ],
+          "confidence": 0.3167,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BASELINE2022567",
+          "bbox": [
+            0.24609375,
+            0.11719734768907564
+          ],
+          "confidence": 0.6593,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.11719734768907564
+          ],
+          "confidence": 0.7779,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "520,000.00",
+          "bbox": [
+            0.3271484375,
+            0.11719734768907564
+          ],
+          "confidence": 0.9278,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2102181",
+          "bbox": [
+            0.369140625,
+            0.1158153886554622
+          ],
+          "confidence": 0.9111,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "New",
+          "bbox": [
+            0.39453125,
+            0.11857930672268907
+          ],
+          "confidence": 0.9027,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "York",
+          "bbox": [
+            0.4111328125,
+            0.11857930672268907
+          ],
+          "confidence": 0.9788,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "200803",
+          "bbox": [
+            0.4423828125,
+            0.121343224789916
+          ],
+          "confidence": 0.9925,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "05/05",
+          "bbox": [
+            0.48828125,
+            0.121343224789916
+          ],
+          "confidence": 0.999,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.515625,
+            0.11857930672268907
+          ],
+          "confidence": 0.7202,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "520,000.00",
+          "bbox": [
+            0.529296875,
+            0.11719734768907564
+          ],
+          "confidence": 0.8765,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "JUSS",
+          "bbox": [
+            0.5693359375,
+            0.1158153886554622
+          ],
+          "confidence": 0.7251,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "546,000.00",
+          "bbox": [
+            0.5849609375,
+            0.11719734768907564
+          ],
+          "confidence": 0.6249,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "200103",
+          "bbox": [
+            0.658203125,
+            0.121343224789916
+          ],
+          "confidence": 0.9754,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Baseline_",
+          "bbox": [
+            0.8125,
+            0.11857930672268907
+          ],
+          "confidence": 0.9706,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MT700_Feb23",
+          "bbox": [
+            0.83984375,
+            0.11719734768907564
+          ],
+          "confidence": 0.5864,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2",
+          "bbox": [
+            0.052734375,
+            0.14207261029411766
+          ],
+          "confidence": 0.987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Chapter4",
+          "bbox": [
+            0.0751953125,
+            0.1379267331932773
+          ],
+          "confidence": 0.9676,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MT707",
+          "bbox": [
+            0.107421875,
+            0.1379267331932773
+          ],
+          "confidence": 0.9942,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Amendment",
+          "bbox": [
+            0.1884765625,
+            0.13654477415966387
+          ],
+          "confidence": 0.9562,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.228515625,
+            0.13930869222689074
+          ],
+          "confidence": 0.9985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BASELINE2022567",
+          "bbox": [
+            0.248046875,
+            0.1379267331932773
+          ],
+          "confidence": 0.88,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "210302",
+          "bbox": [
+            0.37109375,
+            0.1379267331932773
+          ],
+          "confidence": 0.9296,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "New",
+          "bbox": [
+            0.39453125,
+            0.1379267331932773
+          ],
+          "confidence": 0.9757,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "York",
+          "bbox": [
+            0.4111328125,
+            0.1379267331932773
+          ],
+          "confidence": 0.9788,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "05/05",
+          "bbox": [
+            0.48828125,
+            0.14069065126050423
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.515625,
+            0.1379267331932773
+          ],
+          "confidence": 0.9613,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "500,000.00",
+          "bbox": [
+            0.529296875,
+            0.13654477415966387
+          ],
+          "confidence": 0.9001,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.5712890625,
+            0.13654477415966387
+          ],
+          "confidence": 0.8429,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "525,000.00",
+          "bbox": [
+            0.5849609375,
+            0.13654477415966387
+          ],
+          "confidence": 0.597,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "200425",
+          "bbox": [
+            0.658203125,
+            0.14069065126050423
+          ],
+          "confidence": 0.965,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bseline_.M170.Nol_/et23",
+          "bbox": [
+            0.8125,
+            0.13654477415966387
+          ],
+          "confidence": 0.4514,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Drawing",
+          "bbox": [
+            0.1064453125,
+            0.17523962710084034
+          ],
+          "confidence": 0.9462,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.1",
+          "bbox": [
+            0.134765625,
+            0.17662158613445378
+          ],
+          "confidence": 0.7046,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Baseline_Fullset.1st_Set_1st_Shipment_feb23",
+          "bbox": [
+            0.8125,
+            0.17662158613445378
+          ],
+          "confidence": 0.4502,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "3",
+          "bbox": [
+            0.052734375,
+            0.20426076680672267
+          ],
+          "confidence": 0.9976,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Chapters",
+          "bbox": [
+            0.076171875,
+            0.20426076680672267
+          ],
+          "confidence": 0.6051,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PRESENTATION",
+          "bbox": [
+            0.6337890625,
+            0.19458705357142858
+          ],
+          "confidence": 0.8056,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.68359375,
+            0.19458705357142858
+          ],
+          "confidence": 0.8285,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Documents",
+          "bbox": [
+            0.70703125,
+            0.19596901260504201
+          ],
+          "confidence": 0.9897,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Date",
+          "bbox": [
+            0.7451171875,
+            0.19735097163865545
+          ],
+          "confidence": 0.8257,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Shipmentdate",
+          "bbox": [
+            0.763671875,
+            0.19596901260504201
+          ],
+          "confidence": 0.9804,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Cover",
+          "bbox": [
+            0.107421875,
+            0.22084427521008404
+          ],
+          "confidence": 0.9701,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Letter",
+          "bbox": [
+            0.126953125,
+            0.22222623424369747
+          ],
+          "confidence": 0.9947,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.1904296875,
+            0.22222623424369747
+          ],
+          "confidence": 0.9993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BASELINE2022567",
+          "bbox": [
+            0.248046875,
+            0.22084427521008404
+          ],
+          "confidence": 0.8249,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.2194623161764706
+          ],
+          "confidence": 0.7038,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "275,000.00",
+          "bbox": [
+            0.3271484375,
+            0.2194623161764706
+          ],
+          "confidence": 0.9139,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.515625,
+            0.22084427521008404
+          ],
+          "confidence": 0.9613,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "500,000.00",
+          "bbox": [
+            0.529296875,
+            0.2194623161764706
+          ],
+          "confidence": 0.8287,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.5703125,
+            0.22084427521008404
+          ],
+          "confidence": 0.8622,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "250,000.-",
+          "bbox": [
+            0.5859375,
+            0.22084427521008404
+          ],
+          "confidence": 0.986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "200528",
+          "bbox": [
+            0.6826171875,
+            0.22084427521008404
+          ],
+          "confidence": 0.9758,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "15/05/2020",
+          "bbox": [
+            0.7236328125,
+            0.2194623161764706
+          ],
+          "confidence": 0.8422,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "13/05/2020",
+          "bbox": [
+            0.7734375,
+            0.2194623161764706
+          ],
+          "confidence": 0.9708,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Draft",
+          "bbox": [
+            0.107421875,
+            0.24019170168067228
+          ],
+          "confidence": 0.9442,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "12/2",
+          "bbox": [
+            0.1884765625,
+            0.23880974264705884
+          ],
+          "confidence": 0.3925,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.24019170168067228
+          ],
+          "confidence": 0.8726,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "275,000.00",
+          "bbox": [
+            0.3271484375,
+            0.23880974264705884
+          ],
+          "confidence": 0.9139,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Invoice",
+          "bbox": [
+            0.107421875,
+            0.2595391281512605
+          ],
+          "confidence": 0.9851,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.",
+          "bbox": [
+            0.130859375,
+            0.2595391281512605
+          ],
+          "confidence": 0.8636,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MRON12345",
+          "bbox": [
+            0.142578125,
+            0.2581571691176471
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x4/4",
+          "bbox": [
+            0.1884765625,
+            0.2581571691176471
+          ],
+          "confidence": 0.8839,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.2595391281512605
+          ],
+          "confidence": 0.9306,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "150,000.00",
+          "bbox": [
+            0.3271484375,
+            0.2581571691176471
+          ],
+          "confidence": 0.8758,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Invoice",
+          "bbox": [
+            0.107421875,
+            0.27888655462184875
+          ],
+          "confidence": 0.9851,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.",
+          "bbox": [
+            0.130859375,
+            0.27888655462184875
+          ],
+          "confidence": 0.8636,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MRON12346",
+          "bbox": [
+            0.142578125,
+            0.27750459558823526
+          ],
+          "confidence": 0.9984,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x4/4",
+          "bbox": [
+            0.1875,
+            0.2761226365546219
+          ],
+          "confidence": 0.7673,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.27888655462184875
+          ],
+          "confidence": 0.9306,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "125,000.00",
+          "bbox": [
+            0.3271484375,
+            0.27750459558823526
+          ],
+          "confidence": 0.7561,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Weight",
+          "bbox": [
+            0.107421875,
+            0.298233981092437
+          ],
+          "confidence": 0.9932,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "List",
+          "bbox": [
+            0.130859375,
+            0.298233981092437
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.189453125,
+            0.2996159401260504
+          ],
+          "confidence": 0.9997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "+2Copies",
+          "bbox": [
+            0.197265625,
+            0.298233981092437
+          ],
+          "confidence": 0.9937,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bill",
+          "bbox": [
+            0.1064453125,
+            0.31619944852941173
+          ],
+          "confidence": 0.9922,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.119140625,
+            0.31619944852941173
+          ],
+          "confidence": 0.9085,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Lading",
+          "bbox": [
+            0.126953125,
+            0.31619944852941173
+          ],
+          "confidence": 0.8272,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x3/3",
+          "bbox": [
+            0.1875,
+            0.31481748949579835
+          ],
+          "confidence": 0.6569,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NN",
+          "bbox": [
+            0.107421875,
+            0.33692883403361346
+          ],
+          "confidence": 0.9996,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Copies",
+          "bbox": [
+            0.1201171875,
+            0.33692883403361346
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x2",
+          "bbox": [
+            0.1884765625,
+            0.33692883403361346
+          ],
+          "confidence": 0.7669,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Cert.of",
+          "bbox": [
+            0.107421875,
+            0.3562762605042017
+          ],
+          "confidence": 0.6541,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Origin",
+          "bbox": [
+            0.12890625,
+            0.3548943014705882
+          ],
+          "confidence": 0.9947,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x2",
+          "bbox": [
+            0.1884765625,
+            0.3548943014705882
+          ],
+          "confidence": 0.8304,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Beneficiary's",
+          "bbox": [
+            0.107421875,
+            0.3742417279411765
+          ],
+          "confidence": 0.9399,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Cert.",
+          "bbox": [
+            0.1484375,
+            0.3756236869747899
+          ],
+          "confidence": 0.9915,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.189453125,
+            0.37700564600840336
+          ],
+          "confidence": 0.9982,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "4",
+          "bbox": [
+            0.052734375,
+            0.4198463760504202
+          ],
+          "confidence": 0.9914,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Chapter",
+          "bbox": [
+            0.0751953125,
+            0.4143185399159664
+          ],
+          "confidence": 0.9981,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MT707",
+          "bbox": [
+            0.1064453125,
+            0.4115546218487395
+          ],
+          "confidence": 0.5571,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Amendmenti",
+          "bbox": [
+            0.189453125,
+            0.4143185399159664
+          ],
+          "confidence": 0.5114,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.2",
+          "bbox": [
+            0.228515625,
+            0.41293658088235297
+          ],
+          "confidence": 0.9006,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BASELINE2022567",
+          "bbox": [
+            0.2470703125,
+            0.4143185399159664
+          ],
+          "confidence": 0.5593,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "-1-",
+          "bbox": [
+            0.3134765625,
+            0.41293658088235297
+          ],
+          "confidence": 0.2929,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "20,000.00",
+          "bbox": [
+            0.3232421875,
+            0.4143185399159664
+          ],
+          "confidence": 0.5328,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "210303",
+          "bbox": [
+            0.3701171875,
+            0.4143185399159664
+          ],
+          "confidence": 0.9951,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "New",
+          "bbox": [
+            0.39453125,
+            0.4143185399159664
+          ],
+          "confidence": 0.981,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "York",
+          "bbox": [
+            0.4111328125,
+            0.41293658088235297
+          ],
+          "confidence": 0.9794,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "05/05",
+          "bbox": [
+            0.48828125,
+            0.41708245798319327
+          ],
+          "confidence": 0.9989,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.5146484375,
+            0.41293658088235297
+          ],
+          "confidence": 0.5594,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "500,000.00",
+          "bbox": [
+            0.529296875,
+            0.41293658088235297
+          ],
+          "confidence": 0.8289,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "JUS$",
+          "bbox": [
+            0.5703125,
+            0.41293658088235297
+          ],
+          "confidence": 0.4969,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "250,000.-",
+          "bbox": [
+            0.5859375,
+            0.4143185399159664
+          ],
+          "confidence": 0.986,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "200720",
+          "bbox": [
+            0.658203125,
+            0.41708245798319327
+          ],
+          "confidence": 0.9822,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Baseline_MT707",
+          "bbox": [
+            0.8115234375,
+            0.4115546218487395
+          ],
+          "confidence": 0.9042,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "_No2_Feb23",
+          "bbox": [
+            0.86328125,
+            0.4115546218487395
+          ],
+          "confidence": 0.7314,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Drawing",
+          "bbox": [
+            0.107421875,
+            0.43366596638655464
+          ],
+          "confidence": 0.9968,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.2",
+          "bbox": [
+            0.1357421875,
+            0.43366596638655464
+          ],
+          "confidence": 0.8227,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Baseline_",
+          "bbox": [
+            0.8125,
+            0.43366596638655464
+          ],
+          "confidence": 0.5557,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Fuiset.m.Shpmen_/ea23",
+          "bbox": [
+            0.841796875,
+            0.43228400735294115
+          ],
+          "confidence": 0.1716,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "5",
+          "bbox": [
+            0.0537109375,
+            0.4599231880252101
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Chapter7",
+          "bbox": [
+            0.076171875,
+            0.4543953518907563
+          ],
+          "confidence": 0.9559,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PRESENTATION",
+          "bbox": [
+            0.634765625,
+            0.4543953518907563
+          ],
+          "confidence": 0.7702,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DATE",
+          "bbox": [
+            0.6845703125,
+            0.4543953518907563
+          ],
+          "confidence": 0.997,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Documents",
+          "bbox": [
+            0.70703125,
+            0.45301339285714287
+          ],
+          "confidence": 0.9947,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Datel",
+          "bbox": [
+            0.7451171875,
+            0.45301339285714287
+          ],
+          "confidence": 0.5706,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Shipmentdate",
+          "bbox": [
+            0.763671875,
+            0.45163143382352944
+          ],
+          "confidence": 0.951,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Cover",
+          "bbox": [
+            0.107421875,
+            0.4765066964285714
+          ],
+          "confidence": 0.9419,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Letter",
+          "bbox": [
+            0.126953125,
+            0.4778886554621849
+          ],
+          "confidence": 0.9555,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.1875,
+            0.475124737394958
+          ],
+          "confidence": 0.9987,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "BASELINE2022567",
+          "bbox": [
+            0.24609375,
+            0.475124737394958
+          ],
+          "confidence": 0.6266,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.475124737394958
+          ],
+          "confidence": 0.8493,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "275,000.00",
+          "bbox": [
+            0.3271484375,
+            0.475124737394958
+          ],
+          "confidence": 0.9541,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.515625,
+            0.4765066964285714
+          ],
+          "confidence": 0.9888,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "500,000.00",
+          "bbox": [
+            0.529296875,
+            0.475124737394958
+          ],
+          "confidence": 0.9461,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.576171875,
+            0.4765066964285714
+          ],
+          "confidence": 0.937,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "25,000.-",
+          "bbox": [
+            0.58984375,
+            0.4778886554621849
+          ],
+          "confidence": 0.9831,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "200821",
+          "bbox": [
+            0.6826171875,
+            0.4765066964285714
+          ],
+          "confidence": 0.9917,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "15/08/2020",
+          "bbox": [
+            0.724609375,
+            0.475124737394958
+          ],
+          "confidence": 0.985,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "12/08/2020",
+          "bbox": [
+            0.7734375,
+            0.475124737394958
+          ],
+          "confidence": 0.9061,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Overdrawn",
+          "bbox": [
+            0.8408203125,
+            0.48065257352941176
+          ],
+          "confidence": 0.9913,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "by$25,000",
+          "bbox": [
+            0.875,
+            0.4778886554621849
+          ],
+          "confidence": 0.9686,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Draft",
+          "bbox": [
+            0.107421875,
+            0.49723608193277313
+          ],
+          "confidence": 0.9442,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "2/2",
+          "bbox": [
+            0.1884765625,
+            0.49723608193277313
+          ],
+          "confidence": 0.4612,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.49585412289915964
+          ],
+          "confidence": 0.9567,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "275,000.00",
+          "bbox": [
+            0.3271484375,
+            0.49585412289915964
+          ],
+          "confidence": 0.72,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Invoice",
+          "bbox": [
+            0.1064453125,
+            0.5152015493697479
+          ],
+          "confidence": 0.9153,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MRON123478",
+          "bbox": [
+            0.1318359375,
+            0.5179654674369748
+          ],
+          "confidence": 0.8963,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x4/4",
+          "bbox": [
+            0.1875,
+            0.5152015493697479
+          ],
+          "confidence": 0.9025,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "US$",
+          "bbox": [
+            0.3134765625,
+            0.5165835084033613
+          ],
+          "confidence": 0.9545,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "275,000.00",
+          "bbox": [
+            0.3271484375,
+            0.5165835084033613
+          ],
+          "confidence": 0.5124,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Weight",
+          "bbox": [
+            0.107421875,
+            0.537312893907563
+          ],
+          "confidence": 0.9932,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "List",
+          "bbox": [
+            0.1318359375,
+            0.5359309348739496
+          ],
+          "confidence": 0.9959,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x2+10",
+          "bbox": [
+            0.1884765625,
+            0.5345489758403361
+          ],
+          "confidence": 0.8827,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Copy",
+          "bbox": [
+            0.216796875,
+            0.537312893907563
+          ],
+          "confidence": 0.9994,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Bill",
+          "bbox": [
+            0.1064453125,
+            0.5552783613445378
+          ],
+          "confidence": 0.9822,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.119140625,
+            0.5538964023109244
+          ],
+          "confidence": 0.5381,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Lading",
+          "bbox": [
+            0.126953125,
+            0.5538964023109244
+          ],
+          "confidence": 0.976,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x3/3",
+          "bbox": [
+            0.1875,
+            0.5538964023109244
+          ],
+          "confidence": 0.6569,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NN",
+          "bbox": [
+            0.1064453125,
+            0.5746257878151261
+          ],
+          "confidence": 0.9849,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Copies",
+          "bbox": [
+            0.119140625,
+            0.5732438287815126
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x2",
+          "bbox": [
+            0.1884765625,
+            0.5746257878151261
+          ],
+          "confidence": 0.9386,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Cert.of",
+          "bbox": [
+            0.107421875,
+            0.5939732142857143
+          ],
+          "confidence": 0.9229,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Origin",
+          "bbox": [
+            0.12890625,
+            0.5925912552521009
+          ],
+          "confidence": 0.5367,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1x2",
+          "bbox": [
+            0.1884765625,
+            0.5939732142857143
+          ],
+          "confidence": 0.9386,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Beneficiary's",
+          "bbox": [
+            0.1064453125,
+            0.6119386817226891
+          ],
+          "confidence": 0.9441,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Cert.",
+          "bbox": [
+            0.1484375,
+            0.6147025997899159
+          ],
+          "confidence": 0.6973,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "1",
+          "bbox": [
+            0.1904296875,
+            0.6160845588235294
+          ],
+          "confidence": 0.9334,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        }
+      ],
+      "word_count": 184,
+      "average_confidence": 0.8655
+    }
+  ],
+  "total_words": 184,
+  "overall_confidence": 0.8655
+}

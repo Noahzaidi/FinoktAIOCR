@@ -5,13 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Document - {{ doc_id }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glancyr:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
 </head>
 <body>
     <div class="container review-container">
         <header>
-            <h1>Document Review</h1>
-            <p>Document ID: <strong id="doc-id">{{ doc_id }}</strong></p>
+            <div class="header-brand">
+                <div class="logo-section">
+                    <div class="finoktai-logo">
+                        <div class="logo-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 8L32 8L32 32L8 32L8 8Z" stroke="var(--primary-color)" stroke-width="2" fill="none"/>
+                                <path d="M12 12L28 12L28 28L12 28L12 12Z" stroke="var(--accent-color)" stroke-width="1.5" fill="none"/>
+                                <path d="M16 16L24 16L24 24L16 24L16 16Z" stroke="var(--secondary-color)" stroke-width="1" fill="var(--baby-blue)"/>
+                                <circle cx="20" cy="20" r="2" fill="var(--primary-color)"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-finokt">Finokt</span><span class="logo-ai">AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <h1>Document Review</h1>
+                    <p>Document ID: <strong id="doc-id">{{ doc_id }}</strong></p>
+                </div>
+            </div>
             <div class="actions">
                 <button id="undo-btn" class="btn">Undo</button>
                 <button id="redo-btn" class="btn">Redo</button>
@@ -24,7 +46,7 @@
                         <a href="/export/{{ doc_id }}?format=xml" target="_blank" class="dropdown-item">📋 Export XML</a>
                     </div>
                 </div>
-                <a href="/" class="btn">Upload New</a>
+                <a href="/" class="btn">🏠 Home</a>
             </div>
             
             <!-- Document Classification Info -->
@@ -249,10 +271,16 @@
                 <div class="document-viewer-header">
                     <h2>Document Viewer</h2>
                     <div class="viewer-controls">
+                        <button id="prev-page-btn" class="btn-small" title="Previous Page">◀</button>
                         <span id="page-indicator">Loading...</span>
-                        <button id="zoom-out-btn" class="btn-small">−</button>
-                        <span id="zoom-level">100%</span>
-                        <button id="zoom-in-btn" class="btn-small">+</button>
+                        <button id="next-page-btn" class="btn-small" title="Next Page">▶</button>
+                        <button id="pan-left-btn" class="btn-small" title="Pan Left">◀</button>
+                        <button id="pan-right-btn" class="btn-small" title="Pan Right">▶</button>
+                        <div class="zoom-controls">
+                            <button id="zoom-out-btn" class="btn-small">−</button>
+                            <span id="zoom-level">100%</span>
+                            <button id="zoom-in-btn" class="btn-small">+</button>
+                        </div>
                     </div>
                 </div>
                 <div id="document-viewer-container">
@@ -264,6 +292,6 @@
         </main>
     </div>
 
-    <script src="{{ url_for('static', path='/canvas.js') }}"></script>
+    <script src="{{ url_for('static', path='/canvas.js') }}?v={{ timestamp }}"></script>
 </body>
 </html>
