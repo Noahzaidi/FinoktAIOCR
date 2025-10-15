@@ -62,47 +62,38 @@ def normalize_text(text: str, document_type: str = "document") -> dict:
 
     return extracted_data
 
-def apply_lexicon_corrections(text: str, document_type: str = "document") -> tuple:
+from database.connector import get_db
+from database import models
+from sqlalchemy.orm import Session
+
+def apply_lexicon_corrections(text: str, document_type: str, db: Session) -> tuple:
     """
-    Apply learned lexicon corrections to text before processing.
+    Apply learned lexicon corrections to text before processing, using the database.
     Returns tuple of (corrected_text, corrections_applied)
     """
     corrections_applied = []
     
     try:
-        # Load global auto-corrections lexicon
-        lexicon_path = Path("data/lexicons/auto_corrections.json")
-        if not lexicon_path.exists():
+        # Load lexicon from the database
+        lexicon_entries = db.query(models.Lexicon).filter(
+            (models.Lexicon.document_type == 'global') | (models.Lexicon.document_type == document_type)
+        ).all()
+        lexicon = {entry.misspelled: entry.corrected for entry in lexicon_entries}
+
+        if not lexicon:
             return text, corrections_applied
-        
-        with lexicon_path.open("r", encoding="utf-8") as f:
-            lexicon = json.load(f)
-        
+
         # Apply corrections
         corrected_text = text
         for original, corrected in lexicon.items():
-            # Use word boundaries to avoid partial matches
             pattern = r'\b' + re.escape(original) + r'\b'
             if re.search(pattern, corrected_text, flags=re.IGNORECASE):
                 corrected_text = re.sub(pattern, corrected, corrected_text, flags=re.IGNORECASE)
                 corrections_applied.append(f"'{original}' → '{corrected}'")
         
-        # Load document-type specific lexicon if available
-        type_lexicon_path = Path(f"data/lexicons/{document_type}_corrections.json")
-        if type_lexicon_path.exists():
-            with type_lexicon_path.open("r", encoding="utf-8") as f:
-                type_lexicon = json.load(f)
-            
-            for original, corrected in type_lexicon.items():
-                pattern = r'\b' + re.escape(original) + r'\b'
-                if re.search(pattern, corrected_text, flags=re.IGNORECASE):
-                    corrected_text = re.sub(pattern, corrected, corrected_text, flags=re.IGNORECASE)
-                    corrections_applied.append(f"'{original}' → '{corrected}' (type-specific)")
-        
         return corrected_text, corrections_applied
         
     except Exception as e:
-        # Log error but don't fail the whole process
         print(f"Warning: Lexicon correction failed: {e}")
         return text, corrections_applied
 

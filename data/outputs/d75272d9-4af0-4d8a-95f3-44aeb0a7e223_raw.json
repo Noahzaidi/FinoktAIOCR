@@ -1,0 +1,719 @@
+{
+  "document_id": "d75272d9-4af0-4d8a-95f3-44aeb0a7e223",
+  "extraction_timestamp": "2025-10-14T16:03:08.015585",
+  "pages": [
+    {
+      "page_num": 1,
+      "words": [
+        {
+          "text": "Data",
+          "bbox": [
+            0.0556640625,
+            0.042643229166666685
+          ],
+          "confidence": 0.9653,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "e",
+          "bbox": [
+            0.095703125,
+            0.049153645833333315
+          ],
+          "confidence": 0.9984,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "leshimit",
+          "bbox": [
+            0.1103515625,
+            0.0458984375
+          ],
+          "confidence": 0.8102,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "latym",
+          "bbox": [
+            0.1826171875,
+            0.044270833333333315
+          ],
+          "confidence": 0.3876,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "43naBaMa",
+          "bbox": [
+            0.23828125,
+            0.049153645833333315
+          ],
+          "confidence": 0.2556,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "I",
+          "bbox": [
+            0.3212890625,
+            0.047526041666666685
+          ],
+          "confidence": 0.7981,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Verilis",
+          "bbox": [
+            0.33203125,
+            0.044270833333333315
+          ],
+          "confidence": 0.9693,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "tannin",
+          "bbox": [
+            0.3828125,
+            0.0458984375
+          ],
+          "confidence": 0.2679,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Date",
+          "bbox": [
+            0.435546875,
+            0.0458984375
+          ],
+          "confidence": 0.5597,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "of",
+          "bbox": [
+            0.474609375,
+            0.0458984375
+          ],
+          "confidence": 0.9917,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "issue",
+          "bbox": [
+            0.494140625,
+            0.047526041666666685
+          ],
+          "confidence": 0.952,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "SPECIMEN",
+          "bbox": [
+            0.7958984375,
+            0.037760416666666685
+          ],
+          "confidence": 0.9789,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "16.09.2013",
+          "bbox": [
+            0.060546875,
+            0.08984375
+          ],
+          "confidence": 0.9767,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Leshuar",
+          "bbox": [
+            0.056640625,
+            0.14029947916666669
+          ],
+          "confidence": 0.7477,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "nga",
+          "bbox": [
+            0.1220703125,
+            0.1435546875
+          ],
+          "confidence": 0.896,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "<",
+          "bbox": [
+            0.154296875,
+            0.1435546875
+          ],
+          "confidence": 0.6069,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "-"
+        },
+        {
+          "text": "Vanal",
+          "bbox": [
+            0.1650390625,
+            0.14192708333333331
+          ],
+          "confidence": 0.7496,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "DA",
+          "bbox": [
+            0.2138671875,
+            0.1435546875
+          ],
+          "confidence": 0.4736,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Duzenleyen",
+          "bbox": [
+            0.2490234375,
+            0.1435546875
+          ],
+          "confidence": 0.7598,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "makam",
+          "bbox": [
+            0.341796875,
+            0.1435546875
+          ],
+          "confidence": 0.8891,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "I",
+          "bbox": [
+            0.4013671875,
+            0.14518229166666669
+          ],
+          "confidence": 0.856,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "issued",
+          "bbox": [
+            0.412109375,
+            0.1435546875
+          ],
+          "confidence": 0.9628,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "by",
+          "bbox": [
+            0.4677734375,
+            0.1435546875
+          ],
+          "confidence": 0.9949,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MPB",
+          "bbox": [
+            0.05859375,
+            0.18424479166666669
+          ],
+          "confidence": 0.7688,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "à",
+          "bbox": [
+            0.1240234375,
+            0.19889322916666669
+          ],
+          "confidence": 0.3842,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "I",
+          "bbox": [
+            0.130859375,
+            0.18587239583333331
+          ],
+          "confidence": 0.7616,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MUP",
+          "bbox": [
+            0.150390625,
+            0.18424479166666669
+          ],
+          "confidence": 0.8393,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "/",
+          "bbox": [
+            0.220703125,
+            0.1826171875
+          ],
+          "confidence": 0.8726,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "MIA",
+          "bbox": [
+            0.240234375,
+            0.18424479166666669
+          ],
+          "confidence": 0.998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Nr.",
+          "bbox": [
+            0.0546875,
+            0.23470052083333331
+          ],
+          "confidence": 0.9083,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Personal",
+          "bbox": [
+            0.0849609375,
+            0.236328125
+          ],
+          "confidence": 0.9598,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "I",
+          "bbox": [
+            0.154296875,
+            0.23795572916666669
+          ],
+          "confidence": 0.7814,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "JNHM",
+          "bbox": [
+            0.1669921875,
+            0.236328125
+          ],
+          "confidence": 0.2716,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "6p.",
+          "bbox": [
+            0.220703125,
+            0.236328125
+          ],
+          "confidence": 0.9517,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Kimlik",
+          "bbox": [
+            0.26171875,
+            0.236328125
+          ],
+          "confidence": 0.8692,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.",
+          "bbox": [
+            0.3115234375,
+            0.236328125
+          ],
+          "confidence": 0.9755,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "à",
+          "bbox": [
+            0.3427734375,
+            0.2412109375
+          ],
+          "confidence": 0.2933,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Personal",
+          "bbox": [
+            0.353515625,
+            0.236328125
+          ],
+          "confidence": 0.7508,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.",
+          "bbox": [
+            0.4248046875,
+            0.236328125
+          ],
+          "confidence": 0.993,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "0123456789",
+          "bbox": [
+            0.0595703125,
+            0.28190104166666663
+          ],
+          "confidence": 0.9998,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Nr.",
+          "bbox": [
+            0.0556640625,
+            0.33072916666666663
+          ],
+          "confidence": 0.9582,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Ln",
+          "bbox": [
+            0.083984375,
+            0.33235677083333337
+          ],
+          "confidence": 0.2724,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "I",
+          "bbox": [
+            0.115234375,
+            0.333984375
+          ],
+          "confidence": 0.4844,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "6p.",
+          "bbox": [
+            0.1259765625,
+            0.33072916666666663
+          ],
+          "confidence": 0.7477,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "NK/Kart",
+          "bbox": [
+            0.15625,
+            0.33235677083333337
+          ],
+          "confidence": 0.3337,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.",
+          "bbox": [
+            0.2421875,
+            0.33235677083333337
+          ],
+          "confidence": 0.7477,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "IID",
+          "bbox": [
+            0.2705078125,
+            0.33072916666666663
+          ],
+          "confidence": 0.2679,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Card",
+          "bbox": [
+            0.3037109375,
+            0.33235677083333337
+          ],
+          "confidence": 0.7741,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "No.",
+          "bbox": [
+            0.3466796875,
+            0.33235677083333337
+          ],
+          "confidence": 0.7591,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ID0000000",
+          "bbox": [
+            0.05859375,
+            0.37467447916666663
+          ],
+          "confidence": 0.5833,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Vendbanimi",
+          "bbox": [
+            0.0576171875,
+            0.4283854166666667
+          ],
+          "confidence": 0.4286,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ipeowaannurre",
+          "bbox": [
+            0.1640625,
+            0.4283854166666667
+          ],
+          "confidence": 0.2826,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "I",
+          "bbox": [
+            0.2880859375,
+            0.4348958333333333
+          ],
+          "confidence": 0.6407,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "ikamet",
+          "bbox": [
+            0.298828125,
+            0.4267578125
+          ],
+          "confidence": 0.5299,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "à",
+          "bbox": [
+            0.3515625,
+            0.4300130208333333
+          ],
+          "confidence": 0.6656,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "Residence",
+          "bbox": [
+            0.36328125,
+            0.4283854166666667
+          ],
+          "confidence": 0.9555,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "PRISTINA",
+          "bbox": [
+            0.0615234375,
+            0.470703125
+          ],
+          "confidence": 0.9671,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "<",
+          "bbox": [
+            0.6962890625,
+            0.4788411458333333
+          ],
+          "confidence": 0.6154,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "-"
+        },
+        {
+          "text": "IDRKSIDO0000005<<<",
+          "bbox": [
+            0.052734375,
+            0.6969401041666666
+          ],
+          "confidence": 0.9216,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "a",
+          "bbox": [
+            0.5810546875,
+            0.7132161458333334
+          ],
+          "confidence": 0.745,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "A",
+          "bbox": [
+            0.7705078125,
+            0.7132161458333334
+          ],
+          "confidence": 0.7377,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "<<<<<",
+          "bbox": [
+            0.7861328125,
+            0.705078125
+          ],
+          "confidence": 0.6079,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "8906120F2309154RKS0123456789<1",
+          "bbox": [
+            0.0517578125,
+            0.7799479166666667
+          ],
+          "confidence": 0.9109,
+          "auto_corrected": false,
+          "corrected_by_lexicon": false,
+          "original_value": ""
+        },
+        {
+          "text": "HOXHA<<MERITA<<<<<<<<<<<<<<<<<",
+          "bbox": [
+            0.05078125,
+            0.8662109375
+          ],
+          "confidence": 0.8175,
+          "auto_corrected": true,
+          "corrected_by_lexicon": true,
+          "original_value": "HOXHAS<MERITAS<<<<<<<<<<<<<<"
+        }
+      ],
+      "word_count": 64,
+      "average_confidence": 0.7341
+    }
+  ],
+  "total_words": 64,
+  "overall_confidence": 0.7341
+}

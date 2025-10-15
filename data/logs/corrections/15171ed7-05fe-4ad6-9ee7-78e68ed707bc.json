@@ -1,0 +1,24 @@
+{
+  "corrections": [
+    {
+      "document_id": "15171ed7-05fe-4ad6-9ee7-78e68ed707bc",
+      "page": 0,
+      "word_id": "p0_w6",
+      "original_text": "1:707PROFIUS33XXXXNY",
+      "corrected_text": "{1:707PROFIUS33XXXXN}",
+      "corrected_bbox": [
+        [
+          0.6175321691176471,
+          0.095703125
+        ],
+        [
+          0.8323759191176471,
+          0.109375
+        ]
+      ],
+      "user_id": "analyst1",
+      "timestamp": "2025-10-14T15:56:26.459327"
+    }
+  ],
+  "document_id": "15171ed7-05fe-4ad6-9ee7-78e68ed707bc"
+}

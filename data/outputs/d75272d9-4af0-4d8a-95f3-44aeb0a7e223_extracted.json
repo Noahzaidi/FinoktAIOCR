@@ -1,0 +1,15 @@
+{
+  "invoice_number": null,
+  "date": null,
+  "amount": null,
+  "currency": null,
+  "country": null,
+  "corrections_applied": [],
+  "document_type": "document",
+  "classification_confidence": 0.17,
+  "auto_corrections_applied": [
+    "'-' -> '<'",
+    "'-' -> '<'",
+    "'HOXHAS<MERITAS<<<<<<<<<<<<<<' -> 'HOXHA<<MERITA<<<<<<<<<<<<<<<<<'"
+  ]
+}

@@ -313,36 +313,34 @@ class AnchorExtractor:
         total_confidence = base_confidence + distance_bonus + ocr_confidence_bonus + direction_bonus
         return min(1.0, total_confidence)
 
+from database.connector import get_db
+from database import models
+from sqlalchemy.orm import Session
+
 class TemplateMemory:
     """
-    Stores and retrieves document-specific field extraction templates.
-    Implements template memory per document type as mentioned in PRD.
+    Stores and retrieves document-specific field extraction templates from the database.
     """
     
-    def __init__(self):
-        """Initialize template memory system."""
-        self.templates_path = Path("data/templates")
-        self.templates_path.mkdir(parents=True, exist_ok=True)
+    def __init__(self, db_session: Session):
+        """Initialize template memory system with a database session."""
+        self.db = db_session
         self.anchor_extractor = AnchorExtractor()
     
     def learn_template_from_corrections(self, doc_id: str, ocr_data: Dict, 
                                       corrections: List[Dict], doc_type: str = "generic"):
-        """Learn field positions from user corrections to build templates."""
+        """Learn field positions from user corrections to build/update templates in the database."""
         try:
-            template_file = self.templates_path / f"{doc_type}_template.json"
-            
-            # Load existing template or create new one
-            if template_file.exists():
-                with template_file.open("r", encoding="utf-8") as f:
-                    template = json.load(f)
-            else:
-                template = {
-                    "document_type": doc_type,
-                    "field_positions": {},
-                    "anchor_patterns": {},
-                    "confidence_threshold": 0.7,
-                    "usage_count": 0
-                }
+            template = self.db.query(models.Template).filter(models.Template.document_type == doc_type).first()
+
+            if not template:
+                template = models.Template(
+                    document_type=doc_type,
+                    field_positions={},
+                    anchor_patterns={},
+                    usage_count=0
+                )
+                self.db.add(template)
             
             # Update template with correction information
             words = self.anchor_extractor._extract_words_with_positions(ocr_data)
@@ -353,26 +351,22 @@ class TemplateMemory:
                 word_bbox = correction.get("corrected_bbox", [])
                 
                 if field_name != "unknown" and word_bbox:
-                    # Find nearby anchor words
                     nearby_anchors = self._find_nearby_anchors(words, word_bbox)
                     
                     if nearby_anchors:
-                        template["field_positions"][field_name] = {
+                        template.field_positions[field_name] = {
                             "typical_value": corrected_text,
                             "bounding_box": word_bbox,
                             "nearby_anchors": nearby_anchors,
-                            "confidence": 0.8  # High confidence from human correction
+                            "confidence": 0.8
                         }
             
-            template["usage_count"] += 1
-            
-            # Save updated template
-            with template_file.open("w", encoding="utf-8") as f:
-                json.dump(template, f, ensure_ascii=False, indent=2)
-                
+            template.usage_count += 1
+            self.db.commit()
             logger.info(f"Updated template for document type: {doc_type}")
             
         except Exception as e:
+            self.db.rollback()
             logger.error(f"Failed to learn template from corrections: {e}")
     
     def _find_nearby_anchors(self, words: List[Dict], target_bbox: List[float], 
